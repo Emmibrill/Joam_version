@@ -41,9 +41,9 @@
     z-index: 9999;
     perspective: 800px;
 }
-.padding{
-    margin-top: 5rem;
-}
+
+
+
 .ring{
     position: absolute;
     width: 8rem;
@@ -89,7 +89,7 @@ img{
 }
 .section_one{
     overflow: hidden;
-    height: 100vh;
+    height: 70vh;
     background-image: url(LEAF.jpg);
     background-position: center;
     background-size: cover;
