@@ -98,6 +98,7 @@ img{
 }
 .section_one[aria-details="farm-page"]{
     background-image: url(mountain-magic-hour.jpg);
+    height: 100vh;
 }
 /*.background-picture-image{
     height: 100vh;
