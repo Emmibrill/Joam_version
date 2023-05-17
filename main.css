@@ -89,7 +89,7 @@ img{
 }
 .section_one{
     overflow: hidden;
-    height: 70vh;
+    height: 100vh;
     background-image: url(LEAF.jpg);
     background-position: center;
     background-size: cover;
@@ -916,6 +916,9 @@ article p{
 }
 
 @media (max-width:425px) {
+    .section_one{
+        height: 70vh;
+    }
     .welcomeMessage h3{
         font-size: .7rem;
         background-color: rgba(0 0 0 / .5);
