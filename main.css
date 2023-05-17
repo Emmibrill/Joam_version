@@ -384,7 +384,7 @@ img{
     right: 1px;
 }
 .serviceButton .fa-greater-than, .serviceButton .fa-less-than{
-    font-weight: 100;
+    font-weight: 500;
     color: rgb(255, 255, 255, .6);
 }
 
