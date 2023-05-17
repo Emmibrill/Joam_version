@@ -1,0 +1,232 @@
+const navToggler = document.querySelector('.hambugger');
+const navList = document.querySelector('.nav__list');
+const nav_list = document.querySelectorAll('.list');
+const navBar = document.querySelector('.nav__bar');
+
+
+/*var sliderImage = document.querySelector('#sliderImage');
+sliderImage.classList.add('background-picture-image');
+var images = new Array(
+    "LEAF.jpg",
+    "black-and-red-chicken (1).jpg",
+    "yellow-corn-kernels-through-leaves (1).jpg");
+var length = images.length;
+var i = 0;
+
+
+//change the image on the home page first section
+function slider(){
+    if(i > length-1){
+        i = 0
+    }
+    sliderImage.src = images[i]
+    i++
+    setTimeout('slider()',3000)
+}*/
+window.addEventListener('load', () => {
+    document.querySelector('.preloader').style.display = 'none'  
+})
+
+//activate nav bar on scroll
+function activateScrolly() {
+    navBar.classList.toggle('addNavBarColor', scrollY > 20)
+}
+
+//activates the navigation bar and controls the hambugger movement
+function activateNavbar() {
+    let navState = navToggler.getAttribute('aria-controls');
+if(navState === 'closed'){
+    navToggler.setAttribute('aria-controls', 'open')
+}else{navToggler.setAttribute('aria-controls', 'closed')}
+navList.classList.toggle('navActive')
+}
+
+//deacivates the navbar on scroll with a corresponding hambugger movement
+function removeNavbar() {
+    let navState = navToggler.getAttribute('aria-controls');
+if(navState === 'open'){
+    navToggler.setAttribute('aria-controls', 'closed')
+    navList.classList.remove('navActive')
+}
+}
+
+//declare active navigation button on click
+function declareActiveNav() {
+    Array.from(nav_list).forEach(nav => {
+        nav.addEventListener('click', () => {
+            nav_list.forEach(nav => {
+                nav.classList.remove('active')
+            })
+          nav.classList.add('active')
+        })
+    })
+}
+
+declareActiveNav();
+
+window.addEventListener('scroll', () => {
+    activateScrolly();
+})
+
+window.addEventListener('load', () => {
+    navList.classList.remove('navActive')  
+})
+
+
+navToggler.addEventListener('click', () => {
+    activateNavbar()
+})
+
+window.addEventListener('scroll', () => {
+    removeNavbar()    
+})
+
+const readMore = document.querySelector('.read-more')
+readMore.addEventListener('click', () => {
+    showMore()
+})
+//display all the content on the 'why choose joam real estate log'
+const showMore = () => {
+    let par = document.querySelector('.extended-paragraph');
+    let parAttribute = par.getAttribute('aria-details')
+    if(parAttribute === 'hidden'){
+        par.setAttribute('aria-details', 'visible');
+        par.classList.add('showExtended-paragraph')
+    }else{
+        par.setAttribute('aria-details', 'hidden')
+        par.classList.remove('showExtended-paragraph')
+    }
+}
+
+//control the carousel that displays the different services rendered on the home page
+const serviceTrack = document.querySelector('.services-pictures-container');
+const serviceNextButton = document.querySelector('.serviceButton--right');
+const servicePreviousButton = document.querySelector('.serviceButton--left');
+
+const serviceSlides = Array.from(serviceTrack.children)
+const serviceSlideWidth = serviceSlides[1].getBoundingClientRect().width;
+//console.log(serviceSlideWidth)
+
+const setServiceSlidePosition = (slide, index) => {
+    slide.style.left = serviceSlideWidth * index + 'px';
+    const num = slide.style.left
+    //console.log(num)
+}
+serviceSlides.forEach(setServiceSlidePosition);
+
+const widthToTranslate = (serviceTrack, currrentSlide, targetSlide) => {
+    serviceTrack.style.transform = 'translateX(-' + targetSlide.style.left + ')'
+    currrentSlide.classList.remove('activeSlider')
+    targetSlide.classList.add('activeSlider')
+}
+
+const serviceNavControl = (slideIndex) => {
+    if(slideIndex === 1){
+        servicePreviousButton.style.display = 'block'
+    }
+    else if(serviceSlides.length - 1 === slideIndex){
+        serviceNextButton.style.display = 'none'
+        servicePreviousButton.style.display = 'block'
+    }
+    else if(slideIndex === 0 ){
+        servicePreviousButton.style.display = 'none'
+        serviceNextButton.style.display = 'block'
+    }
+    else{
+        servicePreviousButton.style.display = 'block';
+        serviceNextButton.style.display = 'block'
+        }
+}
+
+//display the next slide on the service section when the left button is being clicked
+servicePreviousButton.addEventListener('click', () => {
+    const currrentSlide = serviceTrack.querySelector('.activeSlider');
+    const previousSlide = currrentSlide.previousElementSibling;
+    const slideIndex = serviceSlides.findIndex(slide => slide === previousSlide)
+
+    widthToTranslate(serviceTrack, currrentSlide, previousSlide);
+    serviceNavControl(slideIndex)
+    //console.log(slideIndex)
+    
+})
+
+//display the next slide on the service section when the right button is being clicked
+serviceNextButton.addEventListener('click', () => {
+    const currrentSlide = serviceTrack.querySelector('.activeSlider');
+    const nextSlide = currrentSlide.nextElementSibling;
+    const slideIndex = serviceSlides.findIndex(slide => slide === nextSlide)
+    
+    widthToTranslate(serviceTrack, currrentSlide, nextSlide);
+    serviceNavControl(slideIndex)
+    //console.log(slideIndex)
+    
+})
+
+
+
+//controls the caurosel that display the farm picures
+const track = document.querySelector('.trackWay');
+const sliderNextButton = document.querySelector('.sliderButton--right');
+const sliderPreviousButton = document.querySelector('.sliderButton--left');
+
+const slides = Array.from(track.children)
+const slideWidth = slides[1].getBoundingClientRect().width;
+//console.log(slideWidth)
+
+const assignPosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+    const num = slide.style.left
+    //console.log(num)
+}
+slides.forEach(assignPosition);
+
+//assign the needed width to the different carousel track
+const widthToMove = (track, currrentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
+    currrentSlide.classList.remove('activeSlider')
+    targetSlide.classList.add('activeSlider')
+}
+
+//control the apperance of the carousel navigator
+const navControl = (slideIndex) => {
+    if(slideIndex === 1){
+        sliderPreviousButton.style.display = 'block'
+    }
+    else if(slides.length - 1 === slideIndex){
+        sliderNextButton.style.display = 'none'
+        sliderPreviousButton.style.display = 'block'
+    }
+    else if(slideIndex === 0 ){
+        sliderPreviousButton.style.display = 'none'
+    }
+    else{
+        sliderPreviousButton.style.display = 'block';
+        sliderNextButton.style.display = 'block'
+        }
+}
+
+//display the next slide on the farm picture carousel when the right button is being clicked
+sliderNextButton.addEventListener('click', () => {
+    const currrentSlide = track.querySelector('.activeSlider');
+    const nextSlide = currrentSlide.nextElementSibling;
+    const slideIndex = slides.findIndex(slide => slide === nextSlide)
+    
+    widthToMove(track, currrentSlide, nextSlide);
+    navControl(slideIndex)
+    //console.log(slideIndex)
+    
+})
+
+//display the next slide on the farm picture carousel when the left button is being clicked
+sliderPreviousButton.addEventListener('click', () => {
+    const currrentSlide = track.querySelector('.activeSlider');
+    const previousSlide = currrentSlide.previousElementSibling;
+    const slideIndex = slides.findIndex(slide => slide === previousSlide)
+
+    widthToMove(track, currrentSlide, previousSlide);
+    navControl(slideIndex)
+    //console.log(slideIndex)
+    
+})
+
+
