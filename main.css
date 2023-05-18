@@ -371,7 +371,7 @@ img{
     width: 5rem;
     height: 5rem;
     transform: translateY(-50%);
-    background: transparent;
+    background: black;
 }
 .serviceButton i{
     font-size: 6rem;
