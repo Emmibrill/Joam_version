@@ -351,7 +351,7 @@ img{
     position: relative;
     inset: 0;
     height: 40rem;
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .services-box{
     position: absolute;
@@ -606,6 +606,7 @@ article p{
     height: 100%;
     padding: 0;
     margin: 0;
+    transition: .2s ease-in-out;
 }
 .slide{
     position: absolute;
