@@ -89,7 +89,7 @@ img{
 }
 .section_one{
     overflow: hidden;
-    height: 70vh;
+    height: 70dvh;
     background-image: url(LEAF.jpg);
     background-position: center;
     background-size: cover;
