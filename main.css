@@ -351,6 +351,7 @@ img{
     position: relative;
     inset: 0;
     height: 40rem;
+    transition: 2s ease-in-out;
 }
 .services-box{
     position: absolute;
