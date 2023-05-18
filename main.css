@@ -593,6 +593,7 @@ article p{
     width: 95%;
     padding: 0;
     background: pink;
+    transition: .2s ease-in-out;
 }
 .slide-wrapper{
     position: relative;
@@ -600,7 +601,7 @@ article p{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    transition: .2s ease-in-out;
+
 }
 .trackWay{
     position: relative;
@@ -615,7 +616,7 @@ article p{
     width: 100%;
     height: 100%;
     
-transition: .2s ease-in-out;
+
   
     
 }
