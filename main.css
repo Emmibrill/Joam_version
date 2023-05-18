@@ -379,17 +379,17 @@ img{
 .serviceButton i{
     position: absolute;
     font-size: 6rem;
-    inset: 0;
-    margin: auto;
+
+
 }
 .serviceButton--left{
     display: none;
-    left: 1px;
+    left: 0px;
 
 
 }
 .serviceButton--right{
-    right: 1px;
+    right: 0px;
 
 
 }
