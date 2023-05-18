@@ -377,6 +377,7 @@ img{
     background: black;
 }
 .serviceButton i{
+    position: absolute;
     font-size: 6rem;
     inset: 0;
     margin: auto;
