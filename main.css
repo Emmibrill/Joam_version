@@ -366,9 +366,9 @@ img{
 
 .serviceButton{
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+
     z-index: 1;
     top: 50%;
     width: 5rem;
@@ -382,9 +382,13 @@ img{
 .serviceButton--left{
     display: none;
     left: 1px;
+    inset: 0;
+    margin: auto;
 }
 .serviceButton--right{
     right: 1px;
+    inset: 0;
+    margin: auto;
 }
 .serviceButton .fa-greater-than, .serviceButton .fa-less-than{
     font-weight: 500;
