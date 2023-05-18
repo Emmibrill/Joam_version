@@ -378,17 +378,19 @@ img{
 }
 .serviceButton i{
     font-size: 6rem;
+    inset: 0;
+    margin: auto;
 }
 .serviceButton--left{
     display: none;
     left: 1px;
-    inset: 0;
-    margin: auto;
+
+
 }
 .serviceButton--right{
     right: 1px;
-    inset: 0;
-    margin: auto;
+
+
 }
 .serviceButton .fa-greater-than, .serviceButton .fa-less-than{
     font-weight: 500;
