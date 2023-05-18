@@ -384,12 +384,16 @@ img{
 }
 .serviceButton--left{
     display: none;
-    left: 0px;
+    left: 1px;
+    top: 0;
+    bottom: 0;
 
 
 }
 .serviceButton--right{
-    right: 0px;
+    right: 1px;
+    top: 0;
+    bottom: 0;
 
 
 }
