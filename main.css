@@ -593,7 +593,7 @@ article p{
     width: 95%;
     padding: 0;
     background: pink;
-    transition: .2s ease-in-out;
+
 }
 .slide-wrapper{
     position: relative;
@@ -608,6 +608,7 @@ article p{
     height: 100%;
     padding: 0;
     margin: 0;
+    transition: .2s ease-in-ot;
 
 }
 .slide{
