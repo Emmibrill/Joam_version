@@ -1105,6 +1105,7 @@ article p:not(.lastChild){
         z-index: 1;
         animation: scaleBloom 6s linear infinite;
     }
+    
     @keyframes scaleBloom {
         0%{
             transform: scale(1);
