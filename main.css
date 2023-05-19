@@ -1103,6 +1103,25 @@ article p:not(.lastChild){
         bottom: 38%;
         padding: 1rem 3.5rem;
         z-index: 1;
+        animation: scaleBloom 6s linear infinite;
+    }
+    
+    @keyframes scaleBloom {
+        0%{
+            transform: scale(1);
+        }
+        15%{
+            transform: scale(1.1);
+        }
+        35%{
+            transform: scale(1);
+        }
+        85%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
     }
     .green h3{
         font-size: .9rem;
