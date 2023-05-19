@@ -164,6 +164,19 @@ serviceNextButton.addEventListener('click', () => {
 
 
 
+window.addEventListener('resize', () => {
+    
+    /*const currrentSlide = serviceTrack.querySelector('.activeSlider');
+    let curSlideImgWidth = currrentSlide.children[0].clientWidth
+    console.log(curSlideImgWidth)
+    serviceTrack.style.width = curSlideImgWidth
+    console.log(serviceTrack.style.width)*/
+
+
+})
+
+
+
 //controls the caurosel that display the farm picures
 const track = document.querySelector('.trackWay');
 const sliderNextButton = document.querySelector('.sliderButton--right');
@@ -228,5 +241,3 @@ sliderPreviousButton.addEventListener('click', () => {
     //console.log(slideIndex)
     
 })
-
-
