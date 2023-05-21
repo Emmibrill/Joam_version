@@ -241,6 +241,7 @@ sliderPreviousButton.addEventListener('click', () => {
     //console.log(slideIndex)
     
 })
+
 let showcases = [
 {
     name: "FARM-5",
