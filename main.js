@@ -23,6 +23,7 @@ function slider(){
     i++
     setTimeout('slider()',3000)
 }*/
+
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
 })
