@@ -23,6 +23,7 @@ function slider(){
     i++
     setTimeout('slider()',3000)
 }*/
+
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
 })
@@ -240,4 +241,52 @@ sliderPreviousButton.addEventListener('click', () => {
     navControl(slideIndex)
     //console.log(slideIndex)
     
+})
+
+let showcases = [
+{
+    name: "FARM-5",
+    writeUp: "we got you covered",
+    description: "baby-pigs-eating-on-the-farm",
+    link: "farm.html"
+},
+{
+    name: "CHICKEN",
+    writeUp: "we got you covered",
+    description: "brown-chicken",
+    link: "farm.html"
+},
+{
+    name: "FISHERY",
+    writeUp: "we got you covered",
+    description: "silver-and-blue-fish-in-a-pile" ,
+    link: "farm.html"  
+},
+{
+    name: "GOAT",
+    writeUp: "we got you covered",
+    description: "two-goats-looking-tough",
+    link: "farm.html"    
+}
+]
+
+const farmDisplay = document.querySelector('.farm-display');
+let theDisplay = ''
+
+showcases.forEach(display => {
+    theDisplay += `
+    <div class="farm-display-container">
+            <div class="display_picture">
+                <img src="${display.name}.jpg" alt="${display.description}">
+            </div>
+            <div class="circle">
+                <img src="JOAM-FARM-LOGO.jpg" alt="joam-farm-logo">
+            </div>
+            <div class="details">
+                <h3>${display.writeUp}</h3>
+                <button><a href="${display.link}">explore</a></button>
+            </div>
+        </div>
+    `
+    farmDisplay.innerHTML = theDisplay
 })
