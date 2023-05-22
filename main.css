@@ -581,8 +581,8 @@ article p:not(.lastChild){
 /*real estate section*/
 .estate-pix-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: 1rem;
     cursor: pointer;
 }
 .estate-pix-box{
