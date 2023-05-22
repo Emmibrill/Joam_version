@@ -497,6 +497,8 @@ article p:not(.lastChild){
 }
 
 /*style the different display and showcase section*/
+
+/*farm section*/
 .farm-display{
     display: grid;
     place-items: center;
@@ -542,7 +544,6 @@ article p:not(.lastChild){
     align-items: center;
     justify-content: center;
     object-fit: contain;
-
 }
 .details{
     position: sticky;
@@ -576,6 +577,73 @@ article p:not(.lastChild){
     font-size: 1rem;
     letter-spacing: 2px;
 }
+
+/*real estate section*/
+.estate-pix-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 2rem;
+    cursor: pointer;
+}
+.estate-pix-box{
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+}
+.estate-pix-box img{
+    height: 100%;
+    width: 100%;
+}
+.estate-pix-box::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: rgba(46, 221, 70, 0.5);
+    z-index: 1;
+    transform-origin: bottom;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: 2s ease;
+}
+.add-effect:hover::after, .add-effect:hover .extension{
+    background: rgb(0, 0, 0, .4);
+    transform-origin: bottom;
+    transform: translateY(0%);
+    visibility: visible;
+    transition: 1s ease;
+}
+.extension{
+    position: absolute;
+    background: transparent;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: 1s ease-in;
+}
+.extension h3{
+    color: var(--nav-list-color);
+    padding: 3rem;
+    text-align: center;
+}
+.extension-link{
+    padding: 1rem 3rem;
+    background: green;
+    border: 1px solid var(--nav-list-color);
+    color: var(--nav-list-color);
+    animation: bounce 1s linear 1s infinite alternate;
+}
+
+@keyframes bounce {
+    to{
+        transform: translateY(-1rem);
+    }
+}
+
 /*style the joam organogram section*/
 .joam-organogram{
     display: grid;

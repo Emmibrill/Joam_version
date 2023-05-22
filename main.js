@@ -290,3 +290,70 @@ showcases.forEach(display => {
     `
     farmDisplay.innerHTML = theDisplay
 })
+
+let estates = [
+    {
+        name: "gated-house-exterior (1)",
+        writeUp: "A gated house's façade is displayed in stunning detail",
+        description: "gated-house-exterior",
+        link: "realestate.html"
+    },
+    {
+        name: "large-house-with-balcony",
+        writeUp: "The beautiful mansion with the balcony is on exhibit, and I know you enjoy it",
+        description: "large-house-with-balcony",
+        link: "realestate.html"
+    },
+    {
+        name: "modern-housing-with-blue-sky",
+        writeUp: "Modern homes with a blue sky, how beautiful is nature?",
+        description: "modern-housing-with-blue-sky" ,
+        link: "realestate.html"  
+    },
+    {
+        name: "one-storey-home-exterior (1)",
+        writeUp: "Here is the exterior of a one-story house.",
+        description: "one-storey-home-exterior",
+        link: "realestate.html"    
+    }
+]
+
+const estatePixContainer = document.querySelector('.estate-pix-container');
+console.log(estatePixContainer)
+let theEstate = '';
+
+estates.forEach(estate => {
+    theEstate +=
+    `
+    <div class="estate-pix-box">
+                    <img src="${estate.name}.jpg" alt="${estate.description}">
+                    <div class="extension">
+                        <h3 class="estate-pix-description">${estate.writeUp}</h3>
+                        <a class="extension-link" href="${estate.link}">Reach out</a>
+                    </div>
+                    
+                </div>
+    `;
+    estatePixContainer.innerHTML = theEstate;
+})
+
+const eachEstate = estatePixContainer.children;
+console.log(eachEstate);
+const Estate = Array.from(eachEstate)
+console.log(Estate)
+Estate.forEach(estate => {
+    estate.addEventListener('click', (e) => {
+        const Target = e.currentTarget;
+        console.log(Target)
+        Estate.forEach(estate => {
+            estate.classList.remove('add-effect');
+        })
+        Target.classList.add('add-effect')
+        
+    })
+    
+   
+})
+
+
+
