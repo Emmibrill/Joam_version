@@ -159,11 +159,8 @@ serviceNextButton.addEventListener('click', () => {
     
     widthToTranslate(serviceTrack, currrentSlide, nextSlide);
     serviceNavControl(slideIndex)
-    //console.log(slideIndex)
-    
+    //console.log(slideIndex) 
 })
-
-
 
 window.addEventListener('resize', () => {
     
@@ -175,8 +172,6 @@ window.addEventListener('resize', () => {
 
 
 })
-
-
 
 //controls the caurosel that display the farm picures
 const track = document.querySelector('.trackWay');
