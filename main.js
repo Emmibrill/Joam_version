@@ -340,19 +340,19 @@ estates.forEach(estate => {
 const eachEstate = estatePixContainer.children;
 console.log(eachEstate);
 const Estate = Array.from(eachEstate)
+Estate[0].classList.add('add-effect-active')
 console.log(Estate)
 Estate.forEach(estate => {
     estate.addEventListener('click', (e) => {
         const Target = e.currentTarget;
         console.log(Target)
         Estate.forEach(estate => {
-            estate.classList.remove('add-effect');
+            estate.classList.remove('add-effect', 'add-effect-active');
         })
         Target.classList.add('add-effect')
         
     })
     
-   
 })
 
 

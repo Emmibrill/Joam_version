@@ -612,6 +612,13 @@ article p:not(.lastChild){
     visibility: visible;
     transition: 1s ease;
 }
+.add-effect-active::after, .add-effect-active .extension{
+    background: rgb(0, 0, 0, .4);
+    transform-origin: bottom;
+    transform: translateY(0%);
+    visibility: visible;
+    transition: 1s ease;
+}
 .extension{
     position: absolute;
     background: transparent;
