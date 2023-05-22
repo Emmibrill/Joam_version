@@ -353,7 +353,6 @@ Estate.forEach(estate => {
         
     })
     
-   
 })
 
 
