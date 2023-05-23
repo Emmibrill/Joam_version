@@ -342,9 +342,9 @@ Estate.forEach(estate => {
         const Target = e.currentTarget;
         console.log(Target)
         Estate.forEach(estate => {
-            estate.classList.remove('add-effect', 'add-effect-active');
+            estate.classList.remove('add-effect-active');
         })
-        Target.classList.add('add-effect')
+        Target.classList.add('add-effect-active')
         
     })
     
