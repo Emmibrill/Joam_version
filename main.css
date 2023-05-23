@@ -483,14 +483,11 @@ article p:not(.lastChild){
     color: var(--nav-list-color);
     border: 1px solid rgb(0, 128, 0, .8);
     box-shadow: 0 .3rem .8rem rgba(179, 181, 185, 0.4);
-    animation: bounce 6s linear infinite;
+    animation: bounce 1s linear infinite alternate;
 }
 @keyframes bounce {
-    0%, 30%, 60%, 100%{
-        transform: translateY(0rem);
-    }
-    15%, 45%, 85%{
-        transform: translateY(.8rem);
+    to{
+        transform: translateY(-1rem);
     }
     
 }
@@ -504,6 +501,8 @@ article p:not(.lastChild){
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
     gap: 1rem;
     margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 .farm-display-container{
     position: relative;
@@ -580,7 +579,7 @@ article p:not(.lastChild){
 /*real estate section*/
 .estate-pix-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     gap: 1rem;
     cursor: pointer;
 }
@@ -604,7 +603,7 @@ article p:not(.lastChild){
     visibility: hidden;
     transition: 2s ease;
 }
-.add-effect:hover::after, .add-effect:hover .extension{
+.estate-pix-box:hover::after, .estate-pix-box:hover .extension{
     background: rgb(0, 0, 0, .4);
     transform-origin: bottom;
     transform: translateY(0%);
@@ -883,10 +882,10 @@ article p:not(.lastChild){
 }
 .farm-discover-btn{
     position: absolute;
-    bottom: 38%;
-    padding: 1rem 6rem;
-    border-radius: .4rem;
+    bottom: 15%;
+    padding: 2.5rem 6rem;
     background: var(--nav-list-color);
+    
 }
 .farm-discover-btn a{
     color: green;
@@ -913,10 +912,38 @@ article p:not(.lastChild){
     font-style: italic;
 }
 
+/*style the different farm section*/
+
+.farm-nav-tab{
+    padding: 1rem;
+}
+.list-container{
+    padding: .5rem;
+    background: rgb(228, 222, 222, .3);
+    border-radius: .5rem;
+}
+.list-container li{
+    margin-inline-start: .5rem;
+    margin-block: 1rem;
+    border-bottom: 2px solid var(--nav-list-color);
+}
+.list-title h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
 
 @media (max-width:1049px) {
     .joam-welcome-section h1{
         font-size: 3.8rem;
+    }
+    /*real estate section*/
+    .estate-pix-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+        gap: 1rem;
+        cursor: pointer;
     }
 }
 @media (max-width:820px) {
