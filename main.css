@@ -919,14 +919,37 @@ article p:not(.lastChild){
 }
 .list-container{
     padding: .5rem;
-    background: rgb(228, 222, 222, .3);
+    background: rgb(228, 222, 222, .2);
     border-radius: .5rem;
+    cursor: pointer;
 }
 .list-container li{
     margin-inline-start: .5rem;
     margin-block: 1rem;
     border-bottom: 2px solid var(--nav-list-color);
+    transition: all .5s linear;
 }
+.list-container li h3{
+    transition: all .5s linear;
+}
+.list-container li:not(.list-title):hover, .list-container li :hover:not(.list-title h3) h3{
+    transform: translateX(1rem);
+    color: red;
+    background: var(--nav-list-color);
+    padding: .3rem;
+}
+li.active:not(.list-title), li.active:not(.list-title) h3{
+    transform: translateX(1rem);
+    color: red;
+    background: var(--nav-list-color);
+    padding: .3rem;
+}
+.farm-section-title{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: green;
+}
+
 .list-title h3{
     text-transform: uppercase;
     letter-spacing: 1px;
