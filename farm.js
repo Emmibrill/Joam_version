@@ -80,3 +80,19 @@ const activeFarmNav = () => {
     })
 }
 activeFarmNav()
+
+const farmNav = document.querySelectorAll('[data-target]');
+const farmContent = document.querySelectorAll('[data-content]');
+const showFarmSection = () => {
+    Array.from(farmNav).forEach(nav => {
+        nav.addEventListener('click', () => {
+            const farmContent = document.querySelector(nav.dataset.target);
+            console.log(farmContent);
+            Array.from(farmNav).forEach(nav => {
+                nav.classList.remove('active')
+            })
+            farmContent.classList.add('active')
+        })
+    })
+}
+showFarmSection()

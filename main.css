@@ -445,11 +445,11 @@ img{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
-article p{
+article .why-choose-par{
     position: relative;
     color: black;
     padding: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: .5px;
     line-height: 2.5rem;
     display: flex;
@@ -460,7 +460,7 @@ article p{
     border-radius: 1rem;
     border: 1px solid rgb(0, 128, 0, .8);
 }
-article p:not(.lastChild){
+article .why-choose-par:not(.lastChild){
     margin-bottom: 6rem;
 }
 
@@ -495,6 +495,15 @@ article p:not(.lastChild){
 /*style the different display and showcase section*/
 
 /*farm section*/
+.what-we-are-offering{
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    padding: 0 1rem;
+    font-family: 'Shadows Into Light', cursive;
+    color: green;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
 .farm-display{
     display: grid;
     place-items: center;
@@ -912,10 +921,10 @@ article p:not(.lastChild){
     font-style: italic;
 }
 
-/*style the different farm section*/
+/*style the farm section*/
 
 .farm-nav-tab{
-    padding: 1rem;
+    padding: 2rem 4rem;
 }
 .list-container{
     padding: .5rem;
@@ -930,6 +939,7 @@ article p:not(.lastChild){
     transition: all .5s linear;
 }
 .list-container li h3{
+    font-size: 1rem;
     transition: all .5s linear;
 }
 .list-container li:not(.list-title):hover, .list-container li :hover:not(.list-title h3) h3{
@@ -945,7 +955,6 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     padding: .3rem;
 }
 .farm-section-title{
-    font-size: 1rem;
     text-transform: capitalize;
     color: green;
 }
@@ -954,6 +963,72 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     text-transform: uppercase;
     letter-spacing: 1px;
     
+}
+/*style the respective farm in the farm section*/
+.target-farm-section{
+    margin: 2rem 0;
+    display: none;
+}
+.target-farm-section.active{
+    display: block;
+    
+}
+.vegetable-header{
+    position: relative;
+    background-image: url(water-droplets-on-green.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.farm-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0, .8);
+    isolation: isolate;
+    mix-blend-mode: multiply;
+}
+.overlay-text{
+    position: relative;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: 'Shadows Into Light', cursive;
+}
+.section-one{
+    margin: 1rem 0;
+}
+.intro-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+.intro-section-image{
+    background-image: url(vinyl-record-spinning.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    width: 25rem;
+    margin-bottom: 1rem;
+}
+article .vegetable-paragraph{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+    line-height: 2rem;
 }
 
 
@@ -1084,9 +1159,11 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
         padding-top: .5rem;
         margin-block: .5rem;
     }
-    article p{
-        text-align: center;
+    article .why-choose-par{
         line-height: 1.8rem;
+    }
+    .what-we-are-offering{
+        font-size: 1.2rem;
     }
     .serviceButton, .serviceButton{
         width: 4rem;
@@ -1103,6 +1180,23 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     .sliderButton{
         width: 4rem;
         height: 4rem;
+    }
+
+
+    /*style the respective farm in the farm section*/
+
+    .list-container li h3{
+        font-size: .8rem;
+    }
+
+    .vegetable-header{
+        height: 15rem;
+    }
+    .overlay-text{
+        font-size: 1.5rem;
+    }
+    .list-title h3{
+        font-size: 1rem;
     }
 }
 
@@ -1146,6 +1240,17 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
         color: var(--nav-list-color);
         font-size: .8rem;
     }
+
+
+    /*style the farm section*/
+
+    .farm-nav-tab{
+        padding: 2rem;
+    }
+    .list-container li{
+        margin-block: .5rem;
+    }
+
 }
 @media (max-width:546px) {
     .nav__bar{
@@ -1165,12 +1270,29 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
         width: 1.7rem;
         height: .2rem;
     }
-    article p{
+    article .why-choose-par{
         font-size: .9rem;
     }
     .services-pictures-container{
         height: 30rem;
     }
+
+    /*style the respective farm in the farm section*/
+
+    .overlay-text{
+        font-size: 1.2rem;
+    }
+    .intro-section-image{
+        height: 15rem;
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+    article .vegetable-paragraph{
+        font-size: .8rem;
+        line-height: 2rem;
+    }
+    
+
 }
 @media (max-width:516px) {
     .welcomeMessage h1{
@@ -1247,8 +1369,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     .fa-sharp{
         color: rgb(0, 128, 0, .4);
     }
-    article p{
-        text-align: center;
+    article .why-choose-par{
         line-height: 1.5rem;
     }
 
@@ -1294,7 +1415,6 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 
      /*syle the button on the welcome page section of the jaom farm*/
     .farm-discover-btn{
-        bottom: 38%;
         padding: 1rem 3.5rem;
         z-index: 1;
         animation: scaleBloom 6s linear infinite;
@@ -1312,6 +1432,13 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
         font-size: .9rem;
         padding: 1rem;
     }
+
+/*style the respective farm in the farm section*/
+
+.overlay-text{
+    font-size: 1rem;
+}
+
 }
 @media (max-width:416px) {
     .site_description{
@@ -1364,7 +1491,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     .services-pictures-container{
         height: 23rem;
     }
-    article p{
+    article .why-choose-par{
         font-size: .75rem;
     }
     .joam-tree span{
@@ -1373,5 +1500,10 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     .sliderButton{
         width: 3rem;
         height: 3rem;
+    }
+
+    /*style the farm sections*/
+    .farm-nav-tab{
+        padding: 1rem;
     }
 }

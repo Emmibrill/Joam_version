@@ -86,6 +86,7 @@ const readMore = document.querySelector('.read-more')
 readMore.addEventListener('click', () => {
     showMore()
 })
+
 //display all the content on the 'why choose joam real estate log'
 const showMore = () => {
     let par = document.querySelector('.extended-paragraph');
@@ -143,10 +144,10 @@ const serviceNavControl = (slideIndex) => {
 servicePreviousButton.addEventListener('click', () => {
     const currrentSlide = serviceTrack.querySelector('.activeSlider');
     const previousSlide = currrentSlide.previousElementSibling;
-    const slideIndex = serviceSlides.findIndex(slide => slide === previousSlide)
+    const slideIndex = serviceSlides.findIndex(slide => slide === previousSlide);
 
     widthToTranslate(serviceTrack, currrentSlide, previousSlide);
-    serviceNavControl(slideIndex)
+    serviceNavControl(slideIndex);
     //console.log(slideIndex)
     
 })
@@ -223,7 +224,6 @@ sliderNextButton.addEventListener('click', () => {
     widthToMove(track, currrentSlide, nextSlide);
     navControl(slideIndex)
     //console.log(slideIndex)
-    
 })
 
 //display the next slide on the farm picture carousel when the left button is being clicked
@@ -333,14 +333,11 @@ estates.forEach(estate => {
 })
 
 const eachEstate = estatePixContainer.children;
-console.log(eachEstate);
 const Estate = Array.from(eachEstate)
 Estate[0].classList.add('add-effect-active')
-console.log(Estate)
 Estate.forEach(estate => {
     estate.addEventListener('click', (e) => {
         const Target = e.currentTarget;
-        console.log(Target)
         Estate.forEach(estate => {
             estate.classList.remove('add-effect-active');
         })
