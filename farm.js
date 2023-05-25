@@ -99,7 +99,7 @@ showFarmSection()
 //display the various products in the farm section
 
 const productBody = document.querySelector('.products-body');
-let theProduct = ''
+let theProduct = '';
 let products = [
     {
         product: "FRESH-RAINFALL-ON-LEAF",
