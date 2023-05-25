@@ -834,26 +834,7 @@ article .why-choose-par:not(.lastChild){
 .sliderButton--right svg{
     transform: rotate(270deg);
 }
-.footer-section{
-    background: black;
-    padding: .5rem;
-    margin-top: 1rem;
-}
-.container{
-    padding: 0;
-}
-.row{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-    color: var(--nav-icon);
-    padding: 1rem;
-}
-.col-md-3{
-    width: fit-content;
-}
-.list-unstyled{
-    padding: 0;
-}
+
 
 
 
@@ -1027,8 +1008,10 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 }
 article .vegetable-paragraph{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
     line-height: 2rem;
+    border: none;
+    box-shadow: none;
+    text-align: left;
 }
 
 
@@ -1224,22 +1207,8 @@ article .vegetable-paragraph{
     .article-container{
         grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     }
-    .row>:first-child{
-        grid-column-start: 3;
-        grid-column-end: 5;
-    }
-    .row>:nth-child(2){
-        grid-column-start: 6;
-        grid-column-end: 9;
-    }
-    .row>:nth-child(3){
-        grid-column-start: 4;
-        grid-column-end: 9;
-    }
-    .col-md-3  a{
-        color: var(--nav-list-color);
-        font-size: .8rem;
-    }
+    
+
 
 
     /*style the farm section*/
@@ -1287,10 +1256,7 @@ article .vegetable-paragraph{
         width: 20rem;
         margin-bottom: 1rem;
     }
-    article .vegetable-paragraph{
-        font-size: .8rem;
-        line-height: 2rem;
-    }
+    
     
 
 }
@@ -1320,12 +1286,8 @@ article .vegetable-paragraph{
         width: 100%;
         font-size: .6rem;
     }
-    .row>:nth-child(2){
-        grid-column: span 3;
-    }
-    .row>:nth-child(3){
-        grid-column: span 2;
-    }
+    
+
 
     /*style for the joam farm section*/
 
@@ -1377,10 +1339,8 @@ article .vegetable-paragraph{
     .extended-paragraph{
         display: none;
         transform: scaleY(0);
-        transform-origin: top;
-        transition: .5s;
     }
-    .extended-paragraph.showExtended-paragraph{
+   .showExtended-paragraph{
         display: flex;
         transform: scaleY(1);
     }
@@ -1408,12 +1368,9 @@ article .vegetable-paragraph{
         inset: 0;
         margin: auto;
     }
-    .row>:nth-child(3){
-        grid-column-start: 4;
-        grid-column-end: 9;
-    }
+    
 
-     /*syle the button on the welcome page section of the jaom farm*/
+    /*syle the button on the welcome page section of the jaom farm*/
     .farm-discover-btn{
         padding: 1rem 3.5rem;
         z-index: 1;
@@ -1433,11 +1390,11 @@ article .vegetable-paragraph{
         padding: 1rem;
     }
 
-/*style the respective farm in the farm section*/
+    /*style the respective farm in the farm section*/
 
-.overlay-text{
-    font-size: 1rem;
-}
+    .overlay-text{
+        font-size: 1rem;
+    }
 
 }
 @media (max-width:416px) {
