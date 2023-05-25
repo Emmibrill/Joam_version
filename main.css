@@ -12,6 +12,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     scroll-behavior: smooth;
     text-decoration: none;
+    -webkit-tap-highlight-color: rgb(255, 255, 255, 0);
 }
 
 *:root{
@@ -948,7 +949,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
-    /*display: none;*/
+    display: none;
 }
 .target-farm-section.active{
     display: block;
@@ -985,9 +986,10 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     padding: 1rem;
     text-transform: uppercase;
     font-family: 'Shadows Into Light', cursive;
+    letter-spacing: .2rem;
 }
 .section-one{
-    margin: 1rem 0;
+    margin: 1rem 0 5rem 0;
 }
 .intro-section{
     display: flex;
@@ -1040,8 +1042,118 @@ article .vegetable-paragraph{
 .fa-square-check{
     color: green;
 }
+.products{
+    background: rgb(228, 222, 222, .2);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.products-heading{
+    padding: 2rem 0 5rem 0;
+    text-transform: capitalize;
+    text-align: center;
+}
+.products-body{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 2rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    cursor: pointer;
+}
+.product-container{
+    position: relative;
+    box-shadow: 0 .3rem .8rem rgba(179, 181, 185, 0.5);
+}
+.product-image{
+    position: relative;
+}
+.farm-logo-container{
+    position: absolute;
+    right: 1rem;
+    bottom: -1.3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--nav-list-color);
+}
+.farm-product-logo{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-image: url(JOAM-FARM-LOGO.jpg);
+    background-position: center;
+    background-size: contain;
+    animation: spin 7s linear 1s infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotateY(-180deg);
+    }
+}
 
+.product-description{
+    padding: 2rem;
+}
+.product-description-content{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.product-container-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(92, 86, 86, 0.8);
+    border: 1px solid none;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: center;
+    transition: all .4s ease-out;
+}
+.overlay-button{
+    padding: .6rem 3rem;
+    background: var(--nav-list-color);
+    color: green;
+    font-weight: bold;
+    box-shadow: 0 .3rem .8rem rgba(12, 63, 5, 0.5);
+}
+.product-container:hover .product-container-overlay{
+    transform: scale(1);
+    opacity: 1;
+}
+.product-active{
+    transform: scale(1);
+    opacity: 1;
+}
+.farm-shopNow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.farm-shopNow-button{
+    padding: 1.5rem 5rem;
+    background: green;
+    border: 1px solid rgb(28, 173, 28);
+    color: var(--nav-list-color);
+    font-weight: bold;
+}
 
+@media (max-width:1203px) {
+    .products-body{
+        grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+    }
+}
+@media (max-width:1058px) {
+    .products-body{
+        grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    }
+}
 @media (max-width:1049px) {
     .joam-welcome-section h1{
         font-size: 3.8rem;
@@ -1052,6 +1164,13 @@ article .vegetable-paragraph{
         grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
         gap: 1rem;
         cursor: pointer;
+    }
+}
+@media (max-width:901px) {
+    .products-body{
+        grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 @media (max-width:820px) {
@@ -1214,6 +1333,11 @@ article .vegetable-paragraph{
     .benefits-container li{
         font-size: 1rem;
     }
+
+    /*style farm products section*/
+    /*.products-body{
+        grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    }*/
     
 }
 
@@ -1243,8 +1367,6 @@ article .vegetable-paragraph{
     }
     
 
-
-
     /*style the farm section*/
 
     .farm-nav-tab{
@@ -1255,6 +1377,7 @@ article .vegetable-paragraph{
     }
 
 }
+
 @media (max-width:546px) {
     .nav__bar{
         height: 3.5rem;
@@ -1290,8 +1413,15 @@ article .vegetable-paragraph{
         width: 20rem;
         margin-bottom: 1rem;
     }
-    
-    
+    article .vegetable-paragraph{
+        padding: 1rem 0;
+    }
+    .products-heading{
+        font-size: 1.3rem;
+    }
+    .products-body{
+        gap: 3rem;
+    }
 
 }
 @media (max-width:516px) {
@@ -1434,6 +1564,18 @@ article .vegetable-paragraph{
     }
     .fa-square-check{
         color: green;
+    }
+    .products{
+        margin-top: -3rem;
+    }
+    .products-heading{
+        font-size: 1.2rem;
+    }
+    /*style the farm products container*/
+    @media (max-width:1203px) {
+        .products-body{
+            padding: 1rem;
+        }
     }
 }
 @media (max-width:416px) {

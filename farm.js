@@ -66,7 +66,6 @@ window.addEventListener('scroll', () => {
 //add active state to the farm section navigation
 const listContainer = document.querySelector('.list-container')
 const farmList = Array.from(listContainer.children);
-console.log(farmList)
 const activeFarmNav = () => {
     farmList.forEach(list => {
         list.addEventListener('click', () => {
@@ -96,3 +95,78 @@ const showFarmSection = () => {
     })
 }
 showFarmSection()
+
+//display the various products in the farm section
+
+const productBody = document.querySelector('.products-body');
+let theProduct = '';
+let products = [
+    {
+        product: "FRESH-RAINFALL-ON-LEAF",
+        productTitle: "green vegetable",
+        description: "gated-house-exterior",
+        link: "#"
+    },
+    {
+        product: "FRESH-RAINFALL-ON-LEAF",
+        productTitle: "good vegetable pods",
+        description: "large-house-with-balcony",
+        link: "#"
+    },
+    {
+        product: "FRESH-RAINFALL-ON-LEAF",
+        productTitle: "green vegetable",
+        description: "modern-housing-with-blue-sky" ,
+        link: "#"  
+    },
+    {
+        product: "FRESH-RAINFALL-ON-LEAF",
+        productTitle: "good vegetable pods",
+        description: "one-storey-home-exterior",
+        link: "#"    
+    },
+    {
+        product: "FRESH-RAINFALL-ON-LEAF",
+        productTitle: "green vegetable",
+        description: "one-storey-home-exterior",
+        link: "#"    
+    }
+]
+products.forEach(eachProduct => {
+    theProduct += `
+    <div class="product-container">
+        <div class="product-image">
+            <img src="${eachProduct.product}.jpg" alt="FRESH-RAINFALL-ON-LEAF">
+            <div class="farm-logo-container">
+                <div class="farm-product-logo"></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h4 class="product-description-content">${eachProduct.productTitle}</h4>
+        </div>
+        <div class="product-container-overlay">
+            <a class="overlay-button" href="${eachProduct.link}">shop now</a>
+        </div>
+    </div>
+    `
+    productBody.innerHTML = theProduct;
+    
+})
+
+
+//highlights the selected product showing other features
+
+const highlighProductClicked = () => {
+    const vegetableProduct = Array.from(productBody.children);
+    vegetableProduct.forEach(product => {
+        product.addEventListener('click', (e) => {
+            const target = e.currentTarget
+            const overlay = target.querySelector('.product-container-overlay');
+            vegetableProduct.forEach(product => {
+                product.querySelector('.product-container-overlay').classList.remove('product-active');
+            })
+            overlay.classList.add('product-active');
+        })
+    })
+}
+highlighProductClicked();
