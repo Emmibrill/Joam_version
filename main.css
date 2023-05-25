@@ -948,7 +948,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
-    display: none;
+    /*display: none;*/
 }
 .target-farm-section.active{
     display: block;
@@ -995,7 +995,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 .intro-section-image{
     background-image: url(vinyl-record-spinning.jpg);
@@ -1012,6 +1012,33 @@ article .vegetable-paragraph{
     border: none;
     box-shadow: none;
     text-align: left;
+}
+.more-benefits{
+    position: relative;
+    left: 0;
+    top: -5rem;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 2rem;
+    background: rgb(228, 222, 222, .2);
+}
+.more-benefits-heading{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 0 0 2rem 0;
+    font-size: 1.5rem;
+}
+.benefits-container{
+    padding: 0; 
+}
+.benefits-container li{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-block: 2rem;
+}
+.fa-square-check{
+    color: green;
 }
 
 
@@ -1181,6 +1208,13 @@ article .vegetable-paragraph{
     .list-title h3{
         font-size: 1rem;
     }
+    .more-benefits-heading{
+        font-size: 1.3rem;
+    }
+    .benefits-container li{
+        font-size: 1rem;
+    }
+    
 }
 
 @media (max-width:690px) {
@@ -1394,6 +1428,12 @@ article .vegetable-paragraph{
 
     .overlay-text{
         font-size: 1rem;
+    }
+    .more-benefits-heading{
+        padding-bottom: 0;
+    }
+    .fa-square-check{
+        color: green;
     }
 
 }
