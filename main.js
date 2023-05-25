@@ -342,6 +342,5 @@ Estate.forEach(estate => {
             estate.classList.remove('add-effect-active');
         })
         Target.classList.add('add-effect-active')
-        
     })
 })
