@@ -96,6 +96,7 @@ const showFarmSection = () => {
 }
 showFarmSection()
 
+
 //display the various products in the farm section
 
 const productBody = document.querySelector('.products-body');
