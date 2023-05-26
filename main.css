@@ -1179,7 +1179,6 @@ article .vegetable-paragraph{
     display: none;
     transform: scaleY(0);
     transform-origin: top;
-    transition: all 1s ease-out;
 }
 
 @media (max-width:1203px) {
