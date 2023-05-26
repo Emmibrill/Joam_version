@@ -837,8 +837,6 @@ article .why-choose-par:not(.lastChild){
 }
 
 
-
-
 /*joam farm section*/
 
 /*style the joam welcome message*/
@@ -940,16 +938,15 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     text-transform: capitalize;
     color: green;
 }
-
 .list-title h3{
     text-transform: uppercase;
     letter-spacing: 1px;
-    
 }
+
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
-    /*display: none;*/
+    display: none;
 }
 .target-farm-section.active{
     display: block;
