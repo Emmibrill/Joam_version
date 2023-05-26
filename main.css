@@ -949,7 +949,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
-    display: none;
+    /*display: none;*/
 }
 .target-farm-section.active{
     display: block;
@@ -1101,7 +1101,6 @@ article .vegetable-paragraph{
 }
 .product-description-content{
     text-transform: capitalize;
-    letter-spacing: 2px;
 }
 .product-container-overlay{
     position: absolute;
@@ -1136,21 +1135,60 @@ article .vegetable-paragraph{
     align-items: center;
     justify-content: center;
 }
-.farm-shopNow-button{
-    padding: 1.5rem 5rem;
+.farm-button{
+    margin: 2rem;
+    padding: 1rem 2rem;
     background: green;
-    border: 1px solid rgb(28, 173, 28);
+    border: 1px solid green;
     color: var(--nav-list-color);
-    font-weight: bold;
+    width: 30%;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/*style the farm gallery section*/
+
+.farm-gallery-section{
+    margin: 5rem 0 2rem 0;
+    border-top: 1px solid rgb(228, 222, 222);
+    text-align: center;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+.gallery-heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    padding: 1rem;
+}
+.gallery-heading{
+    text-transform: capitalize;
+    color: green;
+}
+.gallery-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.more-gallery{
+    display: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 1s ease-out;
 }
 
 @media (max-width:1203px) {
-    .products-body{
+    .products-body, .gallery{
         grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
     }
 }
 @media (max-width:1058px) {
-    .products-body{
+    .products-body, .gallery{
         grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
     }
 }
@@ -1167,7 +1205,7 @@ article .vegetable-paragraph{
     }
 }
 @media (max-width:901px) {
-    .products-body{
+    .products-body, .gallery{
         grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
         padding-left: 3rem;
         padding-right: 3rem;
@@ -1416,7 +1454,7 @@ article .vegetable-paragraph{
     article .vegetable-paragraph{
         padding: 1rem 0;
     }
-    .products-heading{
+    .products-heading, .gallery-heading{
         font-size: 1.3rem;
     }
     .products-body{
@@ -1452,13 +1490,16 @@ article .vegetable-paragraph{
     }
     
 
-
     /*style for the joam farm section*/
 
     /*style the joam farm welcome heading*/
     .joam-welcome-section h1{
         font-size: 2.5rem;
     }
+    .farm-button{
+        width: 45%;
+    }
+    
 }
 
 @media (max-width:425px) {
@@ -1568,14 +1609,15 @@ article .vegetable-paragraph{
     .products{
         margin-top: -3rem;
     }
-    .products-heading{
+    .products-heading, .gallery-heading{
         font-size: 1.2rem;
     }
     /*style the farm products container*/
-    @media (max-width:1203px) {
-        .products-body{
-            padding: 1rem;
-        }
+    .products-body{
+        padding: 1rem;
+    }
+    .gallery{
+        padding: 1rem;
     }
 }
 @media (max-width:416px) {

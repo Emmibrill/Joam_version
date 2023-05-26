@@ -171,3 +171,65 @@ const highlighProductClicked = () => {
     })
 }
 highlighProductClicked();
+
+const gallery = document.querySelector('.gallery');
+let galleryImage = '';
+let galleryImages = [
+    {
+        galleryImg: "VEGETABLE-1",
+        description: "image of ugu leaf(fluted pumpkin)",
+    },
+    {
+        galleryImg: "VEGETABLE-2",
+        description: "image of ugu leaf(fluted pumpkin)",    
+    },
+    {
+        galleryImg: "VEGETABLE-4",
+        description: "image of ugu leaf(fluted pumpkin)",
+    },
+    {
+        galleryImg: "VEGETABLE-1",
+        description: "image of ugu leaf(fluted pumpkin)" ,  
+    },
+    {
+        galleryImg: "VEGETABLE-2",
+        description: "image of ugu leaf(fluted pumpkin)",    
+    },
+    {
+        galleryImg: "VEGETABLE-4",
+        description: "image of ugu leaf(fluted pumpkin)",    
+    }
+]
+galleryImages.forEach(image => {
+    galleryImage += `
+        <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
+    `
+    gallery.innerHTML = galleryImage;
+})
+
+const moreGallery = document.querySelector('.more-gallery');
+galleryImages.forEach(image => {
+    galleryImage += `
+        <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
+    `
+    moreGallery.innerHTML = galleryImage;
+})
+
+
+const showMore = document.querySelector('.load-more')
+const moreImage = document.querySelector('.more-gallery');
+showMore.addEventListener('click', () => {
+    const status = moreImage.getAttribute('aria-controls');
+    if(status === 'hidden'){
+        moreImage.setAttribute('aria-controls', 'visible');
+        moreImage.style.display = 'grid';
+        moreImage.style.transform = 'scaleY(1)';    
+        showMore.innerText = 'Show Less'
+    }else{
+        moreImage.setAttribute('aria-controls', 'hidden');
+        moreImage.style.display = 'none';
+        moreImage.style.transform = 'scaleY(0)';
+        showMore.innerText = 'Show More '
+    }
+    
+})
