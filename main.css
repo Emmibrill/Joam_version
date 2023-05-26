@@ -940,7 +940,6 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     text-transform: capitalize;
     color: green;
 }
-
 .list-title h3{
     text-transform: uppercase;
     letter-spacing: 1px;
