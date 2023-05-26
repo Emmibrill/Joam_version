@@ -944,8 +944,8 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 .list-title h3{
     text-transform: uppercase;
     letter-spacing: 1px;
-    
 }
+
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
