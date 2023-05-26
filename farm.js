@@ -200,6 +200,7 @@ let galleryImages = [
         description: "image of ugu leaf(fluted pumpkin)",    
     }
 ]
+
 galleryImages.forEach(image => {
     galleryImage += `
         <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
