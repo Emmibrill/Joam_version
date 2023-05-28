@@ -946,7 +946,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
-    /*display: none;*/
+    display: none;
 }
 .target-farm-section.active{
     display: block;
