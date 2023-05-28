@@ -105,32 +105,12 @@ let products = [
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "green vegetable",
-        description: "gated-house-exterior",
         link: "#"
     },
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "good vegetable pods",
-        description: "large-house-with-balcony",
         link: "#"
-    },
-    {
-        product: "FRESH-RAINFALL-ON-LEAF",
-        productTitle: "green vegetable",
-        description: "modern-housing-with-blue-sky" ,
-        link: "#"  
-    },
-    {
-        product: "FRESH-RAINFALL-ON-LEAF",
-        productTitle: "good vegetable pods",
-        description: "one-storey-home-exterior",
-        link: "#"    
-    },
-    {
-        product: "FRESH-RAINFALL-ON-LEAF",
-        productTitle: "green vegetable",
-        description: "one-storey-home-exterior",
-        link: "#"    
     }
 ]
 products.forEach(eachProduct => {
@@ -189,15 +169,7 @@ let galleryImages = [
     },
     {
         galleryImg: "VEGETABLE-1",
-        description: "image of ugu leaf(fluted pumpkin)" ,  
-    },
-    {
-        galleryImg: "VEGETABLE-2",
-        description: "image of ugu leaf(fluted pumpkin)",    
-    },
-    {
-        galleryImg: "VEGETABLE-4",
-        description: "image of ugu leaf(fluted pumpkin)",    
+        description: "image of ugu leaf(fluted pumpkin)"  
     }
 ]
 
