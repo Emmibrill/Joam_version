@@ -10,7 +10,6 @@
     text-decoration: none;
     list-style: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    scroll-behavior: smooth;
     text-decoration: none;
     -webkit-tap-highlight-color: rgb(255, 255, 255, 0);
 }
@@ -946,13 +945,14 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 /*style the respective farm in the farm section*/
 .target-farm-section{
     margin: 2rem 0;
+}
+.target-farm-section[data-content]{
     display: none;
 }
-.target-farm-section.active{
-    display: block;
-    
+.target-farm-section.farmActive{
+    display: block;  
 }
-.vegetable-header{
+.farm-header{
     position: relative;
     background-image: url(water-droplets-on-green.jpg);
     background-position: center;
@@ -1186,7 +1186,7 @@ article .vegetable-paragraph{
     align-items: center;
     justify-content: center;
     margin-block-start: 4rem;
-    background-image: linear-gradient(to right, rgba(25, 3, 51, 0.6), rgb(64, 83, 19,.9), rgb(30, 146, 30,.9)),url(water-droplets-on-green.jpg);
+    background-image: linear-gradient(to top, rgba(25, 3, 51, 0.6), rgb(64, 83, 19,.9), rgb(30, 146, 30,.9)),url(water-droplets-on-green.jpg);
     padding: 2rem;
 }
 .offer-heading{
@@ -1211,18 +1211,22 @@ article .vegetable-paragraph{
     justify-content: center;
     padding: 1rem;
 }
-.offer-icon{
+.offer-icon{    
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 10rem;
     height: 10rem;
+    text-align: center;
     border-radius: 50%;
-    background: white;
+    background: var(--nav-list-color);
     margin-bottom: 2rem;
 }
 .offer-icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 4rem;
     -webkit-text-stroke: 2px green;
     color: transparent;
@@ -1334,9 +1338,6 @@ article .vegetable-paragraph{
         justify-content: center;
         transform: translateY(-120%);
         transition: .5s;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
         transform-origin: top;
         transform: scaleY(0);
     } 
@@ -1532,26 +1533,40 @@ article .vegetable-paragraph{
 
 .offers-container{
    
-    background-image: linear-gradient(to right, rgba(25, 3, 51, 0.6), rgb(64, 83, 19,.9), rgb(30, 146, 30,.9)),url(water-droplets-on-green.jpg);
+    background-image: linear-gradient(to top, rgba(25, 3, 51, 0.6), rgb(64, 83, 19,.9), rgb(30, 146, 30,.9)),url(water-droplets-on-green.jpg);
     padding: 2rem;
 }
     .offers{
         display: flex;
         flex-direction: column;
+        gap: .5rem;
     }
     .offer{
         border: 1px solid green;
+        border-top: none;
         border-radius: .4rem;
+        padding: 0;
+        padding-top: .5rem;
     }
     .offer-icon{
+        width: 4rem;
+        height: 4rem;
         margin-bottom: 0rem;
+        display: flex;
+        position: relative;
     }
     .offer-icon i{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+
     }
     .offer-writeup{
         height: auto;
-        padding: 1rem;
+        padding: .5rem;
+        font-size: .85rem;
+        font-weight: 100;
+    }
+    .offer.active{
+        border: 1px solid var(--nav-list-color);
     }
     
 
