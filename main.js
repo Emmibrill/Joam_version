@@ -171,7 +171,6 @@ window.addEventListener('resize', () => {
     serviceTrack.style.width = curSlideImgWidth
     console.log(serviceTrack.style.width)*/
 
-
 })
 
 //controls the caurosel that display the farm picures
