@@ -862,7 +862,7 @@ article .why-choose-par:not(.lastChild){
     padding: 1rem;
     text-align: center;
     font-size: 5rem;
-    top: 20%;
+    top: 10%;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--nav-list-color);
@@ -964,6 +964,18 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.farm-header[aria-details="poultry-farm"]{
+    background-image: url(POULTRY-5.jpg);
+}
+.farm-header[aria-details="cassava-farm"]{
+    background-image: url(arrangement-nutritious-cassava-roots_23-2149091023.webp);
+}
+.farm-header[aria-details="palm-kernel-farm"]{
+    background-image: url(palm-tree-with-sun-breaking-through-green-branches_1268-15809.jpg);
+}
+.farm-header[aria-details="plantain-plantation"]{
+    background-image: url(green-banana_1203-7748.jpg);
 }
 .farm-overlay{
     position: absolute;
@@ -1287,7 +1299,6 @@ article .vegetable-paragraph{
 
     /*style the joam farm welcome heading*/
     .joam-welcome-section h1{
-        top: 15%;
         font-size: 3rem;
     }
 }
@@ -1479,6 +1490,10 @@ article .vegetable-paragraph{
 
     /*style the farm section*/
 
+    .joam-welcome-section h1{
+        top: 9%;
+        font-size: 2.5rem;
+    }
     .farm-nav-tab{
         padding: 2rem;
     }

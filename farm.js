@@ -114,7 +114,7 @@ declareActiveNav()
 
 
 
-//display the various products in the farm section
+//display the various products in the vegetable farm section
 
 const productBody = document.querySelector('#vegetable-products');
 let theProduct = '';
@@ -169,6 +169,7 @@ const highlighProductClicked = () => {
 }
 highlighProductClicked();
 
+//display the various pictures in the vegetable gallery
 const vegetableGallery = document.querySelector('#vegetable-gallery');
 let galleryImage = '';
 let galleryImages = [
@@ -197,6 +198,7 @@ galleryImages.forEach(image => {
     vegetableGallery.innerHTML = galleryImage;
 })
 
+//images in the poultry gallery when the more button is clicked
 const moreVegetableGallery = document.querySelector('#more-gallery--vegetable');
 galleryImages.forEach(image => {
     galleryImage += `
@@ -206,24 +208,121 @@ galleryImages.forEach(image => {
 })
 
 
-const showMore = document.querySelector('.load-more')
-const moreImage = document.querySelector('.more-gallery');
+const showMore = document.querySelector('.load-more');
 showMore.addEventListener('click', () => {
+    const moreImage = document.querySelector('.more-gallery');
     const status = moreImage.getAttribute('aria-controls');
-    if(status === 'hidden'){
-        moreImage.setAttribute('aria-controls', 'visible');
-        moreImage.style.display = 'grid';
-        moreImage.style.transform = 'scaleY(1)';    
-        showMore.innerText = 'Show Less'
+    showMoreImage(status, moreImage, showMore);
+})
+
+//show more images available in the farm gallery section
+const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
+    if(currentStatus === 'hidden'){
+        targetImages.setAttribute('aria-controls', 'visible');
+        targetImages.style.display = 'grid';
+        targetImages.style.transform = 'scaleY(1)';    
+        showMoreBtn.innerText = 'Show Less'
     }else{
-        moreImage.setAttribute('aria-controls', 'hidden');
-        moreImage.style.display = 'none';
-        moreImage.style.transform = 'scaleY(0)';
-        showMore.innerText = 'Show More '
+        targetImages.setAttribute('aria-controls', 'hidden');
+        targetImages.style.display = 'none';
+        targetImages.style.transform = 'scaleY(0)';
+        showMoreBtn.innerText = 'Show More '
     }
+}
+
+//display the various products in the poultry farm section
+const poultryProductsContainer = document.querySelector('#poultry-gallery');
+console.log(poultryProductsContainer);
+let thePoultryProducts = '';
+let poultryProducts = [
+    {
+        product: "POULTRY-1",
+        productTitle: "layer",
+        link: "#"
+    },
+    {
+        product: "POULTRY-4",
+        productTitle: "broiler",
+        link: "#"
+    },
+    {
+        product: "POULTRY-EGG",
+        productTitle: "egg",
+        link: "#"
+    },
+    {
+        product: "POULTRY-2",
+        productTitle: "noiler",
+        link: "#"
+    }
+]
+poultryProducts.forEach(poultryProduct => {
+    thePoultryProducts += `
+    <div class="product-container">
+        <div class="product-image">
+            <img src="${poultryProduct.product}.jpg" alt="FRESH-RAINFALL-ON-LEAF">
+            <div class="farm-logo-container">
+                <div class="farm-product-logo"></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h4 class="product-description-content">${poultryProduct.productTitle}</h4>
+        </div>
+        <div class="product-container-overlay">
+            <a class="overlay-button" href="${poultryProduct.link}">shop now</a>
+        </div>
+    </div>
+    `
+    poultryProductsContainer.innerHTML = thePoultryProducts;
     
 })
-const offers = Array.from(offersContainer.children);
+
+//display the images in the poultry gallery
+const poultryGallery = document.querySelector('#poultry-farm-gallery');
+let poultryImage = '';
+let poultryImages = [
+    {
+        galleryImg: "POULTRY-1",
+        description: "image of a black feathered layer",
+    },
+    {
+        galleryImg: "POULTRY-2",
+        description: "image of spotted noiler",    
+    },
+    {
+        galleryImg: "POULTRY-3",
+        description: "image of a focused brown hen",
+    },
+    {
+        galleryImg: "POULTRY-4",
+        description: "image of an active white broiler"  
+    }
+]
+
+poultryImages.forEach(image => {
+    poultryImage += `
+        <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
+    `
+    poultryGallery.innerHTML = poultryImage;
+})
+
+//images in the poultry gallery when the more button is clicked
+const morePoultryGallery = document.querySelector('#more-gallery--poultry');
+poultryImages.forEach(image => {
+    poultryImage += `
+        <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
+    `
+    morePoultryGallery.innerHTML = poultryImage;
+})
+
+const showMorePoultry = document.querySelector('#poultry-load-more');
+showMorePoultry.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--poultry');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMorePoultry);
+})
+
+//highlights the offer
 const indicateClickedOffer = () => {
     offers.forEach(offer => {
         offer.addEventListener('click', (e) => {
@@ -232,8 +331,6 @@ const indicateClickedOffer = () => {
             })
             e.currentTarget.classList.add('active')
         })
-        
-        
     })
 }
 indicateClickedOffer()
