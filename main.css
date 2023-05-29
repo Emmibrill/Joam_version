@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -1007,10 +1008,13 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 }
 article .vegetable-paragraph{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    line-height: 2rem;
+    font-family: 'Dancing Script', cursive;
+    line-height: 3rem;
     border: none;
     box-shadow: none;
     text-align: left;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 .more-benefits{
     position: relative;
