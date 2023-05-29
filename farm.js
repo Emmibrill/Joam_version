@@ -2,6 +2,9 @@ const navToggler = document.querySelector('.hambugger');
 const navList = document.querySelector('.nav__list');
 const nav_list = document.querySelectorAll('.list');
 const navBar = document.querySelector('.nav__bar');
+const farmNavs = document.querySelectorAll('[data-target]');
+const farmContents = document.querySelectorAll('[data-content]');
+const offersContainer  = document.querySelector('.offers');
 
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
@@ -38,6 +41,17 @@ function declareActiveNav() {
                 nav.classList.remove('active')
             })
           nav.classList.add('active')
+        })
+    })
+}
+function declareActiveNav() {
+    Array.from(farmNavs).forEach(nav => {
+        nav.addEventListener('click', () => {
+            Array.from(farmNavs).forEach(nav=> {
+                nav.classList.remove('active')
+            })
+            nav.classList.add('active')
+            console.log(nav)
         })
     })
 }
@@ -80,26 +94,29 @@ const activeFarmNav = () => {
 }
 activeFarmNav()
 
-const farmNav = document.querySelectorAll('[data-target]');
-const farmContent = document.querySelectorAll('[data-content]');
+
 const showFarmSection = () => {
-    Array.from(farmNav).forEach(nav => {
-        nav.addEventListener('click', () => {
-            const farmContent = document.querySelector(nav.dataset.target);
+    Array.from(farmNavs).forEach(farmNav => {
+        farmNav.addEventListener('click', () => {
+            const farmContent = document.querySelector(farmNav.dataset.target);
             console.log(farmContent);
-            Array.from(farmNav).forEach(nav => {
-                nav.classList.remove('active')
+            Array.from(farmContents).forEach(content => {
+                content.classList.remove('farmActive');
             })
-            farmContent.classList.add('active')
+            farmContent.classList.add('farmActive')
+           
         })
     })
 }
+
 showFarmSection()
+declareActiveNav()
+
 
 
 //display the various products in the farm section
 
-const productBody = document.querySelector('.products-body');
+const productBody = document.querySelector('#vegetable-products');
 let theProduct = '';
 let products = [
     {
@@ -152,7 +169,7 @@ const highlighProductClicked = () => {
 }
 highlighProductClicked();
 
-const gallery = document.querySelector('.gallery');
+const vegetableGallery = document.querySelector('#vegetable-gallery');
 let galleryImage = '';
 let galleryImages = [
     {
@@ -177,15 +194,15 @@ galleryImages.forEach(image => {
     galleryImage += `
         <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
     `
-    gallery.innerHTML = galleryImage;
+    vegetableGallery.innerHTML = galleryImage;
 })
 
-const moreGallery = document.querySelector('.more-gallery');
+const moreVegetableGallery = document.querySelector('#more-gallery--vegetable');
 galleryImages.forEach(image => {
     galleryImage += `
         <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
     `
-    moreGallery.innerHTML = galleryImage;
+    moreVegetableGallery.innerHTML = galleryImage;
 })
 
 
@@ -206,3 +223,17 @@ showMore.addEventListener('click', () => {
     }
     
 })
+const offers = Array.from(offersContainer.children);
+const indicateClickedOffer = () => {
+    offers.forEach(offer => {
+        offer.addEventListener('click', (e) => {
+            offers.forEach(offer => {
+                offer.classList.remove('active')
+            })
+            e.currentTarget.classList.add('active')
+        })
+        
+        
+    })
+}
+indicateClickedOffer()
