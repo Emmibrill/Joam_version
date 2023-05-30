@@ -89,7 +89,6 @@ const activeFarmNav = () => {
             })
             list.classList.add('active')
         })
-        
     })
 }
 activeFarmNav()
