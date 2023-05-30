@@ -239,25 +239,25 @@ sliderPreviousButton.addEventListener('click', () => {
 
 let showcases = [
 {
-    name: "FARM-5",
+    name: "baby-pigs-eating",
     writeUp: "we got you covered",
     description: "baby-pigs-eating-on-the-farm",
     link: "farm.html"
 },
 {
-    name: "CHICKEN",
+    name: "brown-chicken",
     writeUp: "we got you covered",
-    description: "brown-chicken",
+    description: "a-full-grown-brown-chicken",
     link: "farm.html"
 },
 {
-    name: "FISHERY",
+    name: "silver-and-blue-fish",
     writeUp: "we got you covered",
     description: "silver-and-blue-fish-in-a-pile" ,
     link: "farm.html"  
 },
 {
-    name: "GOAT",
+    name: "farm-goat",
     writeUp: "we got you covered",
     description: "two-goats-looking-tough",
     link: "farm.html"    
