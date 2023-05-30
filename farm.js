@@ -76,7 +76,6 @@ window.addEventListener('scroll', () => {
 
 
 
-
 //add active state to the farm section navigation
 const listContainer = document.querySelector('.list-container')
 const farmList = Array.from(listContainer.children);
@@ -89,11 +88,9 @@ const activeFarmNav = () => {
             })
             list.classList.add('active')
         })
-        
     })
 }
 activeFarmNav()
-
 
 const showFarmSection = () => {
     Array.from(farmNavs).forEach(farmNav => {
@@ -108,7 +105,6 @@ const showFarmSection = () => {
         })
     })
 }
-
 showFarmSection()
 declareActiveNav()
 
@@ -236,23 +232,26 @@ console.log(poultryProductsContainer);
 let thePoultryProducts = '';
 let poultryProducts = [
     {
-        product: "POULTRY-1",
-        productTitle: "layer",
+        product: "black-layer-chicken",
+        productTitle: "black-layer-chicken-posing",
         link: "#"
     },
     {
-        product: "POULTRY-4",
+        product: "white-broiler",
         productTitle: "broiler",
+        description: "white-broiler-watchig-steps",
         link: "#"
     },
     {
-        product: "POULTRY-EGG",
-        productTitle: "egg",
+        product: "fresh-eggs",
+        productTitle: "fresh eggs",
+        description: "basket-of-fresh-eggs",
         link: "#"
     },
     {
-        product: "POULTRY-2",
+        product: "spotted-noiler-chicken",
         productTitle: "noiler",
+        description: "spotted-noiler-chicken-in-grass",
         link: "#"
     }
 ]
@@ -260,7 +259,7 @@ poultryProducts.forEach(poultryProduct => {
     thePoultryProducts += `
     <div class="product-container">
         <div class="product-image">
-            <img src="${poultryProduct.product}.jpg" alt="FRESH-RAINFALL-ON-LEAF">
+            <img src="${poultryProduct.product}.jpg" alt="${poultryProduct.description}">
             <div class="farm-logo-container">
                 <div class="farm-product-logo"></div>
             </div>
@@ -282,20 +281,20 @@ const poultryGallery = document.querySelector('#poultry-farm-gallery');
 let poultryImage = '';
 let poultryImages = [
     {
-        galleryImg: "POULTRY-1",
-        description: "image of a black feathered layer",
+        galleryImg: "black-white-hen",
+        description: "image-of-a-black-white-feathered layer",
     },
     {
-        galleryImg: "POULTRY-2",
-        description: "image of spotted noiler",    
+        galleryImg: "fierce-chicken-gazes-at-camera",
+        description: "fierce-chicken-gazes-at-camera",    
     },
     {
-        galleryImg: "POULTRY-3",
-        description: "image of a focused brown hen",
+        galleryImg: "white-chicken-in-a-brood",
+        description: "white-chicken-in-a-brood",
     },
     {
-        galleryImg: "POULTRY-4",
-        description: "image of an active white broiler"  
+        galleryImg: "cock-a-doodle-do",
+        description: "image-of-cock-a-doodle-do"  
     }
 ]
 
