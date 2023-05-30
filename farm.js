@@ -105,7 +105,6 @@ const showFarmSection = () => {
         })
     })
 }
-
 showFarmSection()
 declareActiveNav()
 
