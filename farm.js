@@ -325,6 +325,7 @@ showMorePoultry.addEventListener('click', () => {
     showMoreImage(status, moreImage, showMorePoultry);
 })
 
+
 //highlights the offer
 const indicateClickedOffer = () => {
     offers.forEach(offer => {
