@@ -5,6 +5,7 @@ const navBar = document.querySelector('.nav__bar');
 const farmNavs = document.querySelectorAll('[data-target]');
 const farmContents = document.querySelectorAll('[data-content]');
 const offersContainer  = document.querySelector('.offers');
+console.log(offersContainer)
 
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
@@ -51,7 +52,6 @@ function declareActiveNav() {
                 nav.classList.remove('active')
             })
             nav.classList.add('active')
-            console.log(nav)
         })
     })
 }
@@ -96,7 +96,6 @@ const showFarmSection = () => {
     Array.from(farmNavs).forEach(farmNav => {
         farmNav.addEventListener('click', () => {
             const farmContent = document.querySelector(farmNav.dataset.target);
-            console.log(farmContent);
             Array.from(farmContents).forEach(content => {
                 content.classList.remove('farmActive');
             })
@@ -228,7 +227,7 @@ const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
 
 //display the various products in the poultry farm section
 const poultryProductsContainer = document.querySelector('#poultry-gallery');
-console.log(poultryProductsContainer);
+//console.log(poultryProductsContainer);
 let thePoultryProducts = '';
 let poultryProducts = [
     {
@@ -323,9 +322,10 @@ showMorePoultry.addEventListener('click', () => {
 
 //highlights the offer
 const indicateClickedOffer = () => {
-    offers.forEach(offer => {
+    Array.from(offersContainer.children).forEach(offer => {
+        console.log(offer)
         offer.addEventListener('click', (e) => {
-            offers.forEach(offer => {
+            Array.from(offersContainer.children).forEach(offer => {
                 offer.classList.remove('active')
             })
             e.currentTarget.classList.add('active')
