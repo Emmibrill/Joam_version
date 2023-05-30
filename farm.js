@@ -76,7 +76,6 @@ window.addEventListener('scroll', () => {
 
 
 
-
 //add active state to the farm section navigation
 const listContainer = document.querySelector('.list-container')
 const farmList = Array.from(listContainer.children);
