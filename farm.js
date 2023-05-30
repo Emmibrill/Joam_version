@@ -93,7 +93,6 @@ const activeFarmNav = () => {
 }
 activeFarmNav()
 
-
 const showFarmSection = () => {
     Array.from(farmNavs).forEach(farmNav => {
         farmNav.addEventListener('click', () => {
