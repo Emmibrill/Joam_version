@@ -4,8 +4,11 @@ const nav_list = document.querySelectorAll('.list');
 const navBar = document.querySelector('.nav__bar');
 const farmNavs = document.querySelectorAll('[data-target]');
 const farmContents = document.querySelectorAll('[data-content]');
-const offersContainer  = document.querySelector('.offers');
-console.log(offersContainer)
+const offersContainer  = document.querySelectorAll('.offers');
+const allShowMore = document.querySelectorAll('.load-more');
+const listContainer = document.querySelector('.list-container');
+const farmList = Array.from(listContainer.children);
+const allProductBody = document.querySelectorAll('.products-body');
 
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
@@ -34,8 +37,8 @@ if(navState === 'open'){
 }
 }
 
-//declare active navigation button on click
-function declareActiveNav() {
+//declare active main navigation button on click
+function declareActiveMainNav() {
     Array.from(nav_list).forEach(nav => {
         nav.addEventListener('click', () => {
             nav_list.forEach(nav => {
@@ -45,18 +48,96 @@ function declareActiveNav() {
         })
     })
 }
-function declareActiveNav() {
-    Array.from(farmNavs).forEach(nav => {
-        nav.addEventListener('click', () => {
-            Array.from(farmNavs).forEach(nav=> {
-                nav.classList.remove('active')
+
+//display the different farm sections when their respective nav is clicked
+const showFarmSection = () => {
+    Array.from(farmNavs).forEach(farmNav => {
+        farmNav.addEventListener('click', () => {
+            const farmContent = document.querySelector(farmNav.dataset.target);
+            Array.from(farmContents).forEach(content => {
+                content.classList.remove('farmActive');
             })
-            nav.classList.add('active')
+            farmContent.classList.add('farmActive')
+           
         })
     })
 }
 
-declareActiveNav();
+/*add active state to the farm section navigator by changing the color to red 
+and also giving it a translateX proper*/
+const activeFarmNav = () => {
+    farmList.forEach(list => {
+        list.addEventListener('click', () => {
+            farmList.forEach(list => { 
+                list.classList.remove('active')
+            })
+            list.classList.add('active')
+        })
+    })
+}
+
+//display more images available in the farm gallery section when the show more button is being clidked
+const displayMoreImg = () => {
+    for (let i = 0; i < allShowMore.length; i++) {
+        const eachShowMore = allShowMore[i];
+        eachShowMore.addEventListener('click', () => {
+            const allMoreImage = document.querySelectorAll('.more-gallery');
+            for (let i = 0; i < allMoreImage.length; i++) {
+                const targetImages = allMoreImage[i];
+                const status = targetImages.getAttribute('aria-controls');
+                if(status === 'hidden'){
+                    targetImages.setAttribute('aria-controls', 'visible');
+                    targetImages.style.display = 'grid';
+                    targetImages.style.transform = 'scaleY(1)';    
+                    eachShowMore.innerText = 'Show Less'
+                }else{
+                    targetImages.setAttribute('aria-controls', 'hidden');
+                    targetImages.style.display = 'none';
+                    targetImages.style.transform = 'scaleY(0)';
+                    eachShowMore.innerText = 'Show More '
+                }
+            }
+        })
+    }
+}
+
+//highlights the selected product showing other features
+const highlighProductClicked = () => {
+    for (let i = 0; i < allProductBody.length; i++) {
+        const productBody = allProductBody[i];
+        const Farmproducts = (productBody.children);
+        Array.from(Farmproducts).forEach(product => {
+            product.addEventListener('click', (e) => {
+                const target = e.currentTarget
+                const allOverlay = target.querySelector('.product-container-overlay');
+                Array.from(Farmproducts).forEach(product => {
+                    product.querySelector('.product-container-overlay').classList.remove('product-active');
+                })
+                
+                allOverlay.classList.add('product-active');
+            })
+        })  
+    }
+}
+
+//highlights the offer by giving a white border to each when clicked on
+const indicateClickedOffer = () => {
+    for (let i = 0; i < offersContainer.length; i++) {
+        const element = offersContainer[i];
+        const eachOfferCont = (element.children);
+        Array.from(eachOfferCont).forEach(offer => {
+            offer.addEventListener('click', (e) => {
+                const targetOffer = e.currentTarget
+                Array.from(eachOfferCont).forEach(offer => {
+                    offer.classList.remove('active')
+                })
+                targetOffer.classList.add('active')
+            })
+        })
+    }
+}
+
+declareActiveMainNav();
 
 window.addEventListener('scroll', () => {
     activateScrolly();
@@ -74,42 +155,11 @@ window.addEventListener('scroll', () => {
     removeNavbar()    
 })
 
-
-
-//add active state to the farm section navigation
-const listContainer = document.querySelector('.list-container')
-const farmList = Array.from(listContainer.children);
-const activeFarmNav = () => {
-    farmList.forEach(list => {
-        list.addEventListener('click', () => {
-            farmList.forEach(list => {
-                
-                list.classList.remove('active')
-            })
-            list.classList.add('active')
-        })
-    })
-}
+showFarmSection()
 activeFarmNav()
 
-const showFarmSection = () => {
-    Array.from(farmNavs).forEach(farmNav => {
-        farmNav.addEventListener('click', () => {
-            const farmContent = document.querySelector(farmNav.dataset.target);
-            Array.from(farmContents).forEach(content => {
-                content.classList.remove('farmActive');
-            })
-            farmContent.classList.add('farmActive')
-           
-        })
-    })
-}
-showFarmSection()
-declareActiveNav()
 
-
-
-//display the various products in the vegetable farm section
+//the various products in the vegetable farm section
 
 const productBody = document.querySelector('#vegetable-products');
 let theProduct = '';
@@ -142,29 +192,11 @@ products.forEach(eachProduct => {
         </div>
     </div>
     `
-    productBody.innerHTML = theProduct;
-    
+    productBody.innerHTML = theProduct;  
 })
 
 
-//highlights the selected product showing other features
-
-const highlighProductClicked = () => {
-    const vegetableProduct = Array.from(productBody.children);
-    vegetableProduct.forEach(product => {
-        product.addEventListener('click', (e) => {
-            const target = e.currentTarget
-            const overlay = target.querySelector('.product-container-overlay');
-            vegetableProduct.forEach(product => {
-                product.querySelector('.product-container-overlay').classList.remove('product-active');
-            })
-            overlay.classList.add('product-active');
-        })
-    })
-}
-highlighProductClicked();
-
-//display the various pictures in the vegetable gallery
+//various pictures in the vegetable gallery
 const vegetableGallery = document.querySelector('#vegetable-gallery');
 let galleryImage = '';
 let galleryImages = [
@@ -193,7 +225,7 @@ galleryImages.forEach(image => {
     vegetableGallery.innerHTML = galleryImage;
 })
 
-//images in the poultry gallery when the more button is clicked
+//images in the poultry gallery (more images)
 const moreVegetableGallery = document.querySelector('#more-gallery--vegetable');
 galleryImages.forEach(image => {
     galleryImage += `
@@ -202,32 +234,8 @@ galleryImages.forEach(image => {
     moreVegetableGallery.innerHTML = galleryImage;
 })
 
-
-const showMore = document.querySelector('.load-more');
-showMore.addEventListener('click', () => {
-    const moreImage = document.querySelector('.more-gallery');
-    const status = moreImage.getAttribute('aria-controls');
-    showMoreImage(status, moreImage, showMore);
-})
-
-//show more images available in the farm gallery section
-const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
-    if(currentStatus === 'hidden'){
-        targetImages.setAttribute('aria-controls', 'visible');
-        targetImages.style.display = 'grid';
-        targetImages.style.transform = 'scaleY(1)';    
-        showMoreBtn.innerText = 'Show Less'
-    }else{
-        targetImages.setAttribute('aria-controls', 'hidden');
-        targetImages.style.display = 'none';
-        targetImages.style.transform = 'scaleY(0)';
-        showMoreBtn.innerText = 'Show More '
-    }
-}
-
-//display the various products in the poultry farm section
-const poultryProductsContainer = document.querySelector('#poultry-gallery');
-//console.log(poultryProductsContainer);
+//the various products in the poultry farm section
+const poultryProductsContainer = document.querySelector('#poultry-products');
 let thePoultryProducts = '';
 let poultryProducts = [
     {
@@ -275,7 +283,7 @@ poultryProducts.forEach(poultryProduct => {
     
 })
 
-//display the images in the poultry gallery
+//images in the poultry gallery
 const poultryGallery = document.querySelector('#poultry-farm-gallery');
 let poultryImage = '';
 let poultryImages = [
@@ -304,7 +312,7 @@ poultryImages.forEach(image => {
     poultryGallery.innerHTML = poultryImage;
 })
 
-//images in the poultry gallery when the more button is clicked
+//images in the poultry gallery (more images)
 const morePoultryGallery = document.querySelector('#more-gallery--poultry');
 poultryImages.forEach(image => {
     poultryImage += `
@@ -313,23 +321,7 @@ poultryImages.forEach(image => {
     morePoultryGallery.innerHTML = poultryImage;
 })
 
-const showMorePoultry = document.querySelector('#poultry-load-more');
-showMorePoultry.addEventListener('click', () => {
-    const moreImage = document.querySelector('#more-gallery--poultry');
-    const status = moreImage.getAttribute('aria-controls');
-    showMoreImage(status, moreImage, showMorePoultry);
-})
-
-//highlights the offer
-const indicateClickedOffer = () => {
-    Array.from(offersContainer.children).forEach(offer => {
-        console.log(offer)
-        offer.addEventListener('click', (e) => {
-            Array.from(offersContainer.children).forEach(offer => {
-                offer.classList.remove('active')
-            })
-            e.currentTarget.classList.add('active')
-        })
-    })
-}
+displayMoreImg()
+highlighProductClicked()
 indicateClickedOffer()
+

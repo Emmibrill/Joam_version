@@ -964,6 +964,7 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
 }
 .farm-header[aria-details="poultry-farm"]{
     background-image: url(thoughtful-brown-hen.jpg);
@@ -976,6 +977,15 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
 }
 .farm-header[aria-details="plantain-plantation"]{
     background-image: url(green-banana_1203-7748.jpg);
+}
+.farm-header[aria-details="goat-farm"]{
+    background-image: url(farm-goat.jpg);
+}
+.farm-header[aria-details="piggery-farm"]{
+    background-image: url(close-up-on-piggy-snout.jpg);
+}
+.farm-header[aria-details="fishery-farm"]{
+    background-image: url(school-of-fish-looking-for-food.jpg);
 }
 .farm-overlay{
     position: absolute;
