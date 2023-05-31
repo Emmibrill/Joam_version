@@ -327,4 +327,11 @@ showMorePoultry.addEventListener('click', () => {
 
 highlighProductClicked()
 indicateClickedOffer()
+const pageUp = document.querySelector('.page-up');
+window.addEventListener('scroll', () => {
+    if(scrollY > 1000){
+        console.log('hey')
+        pageUp.classList.add('show-page-up')
+    }else{pageUp.classList.remove('show-page-up')}
+})
 
