@@ -77,27 +77,17 @@ const activeFarmNav = () => {
 }
 
 //display more images available in the farm gallery section when the show more button is being clidked
-const displayMoreImg = () => {
-    for (let i = 0; i < allShowMore.length; i++) {
-        const eachShowMore = allShowMore[i];
-        eachShowMore.addEventListener('click', () => {
-            const allMoreImage = document.querySelectorAll('.more-gallery');
-            for (let i = 0; i < allMoreImage.length; i++) {
-                const targetImages = allMoreImage[i];
-                const status = targetImages.getAttribute('aria-controls');
-                if(status === 'hidden'){
-                    targetImages.setAttribute('aria-controls', 'visible');
-                    targetImages.style.display = 'grid';
-                    targetImages.style.transform = 'scaleY(1)';    
-                    eachShowMore.innerText = 'Show Less'
-                }else{
-                    targetImages.setAttribute('aria-controls', 'hidden');
-                    targetImages.style.display = 'none';
-                    targetImages.style.transform = 'scaleY(0)';
-                    eachShowMore.innerText = 'Show More '
-                }
-            }
-        })
+const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
+    if(currentStatus === 'hidden'){
+        targetImages.setAttribute('aria-controls', 'visible');
+        targetImages.style.display = 'grid';
+        targetImages.style.transform = 'scaleY(1)';    
+        showMoreBtn.innerText = 'Show Less'
+    }else{
+        targetImages.setAttribute('aria-controls', 'hidden');
+        targetImages.style.display = 'none';
+        targetImages.style.transform = 'scaleY(0)';
+        showMoreBtn.innerText = 'Show More '
     }
 }
 
@@ -226,7 +216,7 @@ galleryImages.forEach(image => {
 })
 
 //images in the poultry gallery (more images)
-const moreVegetableGallery = document.querySelector('#more-gallery--vegetable');
+const moreVegetableGallery = document.querySelector('#more-gallery--veg');
 galleryImages.forEach(image => {
     galleryImage += `
         <img class="gallery-image" src="${image.galleryImg}.jpg" alt="${image.description}">
@@ -321,7 +311,20 @@ poultryImages.forEach(image => {
     morePoultryGallery.innerHTML = poultryImage;
 })
 
-displayMoreImg()
+const showMoreVeg = document.querySelector('#veg-load-more');
+showMoreVeg.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--veg');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMoreVeg);
+})
+
+const showMorePoultry = document.querySelector('#poultry-load-more');
+showMorePoultry.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--poultry');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMorePoultry);
+})
+
 highlighProductClicked()
 indicateClickedOffer()
 
