@@ -1264,6 +1264,44 @@ article .vegetable-paragraph{
     text-align: center;
     height: 5rem;
 }
+.page-up{
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    background: rgb(51, 173, 51);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: glow 1s linear infinite alternate;
+    transform: .5s;
+}
+.page-up.show-page-up{
+    display: flex;
+}
+.page-up i{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: green;
+    color: var(--nav-list-color);
+}
+@keyframes glow {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 1.5;
+    }
+}
 
 
 @media (max-width:1203px) {
