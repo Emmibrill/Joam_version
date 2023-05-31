@@ -245,7 +245,7 @@ let showcases = [
     link: "farm.html"
 },
 {
-    name: "thoughtful-brown-hen.jpg",
+    name: "black-layer-chicken",
     writeUp: "we got you covered",
     description: "a-full-grown-brown-chicken",
     link: "farm.html"
