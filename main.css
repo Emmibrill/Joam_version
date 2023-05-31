@@ -1303,6 +1303,7 @@ article .vegetable-paragraph{
     }
 }
 
+
 @media (max-width:1203px) {
     .products-body, .gallery{
         grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
