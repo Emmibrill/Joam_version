@@ -331,9 +331,11 @@ estates.forEach(estate => {
     estatePixContainer.innerHTML = theEstate;
 })
 
+
 const eachEstate = estatePixContainer.children;
 const Estate = Array.from(eachEstate)
-Estate[0].classList.add('add-effect-active')
+Estate[0].classList.add('add-effect-active');
+Estate[2].classList.add('add-effect-active');
 Estate.forEach(estate => {
     estate.addEventListener('click', (e) => {
         const Target = e.currentTarget;
