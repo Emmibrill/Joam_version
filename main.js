@@ -331,6 +331,7 @@ estates.forEach(estate => {
     estatePixContainer.innerHTML = theEstate;
 })
 
+
 const eachEstate = estatePixContainer.children;
 const Estate = Array.from(eachEstate)
 Estate[0].classList.add('add-effect-active');
