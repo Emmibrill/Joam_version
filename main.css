@@ -700,13 +700,16 @@ article .why-choose-par:not(.lastChild){
     inset: 0;
     margin: auto;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     text-transform: uppercase;
     font-family: 'Urbanist', sans-serif;
     font-weight: bold;
     color: var(--cardin-green);
     color: black;
-    
+    border-top: 1px solid rgb(146, 197, 146);
+}
+.organogram-title--realestate{
+    border-top: 1px solid rgb(55, 13, 122);
 }
 .joam-tree ul{
     padding: 0;
@@ -1356,7 +1359,9 @@ article .vegetable-paragraph{
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     border-top: 1px solid rgb(146, 197, 146);
-    
+}
+.misVis-container--realestate{
+    border-top: none;
 }
 .back-drop-design{
     position: absolute;
@@ -1400,6 +1405,60 @@ article .vegetable-paragraph{
     font-family: 'Comfortaa', cursive;
     line-height: 2rem;
     font-size: 1rem;
+}
+
+
+/*style the realestate section*/
+
+/*style the what do you have in mind section*/
+.question{
+    
+}
+.ques-wrtUp{
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    color: red;
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0 .5rem 0;
+    padding: 3rem;
+}
+.rentBuy-image-container{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+.rentBuy-image-container--rent{
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+    z-index: 1;
+    margin-bottom: -5vw;
+}
+.rentBuy-image{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+.rentBuy-blend{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    isolation: isolate;
+    mix-blend-mode: multiply;
+}
+.rentBuy-blend--buy{
+    background: rgb(194, 96, 96);
+}
+.rentBuy--question{
+    position: absolute;
+    color: var(--nav-list-color);
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
 }
 
 @media (max-width:1363px) {
