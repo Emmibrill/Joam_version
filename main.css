@@ -1411,9 +1411,11 @@ article .vegetable-paragraph{
 /*style the realestate section*/
 
 /*style the what do you have in mind section*/
-.question{
-    
-}
+
+/*.realestate-products{
+    font-family: 'Comfortaa', cursive;
+}*/
+
 .ques-wrtUp{
     text-transform: uppercase;
     font-family: 'Comfortaa', cursive;
@@ -1434,9 +1436,9 @@ article .vegetable-paragraph{
    justify-content: center;
 }
 .rentBuy-image-container--rent{
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
     z-index: 1;
-    margin-bottom: -5vw;
+    margin-bottom: -7vw;
 }
 .rentBuy-image{
     height: 15rem;
@@ -1459,6 +1461,77 @@ article .vegetable-paragraph{
     text-transform: uppercase;
     font-family: 'Comfortaa', cursive;
     font-size: 3rem;
+}
+.new-property{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0rem;
+    padding: 1rem;
+}
+.new-property h3, h2{
+    font-family: 'Comfortaa', cursive;
+}
+.new-property h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.new-property h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+.realEst-prod-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    padding: 1rem;
+}
+.relEst-prod-wrapper{
+    position: relative;
+    background: brown   ;
+    color: var(--nav-list-color);
+}
+.relEst-prod-Image{
+    position: relative;
+}
+.buy{
+    position: absolute;
+    bottom: .2rem;
+    right: 0;
+    padding: 1rem;
+    background: red;
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+}
+.realEst-des-container{
+    padding: 2rem;
+    font-family: 'Comfortaa', cursive;
+}
+.realEst-prod-des, .realEst-price{
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+    padding: .2rem;
+}
+.realEst-price{
+    margin-bottom: 3rem;
+}
+.realEst-location{
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    padding: .2rem;
+}
+.realEst-placeorder{
+    padding: 1.3rem 2rem;
+    background: var(--nav-list-color);
+    text-transform: capitalize;
+    color: red;
+    font-weight: 700;
 }
 
 @media (max-width:1363px) {
