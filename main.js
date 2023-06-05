@@ -346,4 +346,41 @@ Estate.forEach(estate => {
     })
 })
 
+let realestateProduct = [
+    {
+        prodect: "gated-house-exterior (1)",
+        description: "gated-house-exterior",
+        rrealEstProNameDes: "description one",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    },
+    {
+        name: "large-house-with-balcony",
+        description: "large-house-with-balcony",
+        rrealEstProNameDes: "description two",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    },
+    {
+        name: "modern-housing-with-blue-sky",
+        description: "modern-housing-with-blue-sky",
+        rrealEstProNameDes: "description three",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"  
+    },
+    {
+        name: "one-storey-home-exterior (1)",
+        description: "one-storey-home-exterior",
+        rrealEstProNameDes: "description four",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        
+        link: "realestate.html"    
+    }
+]
+
+
 
