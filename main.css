@@ -1547,6 +1547,9 @@ article .vegetable-paragraph{
     font-family: 'Comfortaa', cursive;
 }*/
 
+.realEst-container--rent{
+    margin-top: 3rem;
+}
 .ques-wrtUp{
     text-transform: uppercase;
     font-family: 'Comfortaa', cursive;
@@ -1629,13 +1632,22 @@ article .vegetable-paragraph{
 .relEst-prod-Image{
     position: relative;
 }
+.relEst-image-con{
+    position: relative;
+    height: 25rem;
+    background: mistyrose;
+}
 .relEst-img{
+    position: absolute;
     height: 25rem;
     width: 100%;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
 }
 .buy{
     position: absolute;
-    bottom: .2rem;
+    bottom: 0rem;
     right: 0;
     padding: 1rem;
     background: red;
