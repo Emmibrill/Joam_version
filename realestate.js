@@ -53,7 +53,6 @@ window.addEventListener('load', () => {
     navList.classList.remove('navActive')  
 })
 
-
 navToggler.addEventListener('click', () => {
     activateNavbar()
 })
