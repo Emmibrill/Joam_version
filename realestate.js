@@ -60,3 +60,116 @@ navToggler.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     removeNavbar()    
 })
+
+
+let realestateProductBuy = [
+    {
+        name: "gated-house-exterior",
+        description: "gated-house-exterior",
+        realEstProNameDes: "description one",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    },
+    {
+        name: "large-house-with-balcony",
+        description: "large-house-with-balcony",
+        realEstProNameDes: "description two",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    }
+]
+const realEstateProductContainer = document.querySelector('#realEst-prod-container-buy');
+let theRealEstProd = '';
+realestateProductBuy.forEach(realEstPro =>{
+    theRealEstProd +=`
+    <div class="relEst-prod-wrapper">
+        <div class="relEst-prod-Image">
+        <div class="relEst-image-con">
+            <img class="relEst-img" src="${realEstPro.name}.jpg" alt="${realEstPro.description}">
+        </div> 
+        <h4 class="buy">buy</h4>
+        </div>
+        <div class="realEst-des-container">
+            <h2 class="realEst-prod-des">${realEstPro.realEstProNameDes}</h2>
+            <h3 class="realEst-location">${realEstPro.realEstLocation}</h3>
+            <h2 class="realEst-price">
+                <span class="realEst-price">
+                    price : 
+                </span>
+                <i class="fa-solid fa-naira-sign"></i>
+                ${realEstPro.realEstPrice}
+            </h2>
+            <a class="realEst-placeorder" href="${realEstPro.link}">place order</a>
+        </div>
+        
+    </div>
+    `
+    realEstateProductContainer.innerHTML = theRealEstProd;
+})
+
+let realestateProductRent = [
+    {
+        name: "gated-house-exterior",
+        description: "gated-house-exterior",
+        realEstProNameDes: "description one",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    },
+    {
+        name: "large-house-with-balcony",
+        description: "large-house-with-balcony",
+        realEstProNameDes: "description two",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"
+    },
+    {
+        name: "modern-housing-with-blue-sky",
+        description: "modern-housing-with-blue-sky",
+        realEstProNameDes: "description three",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"  
+    },
+    {
+        name: "one-storey-home-exterior (1)",
+        description: "one-storey-home-exterior",
+        realEstProNameDes: "description four",
+        realEstLocation: "location one",
+        realEstPrice: "12,000,000",
+        link: "realestate.html"    
+    }
+]
+const realEstateProductContainerRent = document.querySelector('#realEst-prod-container-rent');
+let theRealEstProdRent = '';
+realestateProductRent.forEach(realEstPro =>{
+    theRealEstProdRent +=`
+    <div class="relEst-prod-wrapper">
+        <div class="relEst-prod-Image">
+        <div class="relEst-image-con">
+            <img class="relEst-img" src="${realEstPro.name}.jpg" alt="${realEstPro.description}">
+        </div> 
+        <h4 class="buy">buy</h4>
+        </div>
+        <div class="realEst-des-container">
+            <h2 class="realEst-prod-des">${realEstPro.realEstProNameDes}</h2>
+            <h3 class="realEst-location">${realEstPro.realEstLocation}</h3>
+            <h2 class="realEst-price">
+                <span class="realEst-price">
+                    price : 
+                </span>
+                <i class="fa-solid fa-naira-sign"></i>
+                ${realEstPro.realEstPrice}
+            </h2>
+            <a class="realEst-placeorder" href="${realEstPro.link}">place order</a>
+        </div>
+        
+    </div>
+    `
+    realEstateProductContainerRent.innerHTML = theRealEstProdRent;
+})
+
+
