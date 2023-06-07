@@ -23,11 +23,19 @@
     --nav-list-color: rgb(255, 255, 255);
     --nav-icon: rgb(214, 104, 227);
     --arrow-icon: rgb(255, 255, 0);
-    --downy-teal: rgb(106, 207, 199);
     --cardin-green: rgb(12, 26, 26);
     --box-shadow: 0 0.3rem 0.8rem rgba(179, 181, 185, 0.5);
-    --bakers-chocolate: rgb(88, 44, 18);
-    --medium-orchid-purple: rgb(214, 104, 227);
+    --bg-black-900: #f2f2fc;
+    --back-ground-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #02010f;
+    --text-black-700: #817c91;
+    --white:#f3f0f0;
+    --about-title: #0a090a;
+    --border-color: red;
+    --outline-color-focus: red;
+    --textBox-border: #000000;
+    --textBox-focus: red;
 }
 body{
     margin-bottom: 5rem;
@@ -677,6 +685,129 @@ article .why-choose-par:not(.lastChild){
     }
 }
 
+/*contact form*/
+.contact__form{
+    border-radius: 1rem;
+    background: mintcream;
+    font-family: 'Comfortaa', cursive;
+    width: 50%;
+    display:block;
+    padding: 1rem;
+    margin: 3rem;
+}
+.contact__form h3{
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: red;
+}
+.contact__head{
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.contact__head input{
+    width: 100%;
+    font-size: 1.2rem;
+    height: 2rem;
+    border: 1.5px solid green;
+    border: 1px solid var(navli);
+    background: transparent;
+    padding: 1.4rem .9rem 1.5rem;
+}
+.contact__head input:focus{
+    border: none;
+}
+.contact__head input:focus{
+    outline: 1px solid var(--outline-color-focus);
+}
+.contact__head textarea{
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: .6rem .9rem;
+    background: transparent;
+    border: 1.5px solid var(--textBox-border);
+    color: var(--text-black-900);
+}
+.contact__head textarea:focus{
+    border: none;
+}
+.contact__head textarea:focus{
+    outline: 1px solid var(--textBox-focus);
+}
+.contact__head label{
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    line-height: .85rem;
+    z-index: 1;
+    transition: .3s;
+    
+}
+.focus label{
+    transform: translateY(-190%);
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: .8rem;
+    left: 1.1rem;
+}
+.contact__head span{
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: .8rem;
+    opacity: 0;
+}
+.focus span{
+    opacity: 1;
+}
+.contact__label::before,
+.contact__label::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: .95rem;
+    background: var(--back-ground-100);
+    background: mintcream;
+    bottom: 0;
+    top: -1px;
+    padding: 2px;
+    
+}
+.contact__label::before{
+    left: 0;
+}
+.contact__label::after{
+    right: 0;
+}
+.submitform{
+    display: block;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid none;
+    background: red;
+    color: var(--nav-list-color);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: .9;
+    position: relative;
+}
+
 /*style the joam organogram section*/
 .joam-organogram{
     display: grid;
@@ -882,7 +1013,7 @@ article .why-choose-par:not(.lastChild){
 .joam-welcome-section .realestate-blend{
     position: absolute;
     inset: 0;
-    background: rgba(55, 13, 122, 0.5);
+    background: rgba(55, 13, 122, 0.7);
     isolation: isolate;
     mix-blend-mode: multiply;
 }
@@ -1487,7 +1618,7 @@ article .vegetable-paragraph{
 .realEst-prod-container{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
     padding: 1rem;
 }
 .relEst-prod-wrapper{
@@ -1497,6 +1628,10 @@ article .vegetable-paragraph{
 }
 .relEst-prod-Image{
     position: relative;
+}
+.relEst-img{
+    height: 25rem;
+    width: 100%;
 }
 .buy{
     position: absolute;
@@ -2071,6 +2206,14 @@ article .vegetable-paragraph{
         position: absolute;
         inset: 0;
         margin: auto;
+    }
+    /*contact section: form section*/
+    .contact__form{
+        width: 100%;
+        display:block;
+        padding: 1rem;
+        margin: 0;
+        margin-top: 3rem;
     }
     
 

@@ -172,7 +172,7 @@ window.addEventListener('resize', () => {
     console.log(serviceTrack.style.width)*/
 
 })
-
+/*
 //controls the caurosel that display the farm picures
 const track = document.querySelector('.trackWay');
 const sliderNextButton = document.querySelector('.sliderButton--right');
@@ -195,7 +195,7 @@ const widthToMove = (track, currrentSlide, targetSlide) => {
     currrentSlide.classList.remove('activeSlider')
     targetSlide.classList.add('activeSlider')
 }
-
+*/
 //control the apperance of the carousel navigator
 const navControl = (slideIndex) => {
     if(slideIndex === 1){
@@ -213,7 +213,7 @@ const navControl = (slideIndex) => {
         sliderNextButton.style.display = 'block'
         }
 }
-
+/*
 //display the next slide on the farm picture carousel when the right button is being clicked
 sliderNextButton.addEventListener('click', () => {
     const currrentSlide = track.querySelector('.activeSlider');
@@ -236,6 +236,7 @@ sliderPreviousButton.addEventListener('click', () => {
     //console.log(slideIndex)
     
 })
+*/
 
 let showcases = [
 {
@@ -313,7 +314,6 @@ let estates = [
 ]
 
 const estatePixContainer = document.querySelector('.estate-pix-container');
-console.log(estatePixContainer)
 let theEstate = '';
 
 estates.forEach(estate => {
@@ -345,6 +345,23 @@ Estate.forEach(estate => {
         Target.classList.add('add-effect-active')
     })
 })
+
+const inputs = document.querySelectorAll('.input');
+inputs.forEach(input => {
+    input.addEventListener('focus', addfocus)
+    input.addEventListener('blur', removefocus)
+})
+function addfocus(){
+    let parent = this.parentNode 
+    console.log(parent)
+    parent.classList.add('focus')
+}
+function removefocus(){
+    let parent = this.parentNode
+   if(this.value == ''){
+    parent.classList.remove('focus')
+   }
+}
 
 let realestateProduct = [
     {
