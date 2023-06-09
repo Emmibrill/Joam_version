@@ -288,7 +288,7 @@ showcases.forEach(display => {
 
 let estates = [
     {
-        name: "gated-house-exterior (1)",
+        name: "gated-house-exterior",
         writeUp: "A gated house's façade is displayed in stunning detail",
         description: "gated-house-exterior",
         link: "realestate.html"
