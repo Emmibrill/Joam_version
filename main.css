@@ -38,9 +38,7 @@
     --textBox-border: #000000;
     --textBox-focus: red;
 }
-body{
-    margin-bottom: 5rem;
-}
+
 /*style for the page preloader starts here*/
 .preloader{
     position: fixed;
@@ -860,6 +858,96 @@ article .why-choose-par:not(.lastChild){
 }
 
 
+/*style the footer section*/
+
+.footer-section{
+    background: rgb(8, 8, 8);
+    margin-top: 4rem;
+}
+.footer-headline{
+    text-transform: capitalize;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: rgb(113, 185, 113);
+    color: green;
+}
+.footer-socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem ;
+    border-bottom: 1px solid var(--nav-list-color);
+}
+.socials--footer{
+    box-shadow: none;
+    background: none;
+}
+.footer-getconnected{
+    color: var(--nav-list-color);
+    text-transform: capitalize;
+    font-family: 'comfortaa', cursive;
+}
+.fa-brands.fa-twitter--footer,
+.fa-brands.fa-instagram--footer,
+.fa-brands.fa-whatsapp--footer{
+    color: var(--nav-list-color);
+    padding: .5rem;
+    font-size: 2rem;
+    box-shadow: none;
+}
+.row{
+    position: relative;
+    display: grid;
+    padding: 2rem 1rem 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+}
+.list-unstyled{
+    padding: 0;
+    padding-block-start: 1rem;
+    width: fit-content;
+}
+.row .footer--icon{
+    color: rgb(113, 185, 113, .6);
+}
+.list-unstyled li{
+    padding-block: .5rem;
+}
+.list-unstyled li a{
+    color: var(--nav-list-color);
+}
+.footer-address{
+    margin-top: 1rem;
+    font-family: 'comfortaa', cursive;
+    font-size: .85rem;
+    text-transform: capitalize;
+    color: var(--nav-list-color);
+}
+.footer-sub-headline{
+    margin-bottom: 1rem;
+}
+.footer-sub-headline-par{
+    text-transform: capitalize;
+    font-family: 'comfortaa', cursive;
+    font-weight: bold;
+}
+.footer-rights{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-rights-container{
+    padding: .5rem;
+}
+.footer-rights-par{
+    color: var(--nav-list-color);
+}
+.des-by{
+    color: rgb(113, 185, 113, .3);
+}
+
 /*style the joam organogram section*/
 .joam-organogram{
     display: grid;
@@ -1589,7 +1677,15 @@ article .vegetable-paragraph{
     line-height: 2rem;
     font-size: 1rem;
 }
-
+.fa-quote-left, .fa-quote-right{
+    color: green;
+}
+.fa-quote-right{
+    padding-left: .5rem;
+}
+.fa-quote-left--realEst, .fa-quote-right--realEst{
+    color: rgb(55, 13, 122);
+}
 
 /*style the realestate section*/
 
@@ -2037,7 +2133,22 @@ article .vegetable-paragraph{
         font-size: 1rem;
     }
     
-
+    /*style the footer section*/
+    .row{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 3rem;
+    }
+    .footer-getconnected{
+        font-size: .8rem;
+    }
+    .fa-brands.fa-twitter--footer,
+    .fa-brands.fa-instagram--footer,
+    .fa-brands.fa-whatsapp--footer{
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -2165,6 +2276,41 @@ article .vegetable-paragraph{
         font-size: 1rem;
     }
 
+    /*style the footer section*/
+    .row{
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        gap: 3rem;
+    }
+    .footer-getconnected{
+        font-size: .8rem;
+    }
+    .fa-brands.fa-twitter--footer,
+    .fa-brands.fa-instagram--footer,
+    .fa-brands.fa-whatsapp--footer{
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+    .footer-address{
+       margin-top: 4rem;
+       width: 50%;
+       right: 0;
+       left: 0;
+       margin: auto;
+    }
+    .footer-sub-headline-par{
+        margin-top: 1rem;
+    }
+    .footer-socials{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-rights{
+        text-align: center;
+    }
+
 }
 @media (max-width:516px) {
     .welcomeMessage h1{
@@ -2282,10 +2428,7 @@ article .vegetable-paragraph{
         margin: auto;
     }
     /*contact section: form section*/
-    .contact__form{
-       
-        
-    }
+    
     
 
     /*syle the button on the welcome page section of the jaom farm*/
@@ -2442,5 +2585,17 @@ article .vegetable-paragraph{
     }
     .socials .fa-twitter, .socials .fa-instagram, .socials .fa-whatsapp{
         padding: 1.5rem;
+    }
+
+    /*style the footer section*/
+    
+
+    .fa-brands.fa-twitter--footer,
+    .fa-brands.fa-instagram--footer,
+    .fa-brands.fa-whatsapp--footer{
+        color: var(--nav-list-color);
+        padding: .5rem;
+        font-size: 1.3rem;
+        box-shadow: none;
     }
 }
