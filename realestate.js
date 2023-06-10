@@ -152,7 +152,7 @@ realestateProductRent.forEach(realEstPro =>{
         <div class="relEst-image-con">
             <img class="relEst-img" src="${realEstPro.name}.jpg" alt="${realEstPro.description}">
         </div> 
-        <h4 class="buy">buy</h4>
+        <h4 class="buy">rent</h4>
         </div>
         <div class="realEst-des-container">
             <h2 class="realEst-prod-des">${realEstPro.realEstProNameDes}</h2>
