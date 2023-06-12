@@ -303,7 +303,6 @@ function ValidateonEntry() {
             validateFields();
         })
     })   
-
 }
 
 function validateFields(){
@@ -317,7 +316,6 @@ function validateFields(){
                 if(field.value.trim() != '' && field.value.length > 8)
                 setStatus(field, '', 'success')
             }
-
 
         })
     })
@@ -345,6 +343,7 @@ function setStatus(field, message, status) {
         field.classList.remove('input-success');
     }
 }
+
 formvalidator();
 
 
