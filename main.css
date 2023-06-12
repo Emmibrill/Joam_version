@@ -794,9 +794,7 @@ article .why-choose-par:not(.lastChild){
 .input-success.input:focus{
     outline: 1.5px solid green;
 }
-.input-success textarea:focus{
-    border: 1.5px solid green;
-}
+
 .contact__head input{
     width: 100%;
     font-size: 1.2rem;
