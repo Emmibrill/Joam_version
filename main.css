@@ -477,10 +477,6 @@ img{
 article .why-choose-par:not(.lastChild){
     margin-bottom: 6rem;
 }
-
-.read-more{
-    display: none;
-}
 .fa-solid.icon{
     position: absolute;
     top: -6rem;
@@ -926,6 +922,15 @@ article .why-choose-par:not(.lastChild){
 .footer-sub-headline{
     margin-bottom: 1rem;
 }
+.joam-about-par{
+    text-transform: capitalize;
+    font-family: 'comfortaa', cursive;
+    color: var(--nav-list-color);
+    margin-top: 1rem;
+    font-size: .85rem;
+    line-height: 1.5rem;
+    width: 80%;
+}
 .footer-sub-headline-par{
     text-transform: capitalize;
     font-family: 'comfortaa', cursive;
@@ -1299,15 +1304,15 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     background-image: url(farm-goat.jpg);
 }
 .farm-header[aria-details="piggery-farm"]{
-    background-image: url(close-up-on-piggy-snout.jpg);
+    background-image: url(baby-pigs-eating.jpg);
 }
 .farm-header[aria-details="fishery-farm"]{
-    background-image: url(school-of-fish-looking-for-food.jpg);
+    background-image: url(silver-and-blue-fish.jpg);
 }
 .farm-overlay{
     position: absolute;
     inset: 0;
-    background: rgba(25, 3, 51, 0.6);
+    background: rgba(25, 3, 51, 0.8);
     isolation: isolate;
     mix-blend-mode: multiply;
 }
@@ -2044,9 +2049,6 @@ article .vegetable-paragraph{
         line-height: 2.5rem;
         font-size: 1.5rem;
     }
-    .overlay-text{
-        font-size: 1.5rem;
-    }
     .list-title h3{
         font-size: 1rem;
     }
@@ -2180,11 +2182,11 @@ article .vegetable-paragraph{
     /*style the respective farm in the farm section*/
 
     .overlay-text{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
     .intro-section-image{
         height: 15rem;
-        width: 20rem;
+        width: 80%;
         margin-bottom: 1rem;
     }
     article .vegetable-paragraph{
@@ -2299,6 +2301,14 @@ article .vegetable-paragraph{
        left: 0;
        margin: auto;
     }
+    .joam-about-par{
+        width: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 1rem;
+        
+    }
     .footer-sub-headline-par{
         margin-top: 1rem;
     }
@@ -2379,26 +2389,11 @@ article .vegetable-paragraph{
         font-size: .9rem;
         padding-bottom: 2rem;
     }
-    .read-more{
-        display: flex;
-        align-self: flex-end;
-    }
-    .read-more i{
-        color: red;
-    }
     .fa-sharp{
         color: rgb(0, 128, 0, .4);
     }
     article .why-choose-par{
         line-height: 1.5rem;
-    }
-    .extended-paragraph{
-        display: none;
-        transform: scaleY(0);
-    }
-   .showExtended-paragraph{
-        display: flex;
-        transform: scaleY(1);
     }
     .estate-pix-box{
         height: 20rem;
@@ -2453,9 +2448,7 @@ article .vegetable-paragraph{
 
     /*style the respective farm in the farm section*/
 
-    .overlay-text{
-        font-size: 1rem;
-    }
+
     article .vegetable-paragraph{
         line-height: 2rem;
         font-size: 1.2rem;
@@ -2574,6 +2567,10 @@ article .vegetable-paragraph{
     /*style the farm sections*/
     .farm-nav-tab{
         padding: 1rem;
+    }
+    .intro-section-image{
+        height: 12rem;
+        width: 90%;
     }
 
     /*home page contact section*/

@@ -195,7 +195,7 @@ const widthToMove = (track, currrentSlide, targetSlide) => {
     currrentSlide.classList.remove('activeSlider')
     targetSlide.classList.add('activeSlider')
 }
-*/
+
 //control the apperance of the carousel navigator
 const navControl = (slideIndex) => {
     if(slideIndex === 1){
@@ -241,25 +241,25 @@ sliderPreviousButton.addEventListener('click', () => {
 let showcases = [
 {
     name: "baby-pigs-eating",
-    writeUp: "we got you covered",
+    writeUp: "piggery",
     description: "baby-pigs-eating-on-the-farm",
     link: "farm.html"
 },
 {
     name: "black-layer-chicken",
-    writeUp: "we got you covered",
+    writeUp: "poultry",
     description: "a-full-grown-brown-chicken",
     link: "farm.html"
 },
 {
     name: "silver-and-blue-fish",
-    writeUp: "we got you covered",
+    writeUp: "fishery",
     description: "silver-and-blue-fish-in-a-pile" ,
     link: "farm.html"  
 },
 {
     name: "farm-goat",
-    writeUp: "we got you covered",
+    writeUp: "goat farm",
     description: "two-goats-looking-tough",
     link: "farm.html"    
 }
