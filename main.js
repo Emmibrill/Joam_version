@@ -270,7 +270,6 @@ inputs.forEach(input => {
 })
 function addfocus(){
     let parent = this.parentNode 
-    console.log(parent)
     parent.classList.add('focus')
 }
 function removefocus(){
@@ -279,6 +278,81 @@ function removefocus(){
     parent.classList.remove('focus')
    }
 }
+
+
+const form = document.querySelector('#contact');
+const fieldParent = document.querySelectorAll('.contact__head')
+const fields = document.querySelectorAll('.input')
+
+
+
+function formvalidator() {
+    validateOnSubmit();
+    ValidateonEntry()
+}
+
+function validateOnSubmit() {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fields.forEach(field => {
+            validateFields() ;  
+        })  
+    })
+}
+function ValidateonEntry() {
+    fields.forEach(field => {
+        field.addEventListener('input', () => {
+            validateFields();
+        })
+    })   
+
+}
+
+function validateFields(){
+    fields.forEach(field => {
+        field.addEventListener('input', () => {
+            if(field.value.trim() === ''){
+                setStatus(field, 'field cannot be blank', 'error')
+
+
+            } else{
+                if(field.value.trim() != '' && field.value.length > 8)
+                setStatus(field, '', 'success')
+            }
+
+
+        })
+    })
+}
+
+function setStatus(field, message, status) {   
+    
+    const erroricon = field.parentElement.querySelector('.fa-circle-xmark');
+    const succesicon = field.parentElement.querySelector('.fa-circle-check');
+    const errorMessage = field.parentElement.querySelector('.errorMessage');
+
+
+    if(status === 'success'){
+        if(erroricon){erroricon.classList.remove('input-error')}
+        succesicon.classList.add('input-success')
+        errorMessage.classList.remove('input-error')
+        errorMessage.innerHTML = '';
+        field.classList.add('input-success')
+    }
+    if(status === 'error'){
+        if(succesicon){succesicon.classList.remove('input-success')}
+        erroricon.classList.add('input-error');
+        errorMessage.classList.add('input-error');
+        errorMessage.innerHTML = message;
+        field.classList.remove('input-success');
+    }
+}
+
+formvalidator();
+
+
+
+
 
 
 
