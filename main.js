@@ -82,24 +82,6 @@ window.addEventListener('scroll', () => {
     removeNavbar()    
 })
 
-const readMore = document.querySelector('.read-more')
-readMore.addEventListener('click', () => {
-    showMore()
-})
-
-//display all the content on the 'why choose joam real estate log'
-const showMore = () => {
-    let par = document.querySelector('.extended-paragraph');
-    let parAttribute = par.getAttribute('aria-details')
-    if(parAttribute === 'hidden'){
-        par.setAttribute('aria-details', 'visible');
-        par.classList.add('showExtended-paragraph')
-    }else{
-        par.setAttribute('aria-details', 'hidden')
-        par.classList.remove('showExtended-paragraph')
-    }
-}
-
 //control the carousel that displays the different services rendered on the home page
 const serviceTrack = document.querySelector('.services-pictures-container');
 const serviceNextButton = document.querySelector('.serviceButton--right');
@@ -172,71 +154,6 @@ window.addEventListener('resize', () => {
     console.log(serviceTrack.style.width)*/
 
 })
-/*
-//controls the caurosel that display the farm picures
-const track = document.querySelector('.trackWay');
-const sliderNextButton = document.querySelector('.sliderButton--right');
-const sliderPreviousButton = document.querySelector('.sliderButton--left');
-
-const slides = Array.from(track.children)
-const slideWidth = slides[1].getBoundingClientRect().width;
-//console.log(slideWidth)
-
-const assignPosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-    const num = slide.style.left
-    //console.log(num)
-}
-slides.forEach(assignPosition);
-
-//assign the needed width to the different carousel track
-const widthToMove = (track, currrentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
-    currrentSlide.classList.remove('activeSlider')
-    targetSlide.classList.add('activeSlider')
-}
-
-//control the apperance of the carousel navigator
-const navControl = (slideIndex) => {
-    if(slideIndex === 1){
-        sliderPreviousButton.style.display = 'block'
-    }
-    else if(slides.length - 1 === slideIndex){
-        sliderNextButton.style.display = 'none'
-        sliderPreviousButton.style.display = 'block'
-    }
-    else if(slideIndex === 0 ){
-        sliderPreviousButton.style.display = 'none'
-    }
-    else{
-        sliderPreviousButton.style.display = 'block';
-        sliderNextButton.style.display = 'block'
-        }
-}
-/*
-//display the next slide on the farm picture carousel when the right button is being clicked
-sliderNextButton.addEventListener('click', () => {
-    const currrentSlide = track.querySelector('.activeSlider');
-    const nextSlide = currrentSlide.nextElementSibling;
-    const slideIndex = slides.findIndex(slide => slide === nextSlide)
-    
-    widthToMove(track, currrentSlide, nextSlide);
-    navControl(slideIndex)
-    //console.log(slideIndex)
-})
-
-//display the next slide on the farm picture carousel when the left button is being clicked
-sliderPreviousButton.addEventListener('click', () => {
-    const currrentSlide = track.querySelector('.activeSlider');
-    const previousSlide = currrentSlide.previousElementSibling;
-    const slideIndex = slides.findIndex(slide => slide === previousSlide)
-
-    widthToMove(track, currrentSlide, previousSlide);
-    navControl(slideIndex)
-    //console.log(slideIndex)
-    
-})
-*/
 
 let showcases = [
 {
