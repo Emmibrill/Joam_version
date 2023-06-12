@@ -1299,15 +1299,15 @@ li.active:not(.list-title), li.active:not(.list-title) h3{
     background-image: url(farm-goat.jpg);
 }
 .farm-header[aria-details="piggery-farm"]{
-    background-image: url(close-up-on-piggy-snout.jpg);
+    background-image: url(baby-pigs-eating.jpg);
 }
 .farm-header[aria-details="fishery-farm"]{
-    background-image: url(school-of-fish-looking-for-food.jpg);
+    background-image: url(silver-and-blue-fish.jpg);
 }
 .farm-overlay{
     position: absolute;
     inset: 0;
-    background: rgba(25, 3, 51, 0.6);
+    background: rgba(25, 3, 51, 0.8);
     isolation: isolate;
     mix-blend-mode: multiply;
 }
@@ -2044,9 +2044,6 @@ article .vegetable-paragraph{
         line-height: 2.5rem;
         font-size: 1.5rem;
     }
-    .overlay-text{
-        font-size: 1.5rem;
-    }
     .list-title h3{
         font-size: 1rem;
     }
@@ -2180,11 +2177,11 @@ article .vegetable-paragraph{
     /*style the respective farm in the farm section*/
 
     .overlay-text{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
     .intro-section-image{
         height: 15rem;
-        width: 20rem;
+        width: 80%;
         margin-bottom: 1rem;
     }
     article .vegetable-paragraph{
@@ -2453,9 +2450,7 @@ article .vegetable-paragraph{
 
     /*style the respective farm in the farm section*/
 
-    .overlay-text{
-        font-size: 1rem;
-    }
+
     article .vegetable-paragraph{
         line-height: 2rem;
         font-size: 1.2rem;
@@ -2574,6 +2569,10 @@ article .vegetable-paragraph{
     /*style the farm sections*/
     .farm-nav-tab{
         padding: 1rem;
+    }
+    .intro-section-image{
+        height: 12rem;
+        width: 90%;
     }
 
     /*home page contact section*/
