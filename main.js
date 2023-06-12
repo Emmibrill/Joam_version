@@ -347,6 +347,7 @@ function setStatus(field, message, status) {
         field.classList.remove('input-success');
     }
 }
+
 formvalidator();
 
 
