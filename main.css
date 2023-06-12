@@ -751,15 +751,55 @@ article .why-choose-par:not(.lastChild){
 }
 .contact__head{
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
+.contact__head .fa-circle-check, .contact__head .fa-circle-xmark{
+    position: absolute;
+    top: 1rem;
+    right: .3rem;
+    display: none;
+}
+.contact__head .fa-circle-check{
+    color: green;
+}
+.contact__head .fa-circle-xmark{
+    color: red;
+}
+.errorMessage{
+    display: none;
+    position: absolute;
+    text-transform: capitalize;
+    top: -50%;
+    color: red;
+}
+.input-error.errorMessage{
+    display: block;
+}
+.input-error.input{
+    border: 1.5px solid red;
+}
+.input-success.errorMessage{
+    display: none;
+}
+.input-error.fa-circle-xmark{
+    display: block;
+} 
+.input-success.fa-circle-check{
+    display: block;
+}
+.input-success.input{
+    border: 1.5px solid green;
+}
+.input-success.input:focus{
+    outline: 1.5px solid green;
+}
+
 .contact__head input{
     width: 100%;
     font-size: 1.2rem;
     height: 2rem;
-    border: 1.5px solid green;
-    border: 1px solid var(navli);
+    border: 1.5px solid var(--outline-color-focus);
     background: transparent;
     padding: 1.4rem .9rem 1.5rem;
 }
@@ -775,14 +815,14 @@ article .why-choose-par:not(.lastChild){
     resize: none;
     padding: .6rem .9rem;
     background: transparent;
-    border: 1.5px solid var(--textBox-border);
+    border: 1.5px solid var(--outline-color-focus);
     color: var(--text-black-900);
 }
 .contact__head textarea:focus{
     border: none;
 }
 .contact__head textarea:focus{
-    outline: 1px solid var(--textBox-focus);
+    outline: 1px solid var(--outline-color-focus);
 }
 .contact__head label{
     position: absolute;
@@ -803,7 +843,7 @@ article .why-choose-par:not(.lastChild){
     line-height: .8rem;
     left: 1.1rem;
 }
-.contact__head span{
+.contact__head .contact__label{
     position: absolute;
     top: 0;
     left: 1rem;
@@ -814,7 +854,7 @@ article .why-choose-par:not(.lastChild){
     line-height: .8rem;
     opacity: 0;
 }
-.focus span{
+.focus .contact__label{
     opacity: 1;
 }
 .contact__label::before,
