@@ -317,7 +317,6 @@ function validateFields(){
                 setStatus(field, '', 'success')
             }
 
-
         })
     })
 }
