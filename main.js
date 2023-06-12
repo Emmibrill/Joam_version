@@ -155,7 +155,6 @@ window.addEventListener('resize', () => {
 
 })
 
-
 let showcases = [
 {
     name: "baby-pigs-eating",
