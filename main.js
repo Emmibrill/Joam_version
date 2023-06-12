@@ -284,8 +284,6 @@ const form = document.querySelector('#contact');
 const fieldParent = document.querySelectorAll('.contact__head')
 const fields = document.querySelectorAll('.input')
 
-
-
 function formvalidator() {
     validateOnSubmit();
     ValidateonEntry()
