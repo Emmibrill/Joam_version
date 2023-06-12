@@ -303,7 +303,6 @@ function ValidateonEntry() {
             validateFields();
         })
     })   
-
 }
 
 function validateFields(){
