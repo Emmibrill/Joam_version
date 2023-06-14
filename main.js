@@ -398,6 +398,7 @@ function setStatusForMsg(field, message, status) {
         field.classList.add('input-success')
     }
     if(status === 'error'){
+        if(succesicon){succesicon.classList.remove('input-success')}
         erroricon.classList.add('input-error');
         errorForMsg.classList.add('error');
         errorForMsg.innerHTML = message;
