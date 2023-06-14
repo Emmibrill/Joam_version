@@ -341,7 +341,7 @@ function validateFields(){
 
             if(field.type.trim() === 'tel'){
                 const re = /^\+?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{7})$/;
-                const _re = /^([0]{1})?([1-9]{2})?([0-9]{8})$/;
+                const _re = /^([0]{1})([1-9]{2})([0-9]{8})$/;
                 if(re.test(field.value) || _re.test(field.value)){
                     console.log('number is valid')
                     setStatus(field, '', 'success')
@@ -398,6 +398,7 @@ function setStatusForMsg(field, message, status) {
         field.classList.add('input-success')
     }
     if(status === 'error'){
+        if(succesicon){succesicon.classList.remove('input-success')}
         erroricon.classList.add('input-error');
         errorForMsg.classList.add('error');
         errorForMsg.innerHTML = message;
