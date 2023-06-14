@@ -124,6 +124,7 @@ serviceNextButton.addEventListener('click', () => {
 })
 
 /*window.addEventListener('resize', () => {
+    
 
 })*/
 
@@ -132,25 +133,25 @@ let showcases = [
     name: "baby-pigs-eating",
     writeUp: "piggery",
     description: "baby-pigs-eating-on-the-farm",
-    link: "farm.html"
+    link: "farm.html#farmN"
 },
 {
     name: "black-layer-chicken",
     writeUp: "poultry",
     description: "a-full-grown-brown-chicken",
-    link: "farm.html"
+    link: "farm.html#farmN"
 },
 {
     name: "silver-and-blue-fish",
     writeUp: "fishery",
     description: "silver-and-blue-fish-in-a-pile" ,
-    link: "farm.html"  
+    link: "farm.html#farmN"  
 },
 {
     name: "farm-goat",
     writeUp: "goat farm",
     description: "two-goats-looking-tough",
-    link: "farm.html"    
+    link: "farm.html#farmN"    
 }
 ]
 
