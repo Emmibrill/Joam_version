@@ -123,15 +123,9 @@ serviceNextButton.addEventListener('click', () => {
     //console.log(slideIndex) 
 })
 
-window.addEventListener('resize', () => {
-    
-    /*const currrentSlide = serviceTrack.querySelector('.activeSlider');
-    let curSlideImgWidth = currrentSlide.children[0].clientWidth
-    console.log(curSlideImgWidth)
-    serviceTrack.style.width = curSlideImgWidth
-    console.log(serviceTrack.style.width)*/
+/*window.addEventListener('resize', () => {
 
-})
+})*/
 
 let showcases = [
 {
