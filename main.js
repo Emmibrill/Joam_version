@@ -266,13 +266,20 @@ function formvalidator() {
     validateOnSubmit();
     ValidateonChange()
     ValidateonEntry()
+
 }
 //validates form on submit
 function validateOnSubmit() {
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
         fields.forEach(field => {
-            validateFields() ;  
+            if(field.value === ''){
+                e.preventDefault()
+            }else  if(field.name === 'message'){
+                if(field.value.length < 10){
+                    e.preventDefault()
+                }
+            } 
+            return validateFields() ;  
         })  
     })
 }
