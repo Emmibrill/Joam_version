@@ -266,7 +266,6 @@ function formvalidator() {
     validateOnSubmit();
     ValidateonChange()
     ValidateonEntry()
-
 }
 //validates form on submit
 function validateOnSubmit() {
@@ -279,7 +278,7 @@ function validateOnSubmit() {
                     e.preventDefault()
                 }
             } 
-            return validateFields() ;  
+            return validateFields();
         })  
     })
 }
@@ -383,8 +382,18 @@ function setStatusForMsg(field, message, status) {
         field.classList.remove('input-success');
     }
 }
+function clearField(){
+    window.addEventListener('load', () => {
+        fields.forEach(field =>{
+            while(field.value !== ''){
+                field.value = '';
+            }
+        })
+    })
+}
 
 formvalidator();
+clearField()
 
 
 
