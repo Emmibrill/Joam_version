@@ -1639,7 +1639,7 @@ article .vegetable-paragraph{
 }
 .page-up{
     position: fixed;
-    bottom: 4rem;
+    bottom: 8rem;
     right: 1rem;
     background: rgb(51, 173, 51);
     width: 3.5rem;
