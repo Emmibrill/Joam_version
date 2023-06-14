@@ -3,27 +3,6 @@ const navList = document.querySelector('.nav__list');
 const nav_list = document.querySelectorAll('.list');
 const navBar = document.querySelector('.nav__bar');
 
-
-/*var sliderImage = document.querySelector('#sliderImage');
-sliderImage.classList.add('background-picture-image');
-var images = new Array(
-    "LEAF.jpg",
-    "black-and-red-chicken (1).jpg",
-    "yellow-corn-kernels-through-leaves (1).jpg");
-var length = images.length;
-var i = 0;
-
-
-//change the image on the home page first section
-function slider(){
-    if(i > length-1){
-        i = 0
-    }
-    sliderImage.src = images[i]
-    i++
-    setTimeout('slider()',3000)
-}*/
-
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
 })
@@ -72,7 +51,6 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     navList.classList.remove('navActive')  
 })
-
 
 navToggler.addEventListener('click', () => {
     activateNavbar()
@@ -248,7 +226,6 @@ estates.forEach(estate => {
     estatePixContainer.innerHTML = theEstate;
 })
 
-
 const eachEstate = estatePixContainer.children;
 const Estate = Array.from(eachEstate)
 Estate[0].classList.add('add-effect-active');
@@ -268,6 +245,7 @@ inputs.forEach(input => {
     input.addEventListener('focus', addfocus)
     input.addEventListener('blur', removefocus)
 })
+
 function addfocus(){
     let parent = this.parentNode 
     parent.classList.add('focus')
@@ -293,9 +271,15 @@ function formvalidator() {
 //validates form on submit
 function validateOnSubmit() {
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
         fields.forEach(field => {
-            validateFields() ;  
+            if(field.value === ''){
+                e.preventDefault()
+            }else  if(field.name === 'message'){
+                if(field.value.length < 10){
+                    e.preventDefault()
+                }
+            } 
+            return validateFields() ;  
         })  
     })
 }
