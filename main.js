@@ -340,7 +340,7 @@ function validateFields(){
             }
 
             if(field.type.trim() === 'tel'){
-                const re = /^\+?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{7})$/;
+                const re = /^\+([0-9]{3})([0-9]{3})([0-9]{7})$/;
                 const _re = /^([0]{1})([1-9]{2})([0-9]{8})$/;
                 if(re.test(field.value) || _re.test(field.value)){
                     console.log('number is valid')
@@ -385,24 +385,18 @@ function setStatus(field, message, status) {
     }
 }
 //set status for the message field
-function setStatusForMsg(field, message, status) { 
-    const erroricon = field.parentElement.querySelector('.fa-circle-xmark');
-    const succesicon = field.parentElement.querySelector('.fa-circle-check');  
+function setStatusForMsg(field, message, status) {  
     const errorForMsg = field.parentElement.querySelector('.errorMessage--message');
 
     if(status === 'success'){
-        if(erroricon){erroricon.classList.remove('input-error')}
-        succesicon.classList.add('input-success')
         errorForMsg.classList.remove('error')
         errorForMsg.innerHTML = '';
         field.classList.add('input-success')
     }
     if(status === 'error'){
-        if(succesicon){succesicon.classList.remove('input-success')}
-        erroricon.classList.add('input-error');
         errorForMsg.classList.add('error');
         errorForMsg.innerHTML = message;
-        field.classList.remove('success');
+        field.classList.remove('input-success');
     }
 }
 
