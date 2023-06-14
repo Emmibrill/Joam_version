@@ -286,9 +286,11 @@ const fields = document.querySelectorAll('.input')
 
 function formvalidator() {
     validateOnSubmit();
+    ValidateonChange()
     ValidateonEntry()
-}
 
+}
+//validates form on submit
 function validateOnSubmit() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -297,6 +299,7 @@ function validateOnSubmit() {
         })  
     })
 }
+//validates form on entry
 function ValidateonEntry() {
     fields.forEach(field => {
         field.addEventListener('input', () => {
@@ -304,29 +307,67 @@ function ValidateonEntry() {
         })
     })   
 }
+//validates form on change when using autocomplete
+function ValidateonChange() {
+    fields.forEach(field => {
+        field.addEventListener('click', () => {
+            validateFields();
+        })
+    })   
+}
 
+//validates the different input fields
 function validateFields(){
     fields.forEach(field => {
         field.addEventListener('input', () => {
-            if(field.value.trim() === ''){
-                setStatus(field, 'field cannot be blank', 'error')
+            if(field.type === 'text'){
+                if(field.value.trim() === ''){
+                    setStatus(field, 'field cannot be blank', 'error')
+                }else if(field.value.length < 10){
+                    setStatus(field, 'please enter your full name', 'error')
+                }else{setStatus(field, '', 'success')}
+            } 
 
-
-            } else{
-                if(field.value.trim() != '' && field.value.length > 8)
-                setStatus(field, '', 'success')
+            if(field.type.trim() === 'email'){
+                const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
+                if(re.test(field.value)){
+                    console.log('emial is valid')
+                    setStatus(field, '', 'success')
+                } else{
+                    console.log('emial is not valid')
+                    setStatus(field, 'enter a valid email address', 'error')
+                }
             }
+
+            if(field.type.trim() === 'tel'){
+                const re = /^\+?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{7})$/;
+                const _re = /^([0]{1})?([1-9]{2})?([0-9]{8})$/;
+                if(re.test(field.value) || _re.test(field.value)){
+                    console.log('number is valid')
+                    setStatus(field, '', 'success')
+                } else{
+                    setStatus(field, 'please enter a valid phone number', 'error')
+                }
+            }
+            if(field.name === 'message'){
+                if(field.value.trim() === ''){
+                    console.log('yes o')
+                    setStatusForMsg(field, 'field cannot be blank', 'error')
+                }else if(field.value.length < 10){
+                    setStatusForMsg(field, 'please write something descriptive', 'error')
+                }else{setStatusForMsg(field, '', 'success')}
+            } 
 
         })
     })
 }
 
+//set status for the input fields
 function setStatus(field, message, status) {   
     
     const erroricon = field.parentElement.querySelector('.fa-circle-xmark');
     const succesicon = field.parentElement.querySelector('.fa-circle-check');
     const errorMessage = field.parentElement.querySelector('.errorMessage');
-
 
     if(status === 'success'){
         if(erroricon){erroricon.classList.remove('input-error')}
@@ -341,6 +382,26 @@ function setStatus(field, message, status) {
         errorMessage.classList.add('input-error');
         errorMessage.innerHTML = message;
         field.classList.remove('input-success');
+    }
+}
+//set status for the message field
+function setStatusForMsg(field, message, status) { 
+    const erroricon = field.parentElement.querySelector('.fa-circle-xmark');
+    const succesicon = field.parentElement.querySelector('.fa-circle-check');  
+    const errorForMsg = field.parentElement.querySelector('.errorMessage--message');
+
+    if(status === 'success'){
+        if(erroricon){erroricon.classList.remove('input-error')}
+        succesicon.classList.add('input-success')
+        errorForMsg.classList.remove('error')
+        errorForMsg.innerHTML = '';
+        field.classList.add('input-success')
+    }
+    if(status === 'error'){
+        erroricon.classList.add('input-error');
+        errorForMsg.classList.add('error');
+        errorForMsg.innerHTML = message;
+        field.classList.remove('success');
     }
 }
 
