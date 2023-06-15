@@ -23,6 +23,7 @@ window.addEventListener('resize', () => {
     
 })
 
+//refresh current page on screen rotate
 window.matchMedia("(orientation: landscape)").addEventListener('change', (e) => {
     const mode = e.matches
     if(mode){
