@@ -113,36 +113,37 @@ let realestateProductRent = [
     {
         name: "gated-house-exterior",
         description: "gated-house-exterior",
-        realEstProNameDes: "description one",
-        realEstLocation: "location one",
-        realEstPrice: "12,000,000",
+        realEstProNameDes: "three bedroom flat",
+        realEstLocation: "52 ajuona obukpa, nsukka",
+        realEstPrice: "400,000 per annum",
         link: "realestate.html"
     },
     {
         name: "large-house-with-balcony",
         description: "large-house-with-balcony",
-        realEstProNameDes: "description two",
-        realEstLocation: "location one",
-        realEstPrice: "12,000,000",
+        realEstProNameDes: "two bedroom flat",
+        realEstLocation: "8 ibagwa road, nsukka",
+        realEstPrice: "300,000 per annum",
         link: "realestate.html"
     },
     {
         name: "modern-housing-with-blue-sky",
         description: "modern-housing-with-blue-sky",
-        realEstProNameDes: "description three",
-        realEstLocation: "location one",
-        realEstPrice: "12,000,000",
+        realEstProNameDes: "self contain",
+        realEstLocation: "odenigwe gate, university of nigeria",
+        realEstPrice: "150,000 per annum",
         link: "realestate.html"  
     },
     {
         name: "one-storey-home-exterior (1)",
         description: "one-storey-home-exterior",
-        realEstProNameDes: "description four",
-        realEstLocation: "location one",
-        realEstPrice: "12,000,000",
+        realEstProNameDes: "duplex",
+        realEstLocation: "23 odim gate, university of nigeria",
+        realEstPrice: "1,000,000 per annum",
         link: "realestate.html"    
     }
 ]
+
 const realEstateProductContainerRent = document.querySelector('#realEst-prod-container-rent');
 let theRealEstProdRent = '';
 realestateProductRent.forEach(realEstPro =>{

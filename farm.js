@@ -157,12 +157,12 @@ let products = [
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "green vegetable",
-        link: "#"
+        link: "#contact"
     },
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "good vegetable pods",
-        link: "#"
+        link: "#contact"
     }
 ]
 products.forEach(eachProduct => {
@@ -231,25 +231,25 @@ let poultryProducts = [
     {
         product: "black-layer-chicken",
         productTitle: "black-layer-chicken-posing",
-        link: "#"
+        link: "#contact"
     },
     {
         product: "white-broiler",
         productTitle: "broiler",
         description: "white-broiler-watchig-steps",
-        link: "#"
+        link: "#contact"
     },
     {
         product: "fresh-eggs",
         productTitle: "fresh eggs",
         description: "basket-of-fresh-eggs",
-        link: "#"
+        link: "#contact"
     },
     {
         product: "spotted-noiler-chicken",
         productTitle: "noiler",
         description: "spotted-noiler-chicken-in-grass",
-        link: "#"
+        link: "#contact"
     }
 ]
 poultryProducts.forEach(poultryProduct => {
