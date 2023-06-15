@@ -143,6 +143,7 @@ let realestateProductRent = [
         link: "realestate.html"    
     }
 ]
+
 const realEstateProductContainerRent = document.querySelector('#realEst-prod-container-rent');
 let theRealEstProdRent = '';
 realestateProductRent.forEach(realEstPro =>{
