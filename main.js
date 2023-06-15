@@ -26,13 +26,8 @@ window.addEventListener('resize', () => {
 window.matchMedia("(orientation: landscape)").addEventListener('change', (e) => {
     const mode = e.matches
     if(mode){
-        if(navigator.userAgent.match(/Andriod/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/Windows Phone/i)) {
-                return  location.reload()
-            }
+        console.log(true)
+        return  location.reload()
     }
 })
 
