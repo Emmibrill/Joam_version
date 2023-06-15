@@ -34,7 +34,7 @@
     --white:#f3f0f0;
     --about-title: #0a090a;
     --border-color: red;
-    --outline-color-focus: red;
+    --outline-color-focus: gray;
     --textBox-border: #000000;
     --textBox-focus: red;
 }
@@ -788,9 +788,6 @@ article .why-choose-par:not(.lastChild){
 .error.errorMessage--message{
     display: block;
 }
-.input-error.input{
-    border: 1.5px solid red;
-}
 .input-success.errorMessage{
     display: none;
 }
@@ -800,13 +797,6 @@ article .why-choose-par:not(.lastChild){
 .input-success.fa-circle-check{
     display: block;
 }
-.input-success.input{
-    border: 1.5px solid green;
-}
-.input-success.input:focus{
-    outline: 1.5px solid green;
-}
-
 .contact__head input{
     width: 100%;
     font-size: 1.2rem;
@@ -815,11 +805,23 @@ article .why-choose-par:not(.lastChild){
     background: transparent;
     padding: 1.4rem .9rem 1.5rem;
 }
+.input-success.input{
+    border: 1.5px solid green;
+}
+.input-error.input{
+    border: 1.5px solid red;
+}
 .contact__head input:focus{
     border: none;
 }
 .contact__head input:focus{
     outline: 1px solid var(--outline-color-focus);
+}
+.input-success.input:focus{
+    outline: 1.5px solid green;
+}
+.input-error.input:focus{
+    outline: 1.5px solid red;
 }
 .contact__head textarea{
     width: 100%;

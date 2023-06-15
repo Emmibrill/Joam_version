@@ -266,13 +266,29 @@ function formvalidator() {
 function validateOnSubmit() {
     form.addEventListener('submit', (e) => {
         fields.forEach(field => {
-            if(field.value === ''){
-                e.preventDefault()
-            }else  if(field.name === 'message'){
-                if(field.value.length < 10){
+            if(field.value === ''){e.preventDefault();}
+            else if(field.type === 'text'){
+                if(field.value.trim() === ''){e.preventDefault()}
+                else if(field.value.length < 4){e.preventDefault()}
+                else{return validateFields()}
+            } 
+            else if(field.type === 'email'){
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z{2,3}]*$/;
+                if(re.test(field.value)){return validateFields();}
+                else{e.preventDefault()}
+            }
+            else if(field.type.trim() === 'tel'){
+                const re = /^\+([0-9]{3})([0-9]{3})([0-9]{7})$/;
+                const _re = /^([0]{1})([0-9]{2})([0-9]{8})$/;
+                if(re.test(field.value) || _re.test(field.value)){
+                    return validateFields();
+                } else{e.preventDefault()}
+            }
+            else if(field.name === 'message'){
+                if(field.value.length < 9){
                     e.preventDefault()
                 }
-            } 
+            }
             return validateFields();
         })  
     })
@@ -301,27 +317,24 @@ function validateFields(){
             if(field.type === 'text'){
                 if(field.value.trim() === ''){
                     setStatus(field, 'field cannot be blank', 'error')
-                }else if(field.value.length < 10){
+                }else if(field.value.length < 4){
                     setStatus(field, 'please enter your full name', 'error')
                 }else{setStatus(field, '', 'success')}
             } 
 
             if(field.type.trim() === 'email'){
-                const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
+                const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z{2,3}]*$/;
                 if(re.test(field.value)){
-                    console.log('emial is valid')
                     setStatus(field, '', 'success')
                 } else{
-                    console.log('emial is not valid')
                     setStatus(field, 'enter a valid email address', 'error')
                 }
             }
 
             if(field.type.trim() === 'tel'){
                 const re = /^\+([0-9]{3})([0-9]{3})([0-9]{7})$/;
-                const _re = /^([0]{1})([1-9]{2})([0-9]{8})$/;
+                const _re = /^([0]{1})([0-9]{2})([0-9]{8})$/;
                 if(re.test(field.value) || _re.test(field.value)){
-                    console.log('number is valid')
                     setStatus(field, '', 'success')
                 } else{
                     setStatus(field, 'please enter a valid phone number', 'error')
@@ -329,7 +342,6 @@ function validateFields(){
             }
             if(field.name === 'message'){
                 if(field.value.trim() === ''){
-                    console.log('yes o')
                     setStatusForMsg(field, 'field cannot be blank', 'error')
                 }else if(field.value.length < 10){
                     setStatusForMsg(field, 'please write something descriptive', 'error')
@@ -352,6 +364,7 @@ function setStatus(field, message, status) {
         succesicon.classList.add('input-success')
         errorMessage.classList.remove('input-error')
         errorMessage.innerHTML = '';
+        field.classList.remove('input-error');
         field.classList.add('input-success')
     }
     if(status === 'error'){
@@ -360,6 +373,7 @@ function setStatus(field, message, status) {
         errorMessage.classList.add('input-error');
         errorMessage.innerHTML = message;
         field.classList.remove('input-success');
+        field.classList.add('input-error');
     }
 }
 //set status for the message field
@@ -369,12 +383,14 @@ function setStatusForMsg(field, message, status) {
     if(status === 'success'){
         errorForMsg.classList.remove('error')
         errorForMsg.innerHTML = '';
+        field.classList.remove('input-error');
         field.classList.add('input-success')
     }
     if(status === 'error'){
         errorForMsg.classList.add('error');
         errorForMsg.innerHTML = message;
         field.classList.remove('input-success');
+        field.classList.add('input-error');
     }
 }
 function clearField(){
