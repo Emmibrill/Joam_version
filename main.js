@@ -273,7 +273,7 @@ function validateOnSubmit() {
                 else{return validateFields()}
             } 
             else if(field.type === 'email'){
-                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z{2,3}]*$/;
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z{2,3}]+)*$/;
                 if(re.test(field.value)){return validateFields();}
                 else{e.preventDefault()}
             }
@@ -323,7 +323,7 @@ function validateFields(){
             } 
 
             if(field.type.trim() === 'email'){
-                const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z{2,3}]*$/;
+                const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z{2,3}]+)*$/;
                 if(re.test(field.value)){
                     setStatus(field, '', 'success')
                 } else{
