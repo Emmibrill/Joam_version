@@ -1652,6 +1652,7 @@ article .vegetable-paragraph{
     justify-content: center;
     animation: glow 1s linear infinite alternate;
     transform: .5s;
+    z-index: 3;
 }
 .page-up.show-page-up{
     display: flex;
