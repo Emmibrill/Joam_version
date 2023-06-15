@@ -31,7 +31,6 @@ window.matchMedia("(orientation: landscape)").addEventListener('change', (e) => 
     }
 })
 
-
 //activate nav bar on scroll
 function activateScrolly() {
     navBar.classList.toggle('addNavBarColor', scrollY > 20)
