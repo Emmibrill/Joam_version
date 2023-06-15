@@ -392,6 +392,7 @@ function validateOnSubmit() {
         })  
     })
 }
+
 //validates form on entry
 function ValidateonEntry() {
     fields.forEach(field => {
@@ -400,6 +401,7 @@ function ValidateonEntry() {
         })
     })   
 }
+
 //validates form on change when using autocomplete
 function ValidateonChange() {
     fields.forEach(field => {
