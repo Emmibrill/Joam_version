@@ -367,7 +367,7 @@ function validateOnSubmit() {
     form.addEventListener('submit', (e) => {
         fields.forEach(field => {
             if(field.value === ''){e.preventDefault();}
-            else if(field.type === 'text'){
+            else if(field.name === 'name'){
                 if(field.value.trim() === ''){e.preventDefault()}
                 else if(field.value.length < 4){e.preventDefault()}
             } 
@@ -384,15 +384,19 @@ function validateOnSubmit() {
                 } else{e.preventDefault()}
             }
             else if(field.name === 'address'){
-                if(field.value.length < 6){
+                if(field.value.trim() === ''){
+                    e.preventDefault()
+                }else if(field.value.length < 6){
+                    e.preventDefault()
+                }
+            } 
+            else if(field.name === 'product'){
+                if(field.value.trim() === ''){
+                    e.preventDefault();
+                }else if(field.value.length < 10){
                     e.preventDefault();
                 }
             } 
-            else if(field.name === 'message'){
-                if(field.value.length < 9){
-                    e.preventDefault()
-                }
-            }
             return validateFields();
         })  
     })
@@ -450,7 +454,7 @@ function validateFields(){
 
             if(field.name === 'address'){
                 if(field.value.trim() === ''){
-                    setStatusForMsg(field, 'field cannot be blank', 'error')
+                    setStatus(field, 'field cannot be blank', 'error')
                 }else if(field.value.length < 6){
                     setStatus(field, 'please input your correct address', 'error')
                 }else{setStatus(field, '', 'success')}
