@@ -26,17 +26,12 @@
     --arrow-icon: rgb(255, 255, 0);
     --cardin-green: rgb(12, 26, 26);
     --box-shadow: 0 0.3rem 0.8rem rgba(226, 228, 231, 0.6);
-    --bg-black-900: #f2f2fc;
-    --back-ground-100: #fdf9ff;
-    --bg-black-50: #e8dfec;
-    --text-black-900: #02010f;
-    --text-black-700: #817c91;
-    --white:#f3f0f0;
     --about-title: #0a090a;
-    --border-color: red;
+    --r: rgb(255, 0, 0);
+    --g: rgb(0, 128, 0);
     --outline-color-focus: gray;
-    --textBox-border: #000000;
     --textBox-focus: red;
+    --GrayishBlue: hsl(229, 8%, 60%);
 }
 
 /*style for the page preloader starts here*/
@@ -463,9 +458,8 @@ img{
     color: black;
     padding: 2rem;
     font-family: 'Comfortaa', cursive;
-    font-weight: bold;
     letter-spacing: .5px;
-    line-height: 2.5rem;
+    line-height: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -688,6 +682,9 @@ article .why-choose-par:not(.lastChild){
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
 }
+.contact-container--farm{
+    margin: 3rem 0;
+}
 .joam-socials{
     position: relative;
     display: flex;
@@ -740,6 +737,13 @@ article .why-choose-par:not(.lastChild){
     padding: 1rem;
     margin: 1rem;
 }
+.contact__form--farm{
+    border-radius: 0;
+    width: 65%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
 .contact__form h3{
     padding: 1rem;
     margin-bottom: 2rem;
@@ -748,6 +752,9 @@ article .why-choose-par:not(.lastChild){
     font-size: 1.2rem;
     letter-spacing: 3px;
     color: red;
+}
+.contact__form--farm .shadow--farm{
+    color: rgb(128, 0, 17);
 }
 .contact__head{
     position: relative;
@@ -804,6 +811,12 @@ article .why-choose-par:not(.lastChild){
     border: 1.5px solid var(--outline-color-focus);
     background: transparent;
     padding: 1.4rem .9rem 1.5rem;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active{
+   transition: 9999s ease-in-out 0s;
 }
 .input-success.input{
     border: 1.5px solid green;
@@ -877,7 +890,6 @@ article .why-choose-par:not(.lastChild){
     position: absolute;
     width: 100%;
     height: .95rem;
-    background: var(--back-ground-100);
     background: mintcream;
     bottom: 0;
     top: -1px;
@@ -889,6 +901,12 @@ article .why-choose-par:not(.lastChild){
 }
 .contact__label::after{
     right: 0;
+}
+
+.contact__form--farm .paymt-proof{
+    text-transform: capitalize;
+    font-size: .8rem;
+    color: var(--r);
 }
 .submitform{
     display: block;
@@ -905,6 +923,72 @@ article .why-choose-par:not(.lastChild){
     text-transform: uppercase;
     opacity: .9;
     position: relative;
+    cursor: pointer;
+}
+.submitform--farm{
+    background: rgb(128, 0, 17);
+}
+
+.farm-act{
+    width: 100%;
+    padding: .5rem 2rem .5rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-top: 1px solid var(--GrayishBlue);
+    border-bottom: 1px solid var(--GrayishBlue);
+    cursor: pointer;
+}
+
+.farm-act .head_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+.head_nav svg{
+    margin-right: 1.5rem;
+    transition: .4s ease-out;
+}
+.farm-act.fagsActive svg{
+    transform: rotateX(180deg);
+}
+.farm-act.srokeActive svg path{
+    stroke: red;
+}
+.bank-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+}
+.farm-act h3{
+    font-family: 'comfortaa', cursive;
+    font-size: 1rem;
+    color: var(--g);
+    font-weight: bold;
+}
+.farm-act .account{
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--r);
+}
+.farm-act-title ul{
+    padding: 0;
+}
+.farm-act-title ul li{
+    font-size: .8rem;
+    padding-block: .7rem;
+}
+.farm-act.colorActive h3{
+    color: var(--r);
+}
+.farm-act .act-list{
+    display: none;
+    width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+}
+.farm-act.Active .act-list{
+    display: block;
 }
 
 
@@ -2068,7 +2152,8 @@ article .vegetable-paragraph{
         margin-block: .5rem;
     }
     article .why-choose-par{
-        line-height: 1.8rem;
+        font-size: .8rem;
+        line-height: 2rem;
     }
     .what-we-are-offering{
         font-size: 1.2rem;
@@ -2448,7 +2533,8 @@ article .vegetable-paragraph{
         color: rgb(0, 128, 0, .4);
     }
     article .why-choose-par{
-        line-height: 1.5rem;
+        font-size: .75rem;
+        line-height: 2rem;
     }
     .estate-pix-box{
         height: 20rem;
@@ -2479,7 +2565,12 @@ article .vegetable-paragraph{
     }
     /*contact section: form section*/
     
-    
+    .contact__form--farm{
+        width: 90%;
+    }
+    .submitform--farm{
+        font-size: .9rem;
+    }
 
     /*syle the button on the welcome page section of the jaom farm*/
     .farm-discover-btn{
