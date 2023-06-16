@@ -359,8 +359,8 @@ const fields = document.querySelectorAll('.input')
 
 function formvalidator() {
     validateOnSubmit();
-    ValidateonChange()
-    ValidateonEntry()
+    ValidateonChange();
+    ValidateonEntry();
 }
 //validates form on submit
 function validateOnSubmit() {
@@ -415,7 +415,6 @@ function ValidateonEntry() {
 function ValidateonChange() {
     fields.forEach(field => {
         field.addEventListener('click', () => {
-            console.log(field)
             validateFields();
         })
     })   

@@ -817,12 +817,6 @@ article .why-choose-par:not(.lastChild){
     background: transparent;
     padding: 1.4rem .9rem 1.5rem;
 }
-.input:-webkit-autofill,
-.input:-webkit-autofill:hover,
-.input:-webkit-autofill:focus,
-.input:-webkit-autofill:active{
-   transition: 9999s ease-in-out 0s;
-}
 .input-success.input{
     border: 1.5px solid green;
 }
