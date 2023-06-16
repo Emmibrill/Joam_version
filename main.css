@@ -682,6 +682,11 @@ article .why-choose-par:not(.lastChild){
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
 }
+.farm-contact-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
 .contact-container--farm{
     margin: 3rem 0;
 }
@@ -2274,6 +2279,12 @@ article .vegetable-paragraph{
         padding: 2rem 3rem;
         font-size: 1rem;
     }
+
+    /*contact section: form section*/
+    
+    .contact__form--farm{
+        width: 95% !important;
+    }
     
     /*style the footer section*/
     .row{
@@ -2565,9 +2576,7 @@ article .vegetable-paragraph{
     }
     /*contact section: form section*/
     
-    .contact__form--farm{
-        width: 90%;
-    }
+    
     .submitform--farm{
         font-size: .9rem;
     }
