@@ -9,6 +9,7 @@ const allShowMore = document.querySelectorAll('.load-more');
 const listContainer = document.querySelector('.list-container');
 const farmList = Array.from(listContainer.children);
 const allProductBody = document.querySelectorAll('.products-body');
+const joamActDetails = document.querySelector('.farm-act')
 
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
@@ -369,7 +370,6 @@ function validateOnSubmit() {
             else if(field.type === 'text'){
                 if(field.value.trim() === ''){e.preventDefault()}
                 else if(field.value.length < 4){e.preventDefault()}
-                else{return validateFields()}
             } 
             else if(field.type === 'email'){
                 var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z{2,3}]+)*$/;
@@ -383,6 +383,11 @@ function validateOnSubmit() {
                     return validateFields();
                 } else{e.preventDefault()}
             }
+            else if(field.name === 'address'){
+                if(field.value.length < 6){
+                    e.preventDefault();
+                }
+            } 
             else if(field.name === 'message'){
                 if(field.value.length < 9){
                     e.preventDefault()
@@ -406,6 +411,7 @@ function ValidateonEntry() {
 function ValidateonChange() {
     fields.forEach(field => {
         field.addEventListener('click', () => {
+            console.log(field)
             validateFields();
         })
     })   
@@ -415,11 +421,11 @@ function ValidateonChange() {
 function validateFields(){
     fields.forEach(field => {
         field.addEventListener('input', () => {
-            if(field.type === 'text'){
+            if(field.name === 'name'){
                 if(field.value.trim() === ''){
                     setStatus(field, 'field cannot be blank', 'error')
-                }else if(field.value.length < 4){
-                    setStatus(field, 'please enter your full name', 'error')
+                }else if(field.value.length < 2){
+                    setStatus(field, 'please enter your name', 'error')
                 }else{setStatus(field, '', 'success')}
             } 
 
@@ -441,11 +447,20 @@ function validateFields(){
                     setStatus(field, 'please enter a valid phone number', 'error')
                 }
             }
-            if(field.name === 'message'){
+
+            if(field.name === 'address'){
+                if(field.value.trim() === ''){
+                    setStatusForMsg(field, 'field cannot be blank', 'error')
+                }else if(field.value.length < 6){
+                    setStatus(field, 'please input your correct address', 'error')
+                }else{setStatus(field, '', 'success')}
+            } 
+
+            if(field.name === 'product'){
                 if(field.value.trim() === ''){
                     setStatusForMsg(field, 'field cannot be blank', 'error')
                 }else if(field.value.length < 10){
-                    setStatusForMsg(field, 'please write something descriptive', 'error')
+                    setStatusForMsg(field, 'please fill in the product(s)', 'error')
                 }else{setStatusForMsg(field, '', 'success')}
             } 
 
@@ -506,4 +521,12 @@ function clearField(){
 
 formvalidator();
 clearField()
+
+//toggle the joam farm bank details
+joamActDetails.addEventListener('click', () => {
+    joamActDetails.classList.toggle('Active')
+    joamActDetails.classList.toggle('fagsActive')
+    joamActDetails.classList.toggle('colorActive')
+    joamActDetails.classList.toggle('srokeActive')
+})
 
