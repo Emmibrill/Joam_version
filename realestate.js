@@ -369,21 +369,22 @@ function clearField(){
     })
 }
 
+//toggle the joam farm bank details
+function toggle(destination){
+    destination.classList.toggle('Active')
+    destination.classList.toggle('fagsActive')
+    destination.classList.toggle('colorActive')
+    destination.classList.toggle('srokeActive')
+}
 formvalidator();
 clearField()
 
+
 joamActDetails.addEventListener('click', () => {
-    joamActDetails.classList.toggle('Active')
-    joamActDetails.classList.toggle('fagsActive')
-    joamActDetails.classList.toggle('colorActive')
-    joamActDetails.classList.toggle('srokeActive')
+    toggle(joamActDetails)
 })
 farmOrganogramToggler.addEventListener('click', () => {
-    farmOrganogramToggler.classList.toggle('Active')
-    farmOrganogramToggler.classList.toggle('fagsActive')
-    farmOrganogramToggler.classList.toggle('colorActive')
-    farmOrganogramToggler.classList.toggle('srokeActive')
+    toggle(farmOrganogramToggler)
 })
-
 
 
