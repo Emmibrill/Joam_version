@@ -2539,12 +2539,12 @@ article .vegetable-paragraph{
     /*real estate section*/
 
     .relEst-image-con{
-        height: 13rem;
+        height: 17rem;
     }
     .relEst-img{
-        height: 13rem;
+        height: 17rem;
     }
-    .realEst-prod-des, .realEst-price{
+    .realEst-prod-des, .realEst-price, .realEst-location{
         font-size: 1rem;
     }
     .realEst-placeorder{
@@ -2679,6 +2679,15 @@ article .vegetable-paragraph{
     }
     .new-property{
         margin: 4rem 0 .5rem 0;
+    }
+    .relEst-image-con{
+        height: 15rem;
+    }
+    .relEst-img{
+        height: 15rem;
+    }
+    .realEst-prod-des, .realEst-price, .realEst-location{
+        font-size: .9rem;
     }
 }
 @media (max-width:416px) {
