@@ -981,6 +981,9 @@ article .why-choose-par:not(.lastChild){
     color: var(--g);
     font-weight: bold;
 }
+.organogram-container .organogram-title--realestate{
+    color: rgb(55, 13, 122);
+}
 .farm-act .account{
     text-transform: uppercase;
     font-size: .8rem;
