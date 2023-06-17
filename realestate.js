@@ -2,6 +2,8 @@ const navToggler = document.querySelector('.hambugger');
 const navList = document.querySelector('.nav__list');
 const nav_list = document.querySelectorAll('.list');
 const navBar = document.querySelector('.nav__bar');
+const joamActDetails = document.querySelector('.farm-act');
+const farmOrganogramToggler = document.querySelector('.organogram-container--relEst');
 
 
 window.addEventListener('load', () => {
@@ -179,5 +181,19 @@ window.addEventListener('scroll', () => {
         pageUp.classList.add('show-page-up')
     }else{pageUp.classList.remove('show-page-up')}
 })
+
+joamActDetails.addEventListener('click', () => {
+    joamActDetails.classList.toggle('Active')
+    joamActDetails.classList.toggle('fagsActive')
+    joamActDetails.classList.toggle('colorActive')
+    joamActDetails.classList.toggle('srokeActive')
+})
+farmOrganogramToggler.addEventListener('click', () => {
+    farmOrganogramToggler.classList.toggle('Active')
+    farmOrganogramToggler.classList.toggle('fagsActive')
+    farmOrganogramToggler.classList.toggle('colorActive')
+    farmOrganogramToggler.classList.toggle('srokeActive')
+})
+
 
 

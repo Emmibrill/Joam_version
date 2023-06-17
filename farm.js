@@ -9,7 +9,8 @@ const allShowMore = document.querySelectorAll('.load-more');
 const listContainer = document.querySelector('.list-container');
 const farmList = Array.from(listContainer.children);
 const allProductBody = document.querySelectorAll('.products-body');
-const joamActDetails = document.querySelector('.farm-act')
+const joamActDetails = document.querySelector('.farm-act');
+const farmOrganogramToggler = document.querySelector('.organogram-container--farm');
 
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
@@ -531,5 +532,11 @@ joamActDetails.addEventListener('click', () => {
     joamActDetails.classList.toggle('fagsActive')
     joamActDetails.classList.toggle('colorActive')
     joamActDetails.classList.toggle('srokeActive')
+})
+farmOrganogramToggler.addEventListener('click', () => {
+    farmOrganogramToggler.classList.toggle('Active')
+    farmOrganogramToggler.classList.toggle('fagsActive')
+    farmOrganogramToggler.classList.toggle('colorActive')
+    farmOrganogramToggler.classList.toggle('srokeActive')
 })
 

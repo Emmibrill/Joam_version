@@ -294,7 +294,7 @@ function validateOnSubmit() {
             if(field.value === ''){e.preventDefault();}
             else if(field.type === 'text'){
                 if(field.value.trim() === ''){e.preventDefault()}
-                else if(field.value.length < 4){e.preventDefault()}
+                else if(field.value.length < 2){e.preventDefault()}
                 else{return validateFields()}
             } 
             else if(field.type === 'email'){
@@ -342,7 +342,7 @@ function validateFields(){
             if(field.type === 'text'){
                 if(field.value.trim() === ''){
                     setStatus(field, 'field cannot be blank', 'error')
-                }else if(field.value.length < 4){
+                }else if(field.value.length < 2){
                     setStatus(field, 'please enter your full name', 'error')
                 }else{setStatus(field, '', 'success')}
             } 
