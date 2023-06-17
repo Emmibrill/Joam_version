@@ -2536,6 +2536,20 @@ article .vegetable-paragraph{
         width: 45%;
     }
     
+    /*real estate section*/
+
+    .relEst-image-con{
+        height: 13rem;
+    }
+    .relEst-img{
+        height: 13rem;
+    }
+    .realEst-prod-des, .realEst-price{
+        font-size: 1rem;
+    }
+    .realEst-placeorder{
+        padding: 1rem 1rem;
+    }
 }
 
 @media (max-width:425px) {
@@ -2663,21 +2677,9 @@ article .vegetable-paragraph{
     .new-property h2{
         font-size: 1.5rem;
     }
-        .relEst-image-con{
-            height: 15rem;
-        }
-        .relEst-img{
-            height: 15rem;
-        }
-        .realEst-prod-des, .realEst-price{
-            font-size: 1rem;
-        }
-        .new-property{
-            margin: 4rem 0 .5rem 0;
-        }
-        .realEst-placeorder{
-            padding: 1rem 1rem;
-        }
+    .new-property{
+        margin: 4rem 0 .5rem 0;
+    }
 }
 @media (max-width:416px) {
     .site_description{
