@@ -32,6 +32,7 @@
     --outline-color-focus: gray;
     --textBox-focus: red;
     --GrayishBlue: hsl(229, 8%, 60%);
+    --organogram-brdr: rgb(146, 197, 146, .4)
 }
 
 /*style for the page preloader starts here*/
@@ -938,28 +939,43 @@ article .why-choose-par:not(.lastChild){
     cursor: pointer;
 }
 
-.farm-act .head_nav{
+.farm-act .head_nav, 
+.organogram-container .head_nav--farm, 
+.organogram-container .head_nav--realestate{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 1.5rem 0;
 }
-.head_nav svg{
+.organogram-container .head_nav--farm, 
+.organogram-container .head_nav--realestate{
+    padding: 1rem;
+}
+
+.head_nav svg, 
+.head_nav--farm svg, 
+.head_nav--realestate svg{
     margin-right: 1.5rem;
     transition: .4s ease-out;
 }
 .farm-act.fagsActive svg{
     transform: rotateX(180deg);
 }
+.organogram-container.fagsActive svg{
+    transform: rotateX(180deg);
+}
 .farm-act.srokeActive svg path{
+    stroke: red;
+}
+.organogram-container.srokeActive svg path{
     stroke: red;
 }
 .bank-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
 }
-.farm-act h3{
+.farm-act h3, .organogram-container h3{
     font-family: 'comfortaa', cursive;
     font-size: 1rem;
     color: var(--g);
@@ -980,6 +996,9 @@ article .why-choose-par:not(.lastChild){
 .farm-act.colorActive h3{
     color: var(--r);
 }
+.organogram-container.colorActive .h3{
+    color: var(--r);
+}
 .farm-act .act-list{
     display: none;
     width: 100%;
@@ -988,6 +1007,14 @@ article .why-choose-par:not(.lastChild){
 }
 .farm-act.Active .act-list{
     display: block;
+}
+.organogram-container .joam-tree--farm, 
+.organogram-container .joam-tree--realestate{
+    display: none;
+}
+.organogram-container.Active .joam-tree--farm, 
+.organogram-container.Active .joam-tree--realestate{
+    display: inline-table;
 }
 
 
@@ -1086,18 +1113,23 @@ article .why-choose-par:not(.lastChild){
 .footer-rights-par{
     color: var(--nav-list-color);
 }
+/*desinged by: des-by*/
 .des-by{
     color: rgb(113, 185, 113, .3);
 }
 
 /*style the joam organogram section*/
-.joam-organogram{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    gap: 1rem;
-    padding: 3rem;
-    margin-bottom: 2rem;
+
+
+.farm-organogram{
+    margin-top: 5rem;
+    border-bottom: 1px solid var( --organogram-brdr);
 }
+.farm-organogram .head_nav{
+    border-top: 1px solid var( --organogram-brdr);
+}
+
+
 .joam-tree{
     padding: 1rem;
     border-radius: 1rem;
@@ -1119,7 +1151,6 @@ article .why-choose-par:not(.lastChild){
     font-weight: bold;
     color: var(--cardin-green);
     color: black;
-    border-top: 1px solid rgb(146, 197, 146);
 }
 .organogram-title--realestate{
     border-top: 1px solid rgb(55, 13, 122);
@@ -1321,13 +1352,13 @@ article .why-choose-par:not(.lastChild){
 .farm-discover-btn, .realestate-discover-btn{
     position: absolute;
     bottom: 15%;
-    padding: 2.5rem 6rem;
+    padding: 2rem 3rem;
     background: var(--nav-list-color);
     color: green;
     font-size: 1rem;
     font-weight: bolder;
     text-transform: uppercase;
-    
+    z-index: 1;
 }
 .realestate-discover-btn{
     bottom: 35%;
@@ -1367,7 +1398,7 @@ article .why-choose-par:not(.lastChild){
 }
 .list-container{
     padding: .5rem;
-    background: rgb(228, 222, 222, .2);
+    background: rgb(228, 222, 222, .5);
     border-radius: .5rem;
     cursor: pointer;
 }
