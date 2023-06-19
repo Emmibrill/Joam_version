@@ -291,13 +291,12 @@ img{
     color: var(--nav-list-color);
 }
 .welcomeMessage h1{
-    font-family: 'Comic Neue', cursive;
+    font-family: 'comfortaa', cursive;
     font-size: 3.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 900;
     color: var(--nav-list-color);
-    color: gold;
 }
 
 .welcomeMessage h2{
@@ -2732,6 +2731,11 @@ article .vegetable-paragraph{
 
 }
 @media (max-width:375px) {
+
+    .welcomeMessage h1{
+        font-size: 1.7rem;
+        margin: 0;
+    }
     .services-pictures-container{
         top: 100%;
     }
