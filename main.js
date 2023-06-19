@@ -85,6 +85,8 @@ window.addEventListener('scroll', () => {
     removeNavbar()    
 })
 
+/*
+
 //control the carousel that displays the different services rendered on the home page
 const serviceTrack = document.querySelector('.services-pictures-container');
 const serviceNextButton = document.querySelector('.serviceButton--right');
@@ -147,6 +149,26 @@ serviceNextButton.addEventListener('click', () => {
     serviceNavControl(slideIndex)
     //console.log(slideIndex) 
 })
+*/
+
+const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
 
 /*window.addEventListener('resize', () => {
     
