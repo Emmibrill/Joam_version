@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joam Group</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="shortcut icon" href="JOAM-FARM-LOGO.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
@@ -58,7 +59,7 @@
         
     </section>
     
-    
+    <!--
     <section class="description">
         <button class="serviceButton serviceButton--left">
             <i class="fa-sharp fa-solid fa-less-than"></i>
@@ -85,6 +86,31 @@
             <i class="fa-sharp fa-solid fa-greater-than"></i>
         </button>  
     </section>
+    -->
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="services-box-image" preload="lazy" decoding="async" src="thoughtful-brown-hen.jpg" alt="thoughtful hen">
+            <h2 class="services-box-description">agriculture</h2>
+            <a class="more-details"  href="farm.html">more details</a>
+          </div>
+          <div class="swiper-slide">
+            <img class="services-box-image" preload="lazy" decoding="async" src="real-estate-in-letters (1).jpg" alt="real-estate in letters">
+            <a class="more-details" href="realestate.html">more details</a>
+          </div>
+          <div class="swiper-slide">
+            <img class="services-box-image" preload="lazy" decoding="async" src="reading (1).jpg" alt="a man reading">
+            <h2 class="services-box-description">education</h2>
+            <a class="more-details" href="#">more details</a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        
+      </div>
+
 
     <section class="features">
         <div class="whyChoosejoam">
@@ -308,6 +334,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
