@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none'  
 })
 
-window.addEventListener('resize', () => {
+/*window.addEventListener('resize', () => {
     if(navigator.userAgent.match(/Andriod/i)
     || navigator.userAgent.match(/webOS/i)
     || navigator.userAgent.match(/iPhone/i)
@@ -21,7 +21,7 @@ window.addEventListener('resize', () => {
     }
     
     
-})
+})*/
 
 //refresh current page on screen rotate
 window.matchMedia("(orientation: landscape)").addEventListener('change', (e) => {
@@ -194,7 +194,7 @@ showcases.forEach(display => {
             </div>
             <div class="details">
                 <h3>${display.writeUp}</h3>
-                <button><a href="${display.link}">explore</a></button>
+                <button><a class = "a" href="${display.link}">explore</a></button>
             </div>
         </div>
     `

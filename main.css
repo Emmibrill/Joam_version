@@ -240,7 +240,7 @@ img{
 
 /*style the font icon*/
 .fa-solid{
-    color: gold;
+    color: rgb(113, 185, 113, .6);
     padding-right: .5rem;
 }
 
@@ -360,7 +360,6 @@ img{
     justify-content: center;
     background: rgb(22, 44, 44);
     background: rgb(15, 153, 15);
-    
     border-radius: 0rem .5rem .5rem 0rem;
     color: var(--nav-list-color);
     padding: 2rem 3rem;
@@ -385,31 +384,42 @@ img{
 
 .serviceButton{
     position: absolute;
-    display: block;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
     z-index: 1;
     top: 50%;
     width: 7rem;
     height: 7rem;
     transform: translateY(-50%);
-    background: transparent;
+    /*background: transparent;*/
 }
-.serviceButton .fa-less-than, .serviceButton .fa-greater-than{
-    top: 0;
+.serviceButton .fa-greater-than, 
+.serviceButton .fa-less-than{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0 !important;
+    padding: 0;
     font-size: 6rem;
+    font-weight: 900;
+    color: var(--nav-list-color);
+    color: transparent;
+    -webkit-text-stroke: 1px transparent !important;
+    background-image: radial-gradient(rgba(18, 206, 18, 0.6) 10%, mintcream 50%) !important;
+    -webkit-background-clip: text !important;
+    z-index: 2;
 }
+
 .serviceButton--left{
     display: none;
     left: 0;
 }
 .serviceButton--right{
+    padding: 0;
     right: 0;
-}
-
-.serviceButton .fa-greater-than, .serviceButton .fa-less-than{
-    inset: 0;
-    margin: auto;
-    font-weight: 100;
-    color: var(--nav-list-color);
 }
 
 
@@ -573,18 +583,23 @@ article .why-choose-par:not(.lastChild){
 }
 .details button{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1.5rem 3rem;
     background: rgb(0, 128, 0, .8);
     border-radius: .3rem;
     width: 60%;
     margin: 1rem;
 }
-.details button a{
+.details button .a{
     position: absolute;
     inset: 0;
-    display: flex;
+    margin: auto !important;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    padding: 1.5rem 3rem;
     color: var(--nav-list-color);
     font-size: 1rem;
     letter-spacing: 2px;
@@ -700,8 +715,8 @@ article .why-choose-par:not(.lastChild){
     justify-content: center;
 }
 .socials .fa-twitter, .socials .fa-instagram, .socials .fa-whatsapp{
-    color: red;
-    padding: 2rem;
+    color: rgb(113, 185, 113);
+    padding: 1rem;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
 }
@@ -942,9 +957,9 @@ article .why-choose-par:not(.lastChild){
 .farm-act .head_nav, 
 .organogram-container .head_nav--farm, 
 .organogram-container .head_nav--realestate{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
     width: 100%;
     padding: 1.5rem 0;
 }
@@ -956,7 +971,6 @@ article .why-choose-par:not(.lastChild){
 .head_nav svg, 
 .head_nav--farm svg, 
 .head_nav--realestate svg{
-    margin-right: 1.5rem;
     transition: .4s ease-out;
 }
 .farm-act.fagsActive svg{
@@ -977,6 +991,7 @@ article .why-choose-par:not(.lastChild){
 }
 .farm-act h3, .organogram-container h3{
     font-family: 'comfortaa', cursive;
+    text-align: center;
     font-size: 1rem;
     color: var(--g);
     font-weight: bold;
@@ -1031,7 +1046,6 @@ article .why-choose-par:not(.lastChild){
     text-transform: capitalize;
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
-    color: rgb(113, 185, 113);
     color: green;
 }
 .footer-socials{
@@ -1053,7 +1067,7 @@ article .why-choose-par:not(.lastChild){
 .fa-brands.fa-twitter--footer,
 .fa-brands.fa-instagram--footer,
 .fa-brands.fa-whatsapp--footer{
-    color: var(--nav-list-color);
+    color: rgb(113, 185, 113, .6);
     padding: .5rem;
     font-size: 2rem;
     box-shadow: none;
@@ -1078,6 +1092,9 @@ article .why-choose-par:not(.lastChild){
 }
 .list-unstyled li a{
     color: var(--nav-list-color);
+}
+.joam-services--footer{
+    margin-bottom: 1rem;
 }
 .footer-address{
     margin-top: 1rem;
@@ -1412,6 +1429,7 @@ article .why-choose-par:not(.lastChild){
     transition: all .5s linear;
 }
 .list-container li h3{
+
     font-size: 1rem;
     transition: all .5s linear;
 }
@@ -2087,7 +2105,7 @@ article .vegetable-paragraph{
 @media (max-width:782px) {
     .more-details{
         font-size: .88rem;
-        padding: 1.2rem 0;
+        padding: 1.5rem 3rem;
     }
 
     /*home page social section*/
@@ -2155,7 +2173,7 @@ article .vegetable-paragraph{
         display: flex;
     }
     .nav__list .joam a{
-        color: gold;
+        color: rgb(113, 185, 113, .6);
         text-transform: uppercase;
         font-size: 1.5rem;
     }
@@ -2190,10 +2208,6 @@ article .vegetable-paragraph{
     }
     .what-we-are-offering{
         font-size: 1.2rem;
-    }
-    .serviceButton, .serviceButton{
-        width: 4rem;
-        height: 4rem;
     }
     .fa-user, .fa-users, .fa-user-tie, .house{
         font-size: 4rem;
@@ -2294,6 +2308,7 @@ article .vegetable-paragraph{
     }
     .list-container li{
         margin-block: .5rem;
+        padding: .3rem 0;
     }
     /*style the realestate section*/
 
@@ -2356,6 +2371,17 @@ article .vegetable-paragraph{
     }
     .services-pictures-container{
         height: 30rem;
+    }
+    .serviceButton{
+        width: 4rem;
+        height: 4rem;
+    }
+    .serviceButton .fa-greater-than, 
+    .serviceButton .fa-less-than{
+        font-size: 4rem;
+    }
+    .more-details{
+        padding: 1.2rem 3rem;
     }
 
     /*style the respective farm in the farm section*/
@@ -2607,10 +2633,6 @@ article .vegetable-paragraph{
     .joam-tree span{
         font-size: .6rem;
     }
-    .sliderButton, .serviceButton{
-        width: 3.8rem;
-        height: 3.8rem;
-    }
     .sliderButton svg{
         position: absolute;
         inset: 0;
@@ -2715,7 +2737,7 @@ article .vegetable-paragraph{
     }
     .more-details{
         font-size: .8rem;
-        padding: .6rem 3rem;
+        padding: 1rem 3rem;
         text-transform: uppercase;
     }
     .services-box-description{
@@ -2724,10 +2746,6 @@ article .vegetable-paragraph{
     .choose-us--joamfarm, .choose-us--realestate{
         font-size: .7rem;
         width: 70%;
-    }
-    .sliderButton, .serviceButton{
-        width: 3.5rem;
-        height: 3.5rem;
     }
 
     /*style for the joam farm section*/
@@ -2738,6 +2756,13 @@ article .vegetable-paragraph{
     }
 }
 @media (max-width:320px) {
+
+    .more-details{
+        text-align: center;
+        width: 100%;
+        border-radius: 0;
+        padding: 1rem 3rem;
+    }
     .welcomeMessage h2{
         line-height: 1.4rem;
     }
@@ -2753,11 +2778,7 @@ article .vegetable-paragraph{
     .joam-tree span{
         font-size: .55rem;
     }
-    .sliderButton{
-        width: 3rem;
-        height: 3rem;
-    }
-
+    
     /*style the farm sections*/
     .farm-nav-tab{
         padding: 1rem;
@@ -2769,14 +2790,6 @@ article .vegetable-paragraph{
 
     /*home page contact section*/
 
-    .socials .fa-twitter, .socials .fa-instagram, .socials .fa-whatsapp{
-        color: red;
-        padding: 1rem;
-        box-shadow: var(--box-shadow);
-    }
-    .socials .fa-twitter, .socials .fa-instagram, .socials .fa-whatsapp{
-        padding: 1.5rem;
-    }
 
     /*style the footer section*/
     
@@ -2784,7 +2797,7 @@ article .vegetable-paragraph{
     .fa-brands.fa-twitter--footer,
     .fa-brands.fa-instagram--footer,
     .fa-brands.fa-whatsapp--footer{
-        color: var(--nav-list-color);
+        color: (113, 185, 113, .6);
         padding: .5rem;
         font-size: 1.3rem;
         box-shadow: none;
