@@ -80,6 +80,11 @@ const activeFarmNav = () => {
 
 //display more images available in the farm gallery section when the show more button is being clidked
 const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
+    if(targetImages.children.length <= 0){
+        newDiologueBox()
+        return;
+        //return alert('there is no product at the moment')
+    }
     if(currentStatus === 'hidden'){
         targetImages.setAttribute('aria-controls', 'visible');
         targetImages.style.display = 'grid';
@@ -92,6 +97,32 @@ const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
         showMoreBtn.innerText = 'Show More '
     }
 }
+
+
+function newDiologueBox(){
+    const theDialogueBox = document.createElement('div');
+    theDialogueBox.classList.add('farm-dialogue-box');
+    const theDialogueContent = `
+    <div class="dialogue-box">
+    <h1 class="opps">opps!</h1>
+    <h3 class="sorry">sorry there is no product at the moment</h3>
+    <i class="fa-solid fa-face-smile"></i>
+    
+    <button class="dialogue-box-button">okay</button>
+    </div>
+    `
+    theDialogueBox.innerHTML = theDialogueContent;
+    document.body.appendChild(theDialogueBox)
+    const removeDialogueBox = theDialogueBox.querySelector('.dialogue-box-button');
+    removeDialogueBox.addEventListener('click', removeBox)
+
+    function removeBox(){
+        let theButton = this.parentElement.parentElement;
+        theButton.style.display = 'none'
+    }
+
+}
+
 
 //highlights the selected product showing other features
 const highlighProductClicked = () => {
@@ -304,6 +335,23 @@ poultryImages.forEach(image => {
     poultryGallery.innerHTML = poultryImage;
 })
 
+
+/*const iii = document.querySelector('.products')
+console.log(iii)
+const shopNow = document.querySelectorAll('.farm-button--shop')
+for (let i = 0; i < shopNow.length; i++) {
+    const shopNowButton = shopNow[i];
+    console.log(shopNowButton)
+    shopNowButton.addEventListener('click', () => {
+        const eachproduct = shopNowButton.parentElement.previousElementSibling.children;
+        console.log(eachproduct)
+        const pro = eachproduct.children
+        console.log(pro)
+         //noProductsForNow(targetProduct)
+    })
+    
+}
+*/
 //images in the poultry gallery (more images)
 const morePoultryGallery = document.querySelector('#more-gallery--poultry');
 poultryImages.forEach(image => {
@@ -326,6 +374,44 @@ showMorePoultry.addEventListener('click', () => {
     const status = moreImage.getAttribute('aria-controls');
     showMoreImage(status, moreImage, showMorePoultry);
 })
+const showMoreCassava = document.querySelector('#cass-load-more');
+showMoreCassava.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--cassava');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMoreCassava);
+})
+const showMorePalm = document.querySelector('#palm-load-more');
+showMorePalm.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--palm');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMorePalm);
+})
+const showMorePlantain = document.querySelector('#plantain-load-more');
+showMorePlantain.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--plantain');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMorePlantain);
+})
+const showMoreGoat = document.querySelector('#goat-load-more');
+showMoreGoat.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--goat');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMoreGoat);
+})
+const showMorePig = document.querySelector('#pig-load-more');
+showMorePig.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--pig');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMorePig);
+})
+const showMoreFish = document.querySelector('#fish-load-more');
+showMoreFish.addEventListener('click', () => {
+    const moreImage = document.querySelector('#more-gallery--fish');
+    const status = moreImage.getAttribute('aria-controls');
+    showMoreImage(status, moreImage, showMoreFish);
+})
+
+
 
 highlighProductClicked()
 indicateClickedOffer()
