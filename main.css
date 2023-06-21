@@ -411,6 +411,7 @@ img{
     text-align: center;
     font-size: 18px;
     background: rgb(250, 235, 215, .3);
+    transition: 5s ease-in-out;
 }
 .swiper-slide .services-box-image {
     display: block;
@@ -1353,6 +1354,55 @@ article .why-choose-par:not(.lastChild){
 
 /*joam farm section*/ /*realestate section*/
 
+
+/*farm dialogue box*/
+.farm-dialogue-box{
+    inset: 0;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(148, 160, 180, .4);
+    font-family: 'comfortaa', cursive;
+    z-index: 10;
+}
+.dialogue-box{
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgb(8 8 8 / .9);
+    color: var(--nav-list-color);
+    padding: 2rem;
+}
+.opps{
+    color: green;
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+}
+.sorry{
+    line-height: 2rem;
+}
+.fa-face-smile{
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: var(--nav-list-color);
+}
+.farm-dialogue-box .dialogue-box-button{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: .5rem;
+    padding: .7rem 2rem;
+    background: rgb(87, 87, 155);
+    color: white;
+    border: 1px solid var(--nav-list-color);
+}
 /*style the joam welcome message*/
 .joam-welcome-section{
     position: relative;
@@ -2290,6 +2340,15 @@ article .vegetable-paragraph{
         font-size: 1rem;
     }
 
+    /*farm dialogue box*/
+
+    .dialogue-box{
+        width: 90%;
+    }
+    .sorry{
+        font-size: 1rem;
+    }
+
     /*style farm section mission and vision*/
     .mission-par, .vission-par{
         font-size: .8rem;
@@ -2726,6 +2785,14 @@ article .vegetable-paragraph{
         padding: 1rem;
     }
 
+    /*farm dialogue box*/
+
+    .dialogue-box{
+        width: 90%;
+    }
+    .sorry{
+        font-size: 1rem;
+    }
 
     /*real-estate secion*/
 
@@ -2804,8 +2871,8 @@ article .vegetable-paragraph{
     .welcomeMessage h2{
         line-height: 1.4rem;
     }
-    .services-pictures-container{
-        height: 23rem;
+    .swiper-slide{
+        height: 20rem;
     }
     .why-choose-par{
         font-size: .75rem;
