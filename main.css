@@ -1766,6 +1766,75 @@ article .vegetable-paragraph{
     text-align: center;
 }
 
+/*farm price section*/
+
+
+.farm-prices-container{
+    position: fixed;
+    background: #94a0b4;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    padding: 2rem;
+}
+.prices-wrapper{
+    color: var(--nav-list-color);
+    background: rgb(8 8 8);
+    padding: 2rem;
+    margin-top: 3rem;
+    overflow-y: scroll;
+}
+.container-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+}
+.prices-container{
+    padding: 2rem;
+}
+.prices-heading{
+    text-transform: uppercase;
+    text-align: center;
+}
+.type-of-farm{
+    text-transform: capitalize;
+    margin: 2rem;
+    text-align: center;
+}
+.price-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.product-name ul{
+    padding: 0;
+}
+.p-n, .p-p{
+    color: green;
+}
+.p-name li ul, 
+.p-name li ul li{
+    padding: 0;
+    margin-block: 1rem;
+    text-transform: capitalize;
+}
+.p-name li{
+    text-transform: capitalize;
+}
+
+.proceed-to-order{
+    border: 1px solid green;
+    color: var(--nav-list-color);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 1rem;
+}
+
 /*style the farm gallery section*/
 
 .farm-gallery-section{
@@ -2471,6 +2540,25 @@ article .vegetable-paragraph{
         font-size: 1rem;
     }
 
+    /*farm price section*/
+
+    .prices-heading{
+        font-size: 1.5rem;
+    }
+    .type-of-farm{
+        font-size: 1.2rem;
+    }
+    .p-name li ul, 
+    .p-name li ul li{
+        font-size: .8rem;
+    }
+
+    .proceed-to-order{
+        padding: .5rem;
+        font-size: .7rem;
+    }
+
+
     /*farm dialogue box*/
 
     .dialogue-box{
@@ -2840,6 +2928,25 @@ article .vegetable-paragraph{
     .farm-button{
         width: 45%;
     }
+
+    /*farm price section*/
+
+    .prices-heading{
+        font-size: 1rem;
+    }
+    .type-of-farm{
+        font-size: 1rem;
+    }
+    .p-name li ul, 
+    .p-name li ul li{
+        font-size: .7rem;
+    }
+    .p-n, .p-p{
+        font-size: .7rem;
+    }
+    .proceed-to-order{
+        font-size: .7rem;
+    }
     
     /*real estate section*/
 
@@ -3056,6 +3163,24 @@ article .vegetable-paragraph{
     /*style the joam farm welcome heading*/
     .joam-welcome-section h1{
         font-size: 1.8rem;
+    }
+    /*farm price section*/
+
+.farm-prices-container{
+    padding: 1rem;
+}
+    .type-of-farm{
+        font-size: .8rem;
+    }
+    .p-name li ul, 
+    .p-name li ul li{
+        font-size: .7rem;
+    }
+    .p-n, .p-p{
+        font-size: .7rem;
+    }
+    .proceed-to-order{
+        font-size: .7rem;
     }
 
     /*education section*/
