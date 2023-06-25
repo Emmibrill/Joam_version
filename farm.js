@@ -138,6 +138,10 @@ const highlighProductClicked = () => {
                 })
                 
                 allOverlay.classList.add('product-active');
+                const overlayButton = target.querySelector('.overlay-button');
+                overlayButton.addEventListener('click', () => {
+                    return createPriceList()
+                })
             })
         })  
     }
@@ -190,12 +194,12 @@ let products = [
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "green vegetable",
-        link: "#contact"
+        link: "#prices-con-veg"
     },
     {
         product: "FRESH-RAINFALL-ON-LEAF",
         productTitle: "good vegetable pods",
-        link: "#contact"
+        link: "#prices-con-veg"
     }
 ]
 products.forEach(eachProduct => {
@@ -410,6 +414,279 @@ showMoreFish.addEventListener('click', () => {
     const status = moreImage.getAttribute('aria-controls');
     showMoreImage(status, moreImage, showMoreFish);
 })
+
+
+const orderNowButton = document.querySelectorAll('.farm-button--shop');
+for (let i = 0; i < orderNowButton.length; i++) {
+    const orderButton = orderNowButton[i];
+    orderButton.addEventListener('click', () =>{
+        //return createPriceList();
+    })
+    
+}
+
+function createPriceList() {
+    const farmPricesContainer = document.createElement('div');
+    farmPricesContainer.classList.add('farm-prices-container');
+    const theFarmPricesContent = `
+    <div class="prices-wrapper">
+                <h1 class="prices-heading">joam farm ltd price listing</h1>
+
+                <div class="container-wrapper">
+                    <div class="prices-container" id="prices-con-veg">
+
+                        <h2 class="type-of-farm">vegetable (ugu) farm</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>green vegetable (a bundle) :</li>
+                                            <li>vegetable pod :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>2000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>1000</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-cassava">
+                        <h2 class="type-of-farm">cassava farm</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>a barrow load of cassava :</li>
+                                            <li>a basin of processed garri :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>2000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>2500</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-palm">
+                        <h2 class="type-of-farm">palm plantation</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>one head of palm fruit :</li>
+                                            <li>one gallon of red oil :</li>
+                                            <li>four gallon of red oil :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>1500</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>2000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>3500</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-poultry">
+                        <h2 class="type-of-farm">poultry farm</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>old layer :</li>
+                                            <li>broiler :</li>
+                                            <li>noiler :</li>
+                                            <li>a crate of egg :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>5000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>8000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>6000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>2500</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-plantain">
+                        <h2 class="type-of-farm">plantain plantation</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>a bundle of plantain (12 bunches) :</li>
+                                            <li>plantain sucker :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>75000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>450</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-goat">
+                        <h2 class="type-of-farm">goat farm</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>benue goat :</li>
+                                            <li>sheep(aturu) :</li>
+                                            <li>ram(ebule) :</li>
+                                            <li>hausa goat :</li>
+                                            <li>organic manure(50kg) :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>45000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>42000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>48000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>6000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>10000</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-piggery">
+                        <h2 class="type-of-farm">piggery</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>mature pig :</li>
+                                            <li>organic manure :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>60000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>10000</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                    <div class="prices-container" id="prices-con-fishery">
+                        <h2 class="type-of-farm">fishery</h2>
+                        <div class="price-container">
+                            <div class="product-name">
+                                <ul class="p-name">
+                                    <li><span class="p-n">product name</span>
+                                        <ul>
+                                            <li>large fish :</li>
+                                            <li>medium sized fish :</li>
+                                            <li>fingerlings :</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price">
+                                <div class="product-name">
+                                    <ul class="p-name">
+                                        <li><span class="p-p">product price</span>
+                                            <ul>
+                                                <li><i class="fa-solid fa-naira-sign"></i>10000</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>6500</li>
+                                                <li><i class="fa-solid fa-naira-sign"></i>80</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="proceed-to-order" href="#contact">proceed order</a>
+                    </div>
+                </div>
+            </div>
+    `
+
+    farmPricesContainer.innerHTML = theFarmPricesContent;
+    document.body.appendChild(farmPricesContainer);
+    const order =farmPricesContainer.querySelectorAll('.proceed-to-order');
+   for (let i = 0; i < order.length; i++) {
+    const orderButton = order[i];
+    orderButton.addEventListener('click', () => {
+        farmPricesContainer.remove()
+    })
+    
+   }
+}
 
 
 
