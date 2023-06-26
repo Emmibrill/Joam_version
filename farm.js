@@ -78,12 +78,13 @@ const activeFarmNav = () => {
     })
 }
 
-const displayNoProduct = (targetProducts, shopNowBtn) => {
+//alet "no products" if the product container is empty and pass if it's not
+const displayNoProduct = (targetProducts) => {
     if(targetProducts.children.length <= 0){
-        //newDiologueBox()
-        //return;
+        console.log(true)
+        return newDiologueBox();
         //return alert('there is no product at the moment')
-    }
+    }else{return createPriceList();}
 }
 const shopNow = document.querySelectorAll('.farm-button--shop');
 console.log(shopNow)
@@ -92,10 +93,13 @@ for(i = 0; i < shopNow.length; i++){
     shopNowBtn.addEventListener('click', (e) => {
         const currenTar = e.currentTarget;
         const proBox = currenTar.parentElement.previousElementSibling;
-        const proBdy = proBox.querySelectorAll('.products-body')
-        console.log(proBdy)
-        console.log(true)
-        //displayNoProduct(proBdy, currenTar)
+        const proBdy = proBox.querySelectorAll('.products-body');
+        for (let i = 0; i < proBdy.length; i++) {
+            const eachProBdy = proBdy[i];
+            console.log(eachProBdy)
+            console.log(proBdy.children)
+            displayNoProduct(eachProBdy)
+        }
     })
 }
 
@@ -362,22 +366,6 @@ poultryImages.forEach(image => {
 })
 
 
-/*const iii = document.querySelector('.products')
-console.log(iii)
-const shopNow = document.querySelectorAll('.farm-button--shop')
-for (let i = 0; i < shopNow.length; i++) {
-    const shopNowButton = shopNow[i];
-    console.log(shopNowButton)
-    shopNowButton.addEventListener('click', () => {
-        const eachproduct = shopNowButton.parentElement.previousElementSibling.children;
-        console.log(eachproduct)
-        const pro = eachproduct.children
-        console.log(pro)
-         //noProductsForNow(targetProduct)
-    })
-    
-}
-*/
 //images in the poultry gallery (more images)
 const morePoultryGallery = document.querySelector('#more-gallery--poultry');
 poultryImages.forEach(image => {
@@ -438,14 +426,14 @@ showMoreFish.addEventListener('click', () => {
 })
 
 
-const orderNowButton = document.querySelectorAll('.farm-button--shop');
+/*const orderNowButton = document.querySelectorAll('.farm-button--shop');
 for (let i = 0; i < orderNowButton.length; i++) {
     const orderButton = orderNowButton[i];
     orderButton.addEventListener('click', () =>{
         return createPriceList();
     })
     
-}
+}*/
 
 function createPriceList() {
     const farmPricesContainer = document.createElement('div');
