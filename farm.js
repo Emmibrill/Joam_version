@@ -78,6 +78,27 @@ const activeFarmNav = () => {
     })
 }
 
+const displayNoProduct = (targetProducts, shopNowBtn) => {
+    if(targetProducts.children.length <= 0){
+        //newDiologueBox()
+        //return;
+        //return alert('there is no product at the moment')
+    }
+}
+const shopNow = document.querySelectorAll('.farm-button--shop');
+console.log(shopNow)
+for(i = 0; i < shopNow.length; i++){
+    const shopNowBtn = shopNow[i]
+    shopNowBtn.addEventListener('click', (e) => {
+        const currenTar = e.currentTarget;
+        const proBox = currenTar.parentElement.previousElementSibling;
+        const proBdy = proBox.querySelectorAll('.products-body')
+        console.log(proBdy)
+        console.log(true)
+        //displayNoProduct(proBdy, currenTar)
+    })
+}
+
 //display more images available in the farm gallery section when the show more button is being clidked
 const showMoreImage = (currentStatus, targetImages, showMoreBtn) => {
     if(targetImages.children.length <= 0){
@@ -140,8 +161,9 @@ const highlighProductClicked = () => {
                 allOverlay.classList.add('product-active');
                 const overlayButton = target.querySelector('.overlay-button');
                 overlayButton.addEventListener('click', () => {
-                    return createPriceList()
+                    createPriceList()
                 })
+                
             })
         })  
     }
@@ -268,25 +290,25 @@ let poultryProducts = [
     {
         product: "black-layer-chicken",
         productTitle: "black-layer-chicken-posing",
-        link: "#contact"
+        link: "#prices-con-poultry"
     },
     {
         product: "white-broiler",
         productTitle: "broiler",
         description: "white-broiler-watchig-steps",
-        link: "#contact"
+        link: "#prices-con-poultry"
     },
     {
         product: "fresh-eggs",
         productTitle: "fresh eggs",
         description: "basket-of-fresh-eggs",
-        link: "#contact"
+        link: "#prices-con-poultry"
     },
     {
         product: "spotted-noiler-chicken",
         productTitle: "noiler",
         description: "spotted-noiler-chicken-in-grass",
-        link: "#contact"
+        link: "#prices-con-poultry"
     }
 ]
 poultryProducts.forEach(poultryProduct => {
@@ -420,7 +442,7 @@ const orderNowButton = document.querySelectorAll('.farm-button--shop');
 for (let i = 0; i < orderNowButton.length; i++) {
     const orderButton = orderNowButton[i];
     orderButton.addEventListener('click', () =>{
-        //return createPriceList();
+        return createPriceList();
     })
     
 }
@@ -678,11 +700,12 @@ function createPriceList() {
 
     farmPricesContainer.innerHTML = theFarmPricesContent;
     document.body.appendChild(farmPricesContainer);
-    const order =farmPricesContainer.querySelectorAll('.proceed-to-order');
-   for (let i = 0; i < order.length; i++) {
+    const order = farmPricesContainer.querySelectorAll('.proceed-to-order');
+    for (let i = 0; i < order.length; i++) {
     const orderButton = order[i];
     orderButton.addEventListener('click', () => {
         farmPricesContainer.remove()
+        return location.reload();
     })
     
    }
