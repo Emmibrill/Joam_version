@@ -1120,6 +1120,8 @@ article .why-choose-par:not(.lastChild){
 }
 .list-unstyled li a{
     color: var(--nav-list-color);
+    font-family: 'comfortaa', cursive;
+    font-size: .85rem;
 }
 .joam-services--footer{
     margin-bottom: 1rem;
@@ -1127,9 +1129,12 @@ article .why-choose-par:not(.lastChild){
 .footer-address{
     margin-top: 1rem;
     font-family: 'comfortaa', cursive;
-    font-size: .85rem;
     text-transform: capitalize;
     color: var(--nav-list-color);
+}
+.footer-address--par{
+    font-size: .85rem;
+    line-height: 1.5rem;
 }
 .footer-sub-headline{
     margin-bottom: 1rem;
@@ -1147,6 +1152,7 @@ article .why-choose-par:not(.lastChild){
     text-transform: capitalize;
     font-family: 'comfortaa', cursive;
     font-weight: bold;
+    font-size: .85rem;
 }
 .footer-rights{
     padding: 2rem;
