@@ -1520,8 +1520,7 @@ article .why-choose-par:not(.lastChild){
     border-bottom: 2px solid var(--nav-list-color);
     transition: all .5s linear;
 }
-.list-container li h3{
-
+.farm-section-title{
     font-size: 1rem;
     transition: all .5s linear;
 }
@@ -2508,7 +2507,7 @@ article .vegetable-paragraph{
 
     /*style the respective farm in the farm section*/
 
-    .list-container li h3{
+    .farm-section-title{
         font-size: .8rem;
     }
 
