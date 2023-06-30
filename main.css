@@ -2839,7 +2839,8 @@ article .vegetable-paragraph{
         border-bottom-left-radius: 0rem;
         border-top-left-radius: 1rem;
     }
-    .mission-par, .vission-par{
+    .mission-par,
+    .vission-par{
         font-size: .75rem;
     }
     .misVis-statement{
