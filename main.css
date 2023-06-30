@@ -1118,10 +1118,10 @@ article .why-choose-par:not(.lastChild){
 .list-unstyled li{
     padding-block: .5rem;
 }
-.list-unstyled li a{
+.list-unstyled li .unstyled{
     color: var(--nav-list-color);
     font-family: 'comfortaa', cursive;
-    font-size: .85rem;
+    font-size: .75rem;
 }
 .joam-services--footer{
     margin-bottom: 1rem;
@@ -2027,7 +2027,8 @@ article .vegetable-paragraph{
 .misVis-statement--realestate{
     color: rgb(55, 13, 122);
 }
-.vission-par, .mission-par{
+.misVis-container .vission-par,
+.misVis-container .mission-par{
     text-transform: capitalize;
     font-family: 'Comfortaa', cursive;
     line-height: 2rem;
