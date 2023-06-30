@@ -2882,7 +2882,13 @@ article .vegetable-paragraph{
         right: 0;
         margin: auto;
         margin-top: 1rem;
-        
+        font-size: .7rem;
+    }
+    .unstyled,
+    .footer-address--par, 
+    .footer-sub-headline-par,
+    .footer-getconnected h3 {
+        font-size: .7rem;
     }
     .footer-sub-headline-par{
         margin-top: 1rem;
