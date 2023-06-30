@@ -1118,7 +1118,7 @@ article .why-choose-par:not(.lastChild){
 .list-unstyled li{
     padding-block: .5rem;
 }
-.list-unstyled li .unstyled{
+.unstyled{
     color: var(--nav-list-color);
     font-family: 'comfortaa', cursive;
     font-size: .75rem;
