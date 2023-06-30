@@ -699,8 +699,6 @@ function createPriceList() {
    }
 }
 
-
-
 highlighProductClicked()
 indicateClickedOffer()
 const pageUp = document.querySelector('.page-up');
