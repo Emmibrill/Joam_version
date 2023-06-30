@@ -3031,7 +3031,8 @@ article .vegetable-paragraph{
     .estate-pix-box{
         height: 20rem;
     }
-    .fa-user, .fa-users, .fa-user-tie, .house{
+    .fa-user, .fa-users,
+    .fa-user-tie, .house{
         font-size: 3rem;
     }
     .slide__content{
