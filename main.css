@@ -2474,7 +2474,7 @@ article .vegetable-paragraph{
         text-transform: lowercase;
     }
     .welcomeMessage h2{
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-top: 2rem;
     }
     .welcomeMessage h3{
@@ -2484,6 +2484,7 @@ article .vegetable-paragraph{
     .welcomeMessage ul li{
         padding-top: .5rem;
         margin-block: .5rem;
+        font-size: .9rem;
     }
     article .why-choose-par{
         font-size: .8rem;
@@ -2524,6 +2525,14 @@ article .vegetable-paragraph{
     }
     .more-benefits-heading{
         font-size: 1.3rem;
+    }
+    .misVis-statement{
+        font-size: .8rem;
+    }
+    .misVis-container .mission-par,
+    .misVis-container .vission-par{
+    line-height: 2rem;
+    font-size: .8rem;
     }
     .benefits-container li{
         font-size: 1rem;
@@ -2734,26 +2743,22 @@ article .vegetable-paragraph{
         height: .2rem;
     }
     article .why-choose-par{
-        font-size: .9rem;
+        font-size: .75rem;
     }
-    /*.services-pictures-container{
-        height: 30rem;
-    }*/
     .swiper-slide {
         height: 30rem;
-    }
-    .serviceButton{
-        width: 4rem;
-        height: 4rem;
-    }
-    .serviceButton .fa-greater-than, 
-    .serviceButton .fa-less-than{
-        font-size: 4rem;
     }
     .more-details{
         padding: 1.2rem 3rem;
     }
-
+    .misVis-container .mission-par, 
+    .misVis-container .vission-par {
+        font-size: .75rem;
+    }
+    .contact__head label {
+        font-size: .8rem;
+    }
+    
     /*style the respective farm in the farm section*/
 
     .overlay-text{
@@ -2774,6 +2779,10 @@ article .vegetable-paragraph{
     }
     .products-body{
         gap: 3rem;
+    }
+    .farm-act h3,
+    .organogram-container h3 {
+        font-size: .9rem;
     }
 
     /*style the we also offer section*/
@@ -2830,14 +2839,14 @@ article .vegetable-paragraph{
         border-bottom-left-radius: 0rem;
         border-top-left-radius: 1rem;
     }
-    .mission-par, .vission-par{
+    .mission-par,
+    .vission-par{
         font-size: .75rem;
     }
     .misVis-statement{
         text-align: center;
         padding: .5rem;
         transform: translateY(-1.5rem);
-        font-size: 1.1rem;
     }
 
     /*style the realestate section*/
@@ -2852,7 +2861,14 @@ article .vegetable-paragraph{
         padding: 2rem 1.8rem;
         font-size: 1rem;
     }
-
+    .realEst-prod-des, 
+    .realEst-price,
+    .realEst-location{
+        font-size: 1rem;
+    }
+    .realEst-placeorder {
+        font-size: .8rem;
+    }
     /*style the footer section*/
     .row{
         align-items: center;
@@ -2887,7 +2903,7 @@ article .vegetable-paragraph{
     .unstyled,
     .footer-address--par, 
     .footer-sub-headline-par,
-    .footer-getconnected h3 {
+    .footer-getconnected h3{
         font-size: .7rem;
     }
     .footer-sub-headline-par{
@@ -2901,6 +2917,11 @@ article .vegetable-paragraph{
     .footer-rights{
         text-align: center;
     }
+    .footer-rights-par,
+    .des-by{
+        font-size: .8rem;
+        font-family: 'comfortaa', cursive;
+    }
 
 }
 @media (max-width:516px) {
@@ -2911,7 +2932,7 @@ article .vegetable-paragraph{
         font-size: .9rem;
     }
     .welcomeMessage ul li{
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .joam-organogram{
         display: flex;
@@ -2968,9 +2989,6 @@ article .vegetable-paragraph{
     .relEst-img{
         height: 17rem;
     }
-    .realEst-prod-des, .realEst-price, .realEst-location{
-        font-size: 1rem;
-    }
     .realEst-placeorder{
         padding: 1rem 1rem;
     }
@@ -2996,9 +3014,6 @@ article .vegetable-paragraph{
     .welcomeMessage h3{
         background-color: rgba(0 0 0 / .5);
     }
-    /*.services-pictures-container{
-        height: 25rem;
-    }*/
     .swiper-slide{
         height: 25rem;
     }
@@ -3016,11 +3031,9 @@ article .vegetable-paragraph{
     .estate-pix-box{
         height: 20rem;
     }
-    .fa-user, .fa-users, .fa-user-tie, .house{
+    .fa-user, .fa-users,
+    .fa-user-tie, .house{
         font-size: 3rem;
-    }
-    .serviceButton i{
-        font-size: 5rem;
     }
     .slide__content{
         height: 15rem;
@@ -3031,13 +3044,8 @@ article .vegetable-paragraph{
     .joam-tree span{
         font-size: .6rem;
     }
-    .sliderButton svg{
-        position: absolute;
-        inset: 0;
-        margin: auto;
-    }
+
     /*contact section: form section*/
-    
     
     .submitform--farm{
         font-size: .9rem;
@@ -3083,6 +3091,11 @@ article .vegetable-paragraph{
     .products-heading, .gallery-heading{
         font-size: 1.2rem;
     }
+    .farm-act h3,
+    .organogram-container h3 {
+        font-size: .8rem;
+    }
+
     /*style the farm products container*/
     .products-body{
         padding: 1rem;
@@ -3117,7 +3130,9 @@ article .vegetable-paragraph{
     .relEst-img{
         height: 15rem;
     }
-    .realEst-prod-des, .realEst-price, .realEst-location{
+    .realEst-prod-des,
+    .realEst-price,
+    .realEst-location{
         font-size: .9rem;
     }
 
@@ -3192,6 +3207,17 @@ article .vegetable-paragraph{
         font-size: .7rem;
     }
     .proceed-to-order{
+        font-size: .7rem;
+    }
+
+    /*real estate section*/
+
+    .realEst-prod-des,
+    .realEst-price,
+    .realEst-location{
+        font-size: .8rem;
+    }
+    .realEst-placeorder {
         font-size: .7rem;
     }
 
