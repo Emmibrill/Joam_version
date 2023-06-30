@@ -2745,9 +2745,6 @@ article .vegetable-paragraph{
     article .why-choose-par{
         font-size: .75rem;
     }
-    /*.services-pictures-container{
-        height: 30rem;
-    }*/
     .swiper-slide {
         height: 30rem;
     }
@@ -2758,7 +2755,9 @@ article .vegetable-paragraph{
     .misVis-container .vission-par {
         font-size: .75rem;
     }
-
+    .contact__head label {
+        font-size: .8rem;
+    }
     /*style the respective farm in the farm section*/
 
     .overlay-text{
@@ -2779,6 +2778,10 @@ article .vegetable-paragraph{
     }
     .products-body{
         gap: 3rem;
+    }
+    .farm-act h3,
+    .organogram-container h3 {
+        font-size: .9rem;
     }
 
     /*style the we also offer section*/
@@ -2912,6 +2915,11 @@ article .vegetable-paragraph{
     .footer-rights{
         text-align: center;
     }
+    .footer-rights-par,
+    .des-by{
+        font-size: .8rem;
+        font-family: 'comfortaa', cursive;
+    }
 
 }
 @media (max-width:516px) {
@@ -3004,10 +3012,6 @@ article .vegetable-paragraph{
     .welcomeMessage h3{
         background-color: rgba(0 0 0 / .5);
     }
-
-    /*.services-pictures-container{
-        height: 25rem;
-    }*/
     .swiper-slide{
         height: 25rem;
     }
@@ -3027,9 +3031,6 @@ article .vegetable-paragraph{
     }
     .fa-user, .fa-users, .fa-user-tie, .house{
         font-size: 3rem;
-    }
-    .serviceButton i{
-        font-size: 5rem;
     }
     .slide__content{
         height: 15rem;
@@ -3086,6 +3087,10 @@ article .vegetable-paragraph{
     }
     .products-heading, .gallery-heading{
         font-size: 1.2rem;
+    }
+    .farm-act h3,
+    .organogram-container h3 {
+        font-size: .8rem;
     }
 
     /*style the farm products container*/
