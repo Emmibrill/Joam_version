@@ -1105,7 +1105,7 @@ article .why-choose-par:not(.lastChild){
     display: grid;
     padding: 2rem 1rem 1rem;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
 }
 .list-unstyled{
     padding: 0;
