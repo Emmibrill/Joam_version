@@ -1118,7 +1118,7 @@ article .why-choose-par:not(.lastChild){
 .list-unstyled li{
     padding-block: .5rem;
 }
-.list-unstyled li .unstyled{
+.unstyled{
     color: var(--nav-list-color);
     font-family: 'comfortaa', cursive;
     font-size: .75rem;
@@ -2882,7 +2882,13 @@ article .vegetable-paragraph{
         right: 0;
         margin: auto;
         margin-top: 1rem;
-        
+        font-size: .7rem;
+    }
+    .unstyled,
+    .footer-address--par, 
+    .footer-sub-headline-par,
+    .footer-getconnected h3 {
+        font-size: .7rem;
     }
     .footer-sub-headline-par{
         margin-top: 1rem;
