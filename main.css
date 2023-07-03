@@ -1963,7 +1963,6 @@ article .vegetable-paragraph{
 .misVis-container .vission-par,
 .misVis-container .mission-par{
     text-transform: capitalize;
-    font-family: 'Comfortaa', cursive;
     line-height: 2rem;
     font-size: 1rem;
 }
@@ -2466,7 +2465,6 @@ article .vegetable-paragraph{
     }
     .misVis-container .mission-par,
     .misVis-container .vission-par{
-    line-height: 2rem;
     font-size: .8rem;
     }
     .benefits-container li{
