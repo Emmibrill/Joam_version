@@ -332,71 +332,6 @@ img{
     font-weight: 700;
 }
 
-/*style the services section that contains the different services rendered*/
-/*.description{
-    position: relative;
-    padding-top: .5rem !important;
-    background-color: rgb(250, 235, 215, .3);
-    overflow: hidden;
-}
-.services-pictures-container{
-    position: relative;
-    inset: 0;
-    height: 40rem;
-    transition: all .3s;
-}
-.services-box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.services-box-image{
-    min-width: 100% !important;
-    height: 100%;
-    object-fit: cover;
-}
-
-.serviceButton{
-    position: absolute;
-    display: flex;
-    align-items: center !important;
-    justify-content: center !important;
-    background: transparent !important;
-    z-index: 1;
-    top: 50%;
-    width: 7rem;
-    height: 7rem;
-    transform: translateY(-50%);
-    background: transparent;
-}
-.serviceButton .fa-greater-than, 
-.serviceButton .fa-less-than{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    inset: 0 !important;
-    padding: 0;
-    font-size: 6rem;
-    font-weight: 900;
-    color: var(--nav-list-color);
-    color: transparent;
-    -webkit-text-stroke: 1px transparent !important;
-    background-image: radial-gradient(rgba(18, 206, 18, 0.6) 10%, mintcream 50%) !important;
-    -webkit-background-clip: text !important;
-    z-index: 2;
-}
-
-.serviceButton--left{
-    display: none;
-    left: 0;
-}
-.serviceButton--right{
-    padding: 0;
-    right: 0;
-}
-*/
-
 /*swiper*/
 
 .swiper {
@@ -1064,13 +999,13 @@ article .why-choose-par:not(.lastChild){
 }
 
 
-/*style the footer section*/
+/*style the footer section
 
 .footer-section{
     background: rgb(8, 8, 8);
     margin-top: 4rem;
 }
-.footer-headline{
+.row h4{
     text-transform: capitalize;
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
@@ -1086,11 +1021,6 @@ article .why-choose-par:not(.lastChild){
 .socials--footer{
     box-shadow: none;
     background: none;
-}
-.footer-getconnected{
-    color: var(--nav-list-color);
-    text-transform: capitalize;
-    font-family: 'comfortaa', cursive;
 }
 .fa-brands.fa-twitter--footer,
 .fa-brands.fa-instagram--footer,
@@ -1167,10 +1097,11 @@ article .why-choose-par:not(.lastChild){
 .footer-rights-par{
     color: var(--nav-list-color);
 }
-/*desinged by: des-by*/
+/*desinged by: des-by
 .des-by{
     color: rgb(113, 185, 113, .3);
 }
+*/
 
 /*style the joam organogram section*/
 
@@ -2011,6 +1942,7 @@ article .vegetable-paragraph{
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border: 1px solid green;
+    font-size: 1rem;
 }
 .misVis-article-realestate{
     border: 1px solid rgb(55, 13, 122);
@@ -2023,6 +1955,7 @@ article .vegetable-paragraph{
     padding: .5rem;
     transform: translateY(-2.5rem);
     text-transform: uppercase;
+    font-size: 1rem;
 }
 .misVis-statement--realestate{
     color: rgb(55, 13, 122);
@@ -2338,6 +2271,7 @@ article .vegetable-paragraph{
     }
 }
 @media (max-width:988px) {
+
     /*eduction section*/
 
     .eduction-bkg-design{
@@ -2358,6 +2292,7 @@ article .vegetable-paragraph{
     }
 }
 @media (max-width:853px) {
+
     /*eduction section*/
 
     .edu-wel-msg{
@@ -2690,7 +2625,7 @@ article .vegetable-paragraph{
         width: 95% !important;
     }
     
-    /*style the footer section*/
+    /*style the footer section
     .row{
         display: flex;
         flex-direction: column;
@@ -2706,7 +2641,7 @@ article .vegetable-paragraph{
         padding: .5rem;
         font-size: 1.5rem;
     }
-
+    */
 }
 @media (max-width:646px) {
 
@@ -2869,7 +2804,7 @@ article .vegetable-paragraph{
     .realEst-placeorder {
         font-size: .8rem;
     }
-    /*style the footer section*/
+    /*style the footer section
     .row{
         align-items: center;
         text-align: center;
@@ -2922,6 +2857,7 @@ article .vegetable-paragraph{
         font-size: .8rem;
         font-family: 'comfortaa', cursive;
     }
+    */
 
 }
 @media (max-width:516px) {
@@ -3270,8 +3206,7 @@ article .vegetable-paragraph{
     /*home page contact section*/
 
 
-
-    /*style the footer section*/
+    /*style the footer section
     
 
     .fa-brands.fa-twitter--footer,
@@ -3282,6 +3217,10 @@ article .vegetable-paragraph{
         font-size: 1.3rem;
         box-shadow: none;
     }
+  
+    */
+}
+
 }
 
 }
