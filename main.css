@@ -443,6 +443,9 @@ img{
     border-radius: 1rem;
     border: 1px solid rgb(0, 128, 0, .8);
 }
+.misVis-container--realestate .why-choose-par{
+    border: 1px solid rgb(55, 13, 122);
+}
 article .why-choose-par:not(.lastChild){
     margin-bottom: 6rem;
 }
@@ -1961,12 +1964,7 @@ article .vegetable-paragraph{
 .misVis-statement--realestate{
     color: rgb(55, 13, 122);
 }
-.misVis-container .vission-par,
-.misVis-container .mission-par{
-    text-transform: capitalize;
-    line-height: 2rem;
-    font-size: 1rem;
-}
+
 .fa-quote-left, .fa-quote-right{
     color: green;
 }
@@ -2464,10 +2462,6 @@ article .vegetable-paragraph{
     .misVis-statement{
         font-size: .8rem;
     }
-    .misVis-container .mission-par,
-    .misVis-container .vission-par{
-    font-size: .8rem;
-    }
     .benefits-container li{
         font-size: 1rem;
     }
@@ -2685,10 +2679,6 @@ article .vegetable-paragraph{
     .more-details{
         padding: 1.2rem 3rem;
     }
-    .misVis-container .mission-par, 
-    .misVis-container .vission-par {
-        font-size: .75rem;
-    }
     .contact__head label {
         font-size: .8rem;
     }
@@ -2772,10 +2762,6 @@ article .vegetable-paragraph{
         padding: 2rem;
         border-bottom-left-radius: 0rem;
         border-top-left-radius: 1rem;
-    }
-    .mission-par,
-    .vission-par{
-        font-size: .75rem;
     }
     .misVis-statement{
         text-align: center;
