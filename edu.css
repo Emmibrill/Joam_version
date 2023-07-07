@@ -120,7 +120,8 @@
         padding: 0 .5rem;
     }
     .pri-home-btn{
-        font-size: .75rem;
+        font-size: .6rem;
+        padding: .4rem;
     }
     .pri-vis-box{
         margin: 1rem 0;
@@ -137,9 +138,12 @@
     }
 }
 @media (max-width:375px) {
-    .pri-home-btn{
+    .pri-joam{
         font-size: .7rem;
-        padding: .5rem;
+    }
+    .pri-home-btn{
+        font-size: .55rem;
+        padding: .3rem;
     }
     .primary-welcome-section{
         padding: 1rem;
@@ -155,11 +159,8 @@
     }
 }
 @media (max-width:320px) {
-    .pri-joam{
-        font-size: .9rem;
-    }
     .pri-home-btn{
-        font-size: .6rem;
-        padding: .5rem;
+        font-size: .5rem;
+        padding: .2rem;
     }
 }
