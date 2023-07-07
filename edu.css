@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;  
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgb(255, 255, 255, 0);
+    -webkit-text-size-adjust: 100%;
+}
+
+*:root{
+    --nav-list-color: rgb(255, 255, 255);
+    --nav-icon: rgb(214, 104, 227);
+    --cardin-green: rgb(12, 26, 26);
+    --box-shadow: 0 0.3rem 0.8rem rgba(226, 228, 231, 0.6);
+    --about-title: #0a090a;
+    --r: rgb(255, 0, 0);
+    --g: rgb(0, 128, 0);
+    --outline-color-focus: gray;
+    --GrayishBlue: hsl(229, 8%, 60%);
+}
+
+/*primary section*/
+
+.primary-welcome-section{
+    padding: 2rem;
+    background: rgb(236, 224, 224, .4);
+}
+.pri-wel-con{
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    background: var(--nav-list-color);
+    box-shadow: var(--box-shadow);
+}
+.pri-misvis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pri-vis-con{
+    padding: 1rem;
+}
+.pri-vis-box{
+    margin: 3rem 0;
+}
+.pri-heading{
+    text-align: center;
+    padding: 1rem;
+    font-family: 'comfortaa', cursive;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--r);
+}
+.pri-article{
+    padding: .5rem;
+    font-family: 'comfortaa', cursive;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+.pri-wel-img{
+    position: relative;
+    height: 30rem;
+}
+.pri-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .pri-heading{
+        font-size: .8rem;
+    }
+    .pri-article{
+        font-size: .8rem;
+    }
+    .pri-wel-img{
+        height: 25rem;
+    }
+}
+
+@media (max-width:541px) {
+    .pri-vis-box{
+        margin: 1rem 0;
+    }
+    .pri-heading{
+        font-size: .7rem;
+    }
+    .pri-article{
+        font-size: .7rem;
+    }
+    .pri-wel-img{
+        height: 20rem;
+    }
+}
+@media (max-width:375px) {
+    .primary-welcome-section{
+        padding: 1rem;
+    }
+    .pri-vis-box{
+        margin: .5rem 0;
+    }
+    .pri-wel-con{
+        padding: 0;
+    }
+    .pri-wel-img{
+        height: 15rem;
+    }
+}

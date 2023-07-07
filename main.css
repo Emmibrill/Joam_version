@@ -2218,6 +2218,12 @@ article .vegetable-paragraph{
     -webkit-text-stroke: 1px var(--nav-list-color);
     transition: all 1s ease-out;
 }
+
+/*education primary section*/
+
+
+
+
 @media (max-width:1363px) {
     /*syle the realestate discover button*/
     .realestate-discover-btn{
