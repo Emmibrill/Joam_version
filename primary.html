@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>joam education/primary</title>
     <link rel="stylesheet" href="edu.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
 <body>
     <header>
@@ -47,8 +48,23 @@
             </div>
             <div class="pri-wel-img">
                 <img class="pri-image" src="sunny-school-bus.jpg" alt="a-sunny-school-bus">
+                <h1 class="edu-sec-title">joam primary</h1>
+                <h2 class="motto">motto:</h2>
+                <h4 id="typed-text"  style="font-family: 'comfortaa', cursive; font-weight: 700; color: white; text-transform: capitalize;"></h4>
             </div>
         </div>
     </section>
+
+    <script>
+
+        var typed = new Typed('#typed-text', {
+        strings: ["promoting excellence, <br/> through unique diligence "],
+        typeSpeed: 100,
+        backSpeed: 15,
+        loop: true
+        })
+        
+    </script>
+
 </body>
 </html>
