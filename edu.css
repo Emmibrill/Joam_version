@@ -95,12 +95,49 @@
 .pri-wel-img{
     position: relative;
     height: 30rem;
+    overflow: hidden;
 }
 .pri-image{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.edu-sec-title{
+    position: absolute;
+    color: var(--nav-list-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    background: rgb(8 8 8 / .5);
+    isolation: isolate;
+    font-family: 'comfortaa', cursive;
+}
+.motto{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'comfortaa', cursive;
+    color: red;
+    text-transform: capitalize;
+}
+#typed-text{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 3rem;
 }
 
 @media (max-width:768px) {
@@ -112,6 +149,25 @@
     }
     .pri-wel-img{
         height: 25rem;
+    }
+    .edu-sec-title{
+       font-size: 1.2rem;
+    }
+    .motto{
+        font-size: 1.2rem;
+    }
+    #typed-text{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width:615px) {
+    .pri-header-con{
+        padding: 0 .5rem;
+    }
+    .pri-home-btn{
+        font-size: .8rem;
+        padding: .5rem;
     }
 }
 
@@ -136,6 +192,15 @@
     .pri-wel-img{
         height: 20rem;
     }
+    .edu-sec-title{
+        font-size: 1rem;
+     }
+     .motto{
+         font-size: .9rem;
+     }
+     #typed-text{
+         font-size: .7rem;
+     }
 }
 @media (max-width:375px) {
     .pri-joam{
@@ -156,6 +221,9 @@
     }
     .pri-wel-img{
         height: 15rem;
+    }
+    #typed-text{
+        top: 1.5rem;
     }
 }
 @media (max-width:320px) {
